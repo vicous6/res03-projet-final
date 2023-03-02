@@ -57,7 +57,7 @@ Un CRUD sera implémenté pour l'administrateur.
       Product-Panier(product_id,panier_id)
     
 ## Controller :
-
+  
 
 ## Managers :
    User-manager
@@ -94,7 +94,7 @@ Un CRUD sera implémenté pour l'administrateur.
      
    Panier-manager
    
-     getAllOrders() (join -> product) 
+     getAllOrders() (join -> product, 2nd join(material,category) ) 
      getOrderById(int $id)
      getOrderByEmail(Order $order)
      updateOrder(Order $order)
