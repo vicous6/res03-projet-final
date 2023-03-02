@@ -3,6 +3,10 @@
 
 # Site vente de bijoux
 
+## Description
+
+Ce site sera une boutique en ligne de bijoux artisanaux, il sera possible de selectionner un/des produits et de faire le reglement directement à partir du site.
+Un CRUD sera implémenté pour l'administrateur.
 
 ## Fonctionnalités:
 
