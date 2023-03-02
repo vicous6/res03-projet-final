@@ -17,6 +17,7 @@ Un CRUD sera implémenté pour l'administrateur.
 
 
 ## Technologie: 
+
  Html, SASS, JS , PHP , MYSQL
 
 ## Pages :
@@ -35,27 +36,31 @@ Un CRUD sera implémenté pour l'administrateur.
                         All-orders     -> /admin/all-orders
           
 
-## Tables: User(id, email, password, role)
+## Tables: User(id, email, password, role) :
+
     User (id, email, password, role)
-    Product(id, name, description, url-photo, prix, category_id)
+    Product(id, name, description, url-photo, prix, category_id, material_id)
     Category(id, name)
     Materials(id, name)
     
-    Orders:(id,facturation_address, livraison_address, total_price, Date, isPayed?, isSend?, user_id)
+    
+    Panier(id,user_id, product_id )
+    
+    Order(id, panier_id,facturation_address, livraison_address, total_price, Date, isPayed?, isSend? )
+         
          
     Tables de liaisons: 
 
-
-    Product-orders(product_id,order_id)
-    Product-materials(product_id,materials_id)
+      Product-orders(product_id,order_id)
+      Product-materials(product_id,materials_id)
     
-## Controller
+## Controller :
 
 
-## Managers
+## Managers :
    User-manager
    
-     getAllUsers()
+     getAllUsers() 
      getUserById(int $id)
      getUserByEmail(User $user)
      updateUser(User $user)
@@ -63,7 +68,7 @@ Un CRUD sera implémenté pour l'administrateur.
      
    Product-manager
    
-     getAllProducts()
+     getAllProducts() -> join(category, material)
      getById(int $id)
      getProductByEmail(Product $product)
      updateProduct(Product $product)
@@ -87,7 +92,7 @@ Un CRUD sera implémenté pour l'administrateur.
      
    Order-manager
    
-     getAllOrder()
+     getAllOrder() (join -> user, product) 
      getOrderById(int $id)
      getOrderByEmail(Order $order)
      updateOrder(Order $order)
