@@ -1,10 +1,10 @@
 # res03-projet-final
 
 
-###Site vente de bijoux
+# Site vente de bijoux
 
 
-##Fonctionnalité:
+## Fonctionnalité:
 
     Selectioner un produit, l'ajouter au panier, valider la panier , payement via Stripe
 
@@ -12,11 +12,11 @@
 
 
 
-##Technologie: Html, SASS, JS , PHP , MYSQL
+## Technologie: Html, SASS, JS , PHP , MYSQL
 
-##Pages : Acceuil , Gallerie , Contact , Login  , 404 
+## Pages : Acceuil , Gallerie , Contact , Login  , 404 
 
-##Tables: User(id, email, password, role)
+## Tables: User(id, email, password, role)
           Product(id, name, description, url-photo, prix, category_id, material_id, panier_id)
           
           Category(id, name)
