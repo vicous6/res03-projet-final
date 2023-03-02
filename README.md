@@ -4,7 +4,7 @@
 # Site vente de bijoux
 
 
-## Fonctionnalité:
+## Fonctionnalités:
 
     Selectioner un produit, l'ajouter au panier, valider la panier , payement via Stripe
 
