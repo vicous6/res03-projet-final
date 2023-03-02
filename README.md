@@ -65,15 +65,33 @@ Un CRUD sera implémenté pour l'administrateur.
    
      getAllProducts()
      getById(int $id)
-     getProductByEmail(User $user)
-     updateProduct(User $user)
+     getProductByEmail(Product $product)
+     updateProduct(Product $product)
      deleteProduct(int $id)
      
    Category-manager
+   
+     getAllCategories()
+     getCategoryById(int $id)
+     getCategoryByEmail(Category $category)
+     updateCategory(Category $category)
+     deleteCategory(int $id)
      
    Material-manager
      
+     getAllMaterials()
+     getMaterialById(int $id)
+     getMaterialByEmail(Material $material)
+     updateMaterial(Material $material)
+     deleteMaterial(int $id)
+     
    Order-manager
+   
+     getAllOrder()
+     getOrderById(int $id)
+     getOrderByEmail(Order $order)
+     updateOrder(Order $order)
+     deleteOrder(int $id)
      
                  
                       
