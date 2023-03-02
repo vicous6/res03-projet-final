@@ -36,16 +36,27 @@ Un CRUD sera implémenté pour l'administrateur.
           
 
 ## Tables: User(id, email, password, role)
+    User (id, email, password, role)
     Product(id, name, description, url-photo, prix, category_id)
     Category(id, name)
     Materials(id, name)
     
-    Orders:(id,facturation_address, livraison_address, total_price, Date, isPayed?, isSend?)
+    Orders:(id,facturation_address, livraison_address, total_price, Date, isPayed?, isSend?, user_id)
          
     Tables de liaisons: 
 
+
     Product-orders(product_id,order_id)
     Product-materials(product_id,materials_id)
-##
+    
+## Controller
+
+
+## Managers
+
+  # Products-manager
+  # Category-manager
+  # Materials-manager
+  # Orders-manager
                  
                       
