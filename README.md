@@ -12,9 +12,11 @@
 
 
 
-## Technologie: Html, SASS, JS , PHP , MYSQL
+## Technologie: 
+          Html, SASS, JS , PHP , MYSQL
 
-## Pages : Acceuil , Gallerie , Contact , Login  , 404 
+## Pages :
+          Acceuil , Gallerie , Contact , Login  , 404 
 
 ## Tables: User(id, email, password, role)
           Product(id, name, description, url-photo, prix, category_id, material_id, panier_id)
