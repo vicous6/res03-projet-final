@@ -54,6 +54,7 @@ Un CRUD sera implémenté pour l'administrateur.
 
 ## Managers
    User-manager
+   
      getAllUsers()
      getUserById(int $id)
      getUserByEmail(User $user)
@@ -61,6 +62,7 @@ Un CRUD sera implémenté pour l'administrateur.
      deleteUser(int $id)
      
    Product-manager
+   
      getAllProducts()
      getById(int $id)
      getProductByEmail(User $user)
