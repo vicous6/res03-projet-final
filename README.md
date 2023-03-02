@@ -53,10 +53,25 @@ Un CRUD sera implémenté pour l'administrateur.
 
 
 ## Managers
-
-  # Products-manager
-  # Category-manager
-  # Materials-manager
-  # Orders-manager
+   User-manager
+     getAllUsers()
+     getUserById(int $id)
+     getUserByEmail(User $user)
+     updateUser(User $user)
+     deleteUser(int $id)
+     
+   Product-manager
+     getAllProducts()
+     getById(int $id)
+     getProductByEmail(User $user)
+     updateProduct(User $user)
+     deleteProduct(int $id)
+     
+   Category-manager
+     
+   Material-manager
+     
+   Order-manager
+     
                  
                       
