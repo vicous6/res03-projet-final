@@ -6,24 +6,24 @@
 
 ## Fonctionnalités:
 
-    Selectioner un produit, l'ajouter au panier, valider la panier , payement via Stripe
+ Selectioner un produit, l'ajouter au panier, valider la panier , payement via Stripe
 
 
 
 
 
 ## Technologie: 
-          Html, SASS, JS , PHP , MYSQL
+ Html, SASS, JS , PHP , MYSQL
 
 ## Pages :
-          User: Accueil , Gallerie , Contact , Login  , 404 ,
+ User: Accueil , Gallerie , Contact , Login  , 404 ,
           
                 Routes: Accueil  -> /
                         Gallerie -> /gallerie
                         Contact  -> /contact
                         Login    -> /login
                 
-          Admin: All-products, new-product, update-product, all-orders
+  Admin: All-products, new-product, update-product, all-orders
           
                 Routes: All-products   -> /admin/all-products
                         New-product    -> /admin/new-product
