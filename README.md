@@ -39,20 +39,22 @@ Un CRUD sera implémenté pour l'administrateur.
 ## Tables: User(id, email, password, role) :
 
     User (id, email, password, role)
+    
     Product(id, name, description, url-photo, prix, category_id, material_id)
     Category(id, name)
-    Materials(id, name)
+    Material(id, name)
     
     
     Panier(id,user_id, product_id )
     
-    Order(id, panier_id,facturation_address, livraison_address, total_price, Date, isPayed?, isSend? )
+<!--     Order(id, panier_id,facturation_address, livraison_address, total_price, Date, isPayed?, isSend? ) -->
          
          
     Tables de liaisons: 
-
-      Product-orders(product_id,order_id)
-      Product-materials(product_id,materials_id)
+      
+      Product-order(product_id,order_id)
+      Product-material(product_id,material_id)
+      Product-Panier(product_id,panier_id)
     
 ## Controller :
 
@@ -90,9 +92,9 @@ Un CRUD sera implémenté pour l'administrateur.
      updateMaterial(Material $material)
      deleteMaterial(int $id)
      
-   Order-manager
+   Panier-manager
    
-     getAllOrder() (join -> user, product) 
+     getAllOrders() (join -> product) 
      getOrderById(int $id)
      getOrderByEmail(Order $order)
      updateOrder(Order $order)
