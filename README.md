@@ -16,7 +16,7 @@
  Html, SASS, JS , PHP , MYSQL
 
 ## Pages :
- User: Accueil , Gallerie , Contact , Login  , 404 ,
+ User: Accueil , Gallerie , Contact , Login  , 404
           
                 Routes: Accueil  -> /
                         Gallerie -> /gallerie
@@ -27,7 +27,7 @@
           
                 Routes: All-products   -> /admin/all-products
                         New-product    -> /admin/new-product
-                        Update-product -> /admin/update-product
+                        Update-product -> /admin/update-product/{id}
                         All-orders     -> /admin/all-orders
           
 
