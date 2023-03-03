@@ -59,12 +59,20 @@ Un CRUD sera implémenté pour l'administrateur.
 ## Controller :
    
    AdminController
-     ->
-     ->
-     ->
+     All-products   -> /admin/all-products
+     New-product    -> /admin/new-product
+     Update-product -> /admin/update-product/{id}
+     All-orders     -> /admin/all-orders
+     
    PageController
-     ->
-    
+      Accueil  -> /
+      Gallerie -> /gallerie
+      Contact  -> /contact
+      Login    -> /login
+      
+    PanierController
+      Gallerie -> /gallerie
+ 
 
 ## Managers :
    User-manager
