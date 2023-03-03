@@ -40,10 +40,10 @@ Un CRUD sera implémenté pour l'administrateur.
 
     User (id, email, password, role)
     
-    Product(id, name, description, url-photo, prix, category_id, material_id)
+    Product(id, name, description, prix, category_id)
     Category(id, name)
     Material(id, name)
-    
+    Images(id, , product_id, url)
     
     Panier(id,user_id, product_id )
     
@@ -57,7 +57,14 @@ Un CRUD sera implémenté pour l'administrateur.
       Product-Panier(product_id,panier_id)
     
 ## Controller :
-  
+   
+   AdminController
+     ->
+     ->
+     ->
+   PageController
+     ->
+    
 
 ## Managers :
    User-manager
@@ -67,6 +74,7 @@ Un CRUD sera implémenté pour l'administrateur.
      getUserByEmail(User $user)
      updateUser(User $user)
      deleteUser(int $id)
+     createUser(User $user)
      
    Product-manager
    
@@ -75,6 +83,7 @@ Un CRUD sera implémenté pour l'administrateur.
      getProductByEmail(Product $product)
      updateProduct(Product $product)
      deleteProduct(int $id)
+     createProduct(Product $product)
      
    Category-manager
    
@@ -83,6 +92,7 @@ Un CRUD sera implémenté pour l'administrateur.
      getCategoryByEmail(Category $category)
      updateCategory(Category $category)
      deleteCategory(int $id)
+     createCategory(Category $category)
      
    Material-manager
      
@@ -91,6 +101,7 @@ Un CRUD sera implémenté pour l'administrateur.
      getMaterialByEmail(Material $material)
      updateMaterial(Material $material)
      deleteMaterial(int $id)
+     createMaterial(Material $material)
      
    Panier-manager
    
@@ -99,6 +110,7 @@ Un CRUD sera implémenté pour l'administrateur.
      getOrderByEmail(Order $order)
      updateOrder(Order $order)
      deleteOrder(int $id)
+     createrPanier(Panier $panier)
      
                  
                       
