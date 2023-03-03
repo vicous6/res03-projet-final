@@ -76,12 +76,13 @@ Un CRUD sera implémenté pour l'administrateur.
    PageController
    
      Accueil  -> /
-     Gallerie -> /gallerie
-                  /gallerie/{id}
+     Gallerie -> /gallerie      -> affiche les produit , ces produit peuvent etre classés/filtrer et constituer un panier dans le local storage 
+                  /gallerie/{id}-> affiche le dit produit dans une page dédié
       
       
      Contact  -> /contact
      Login    -> /login
+     Register    -> /register
                   
       
       
@@ -146,13 +147,9 @@ Un CRUD sera implémenté pour l'administrateur.
      createrImage(Image $Image)
      
     FacturationAddressManager
-       getAllImages() 
-     getImageById(int $id)
-     getImageByEmail(Image $Image)
-     updateImage(Image $Image)
-     deleteImage(int $id)
-     createrImage(Image $Image)
-     
+    
+    LivraisonAddressManager
+      
      
                  
                       
