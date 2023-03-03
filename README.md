@@ -75,17 +75,17 @@ Un CRUD sera implémenté pour l'administrateur.
      
    PageController
    
-      Accueil  -> /
-      Gallerie -> /gallerie
+     Accueil  -> /
+     Gallerie -> /gallerie
                   /gallerie/{id}
       
       
-      Contact  -> /contact
-      Login    -> /login
+     Contact  -> /contact
+     Login    -> /login
                   
       
       
-    PanierController
+   PanierController
     
       Gallerie -> /gallerie/panier
  
