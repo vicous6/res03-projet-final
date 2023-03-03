@@ -38,7 +38,10 @@ Un CRUD sera implémenté pour l'administrateur.
 
 ## Tables: User(id, email, password, role) :
 
-    User (id, email, password, role, adress)
+    User (id, email, password, role, number )
+    
+    FacturationAddress (id ,user_id ,number, road, zip_code , country)
+    LivraisonAddress (id ,user_id, number, road, zip_code , country)
     
     Product(id, name, description, prix, category_id)
     
@@ -74,12 +77,17 @@ Un CRUD sera implémenté pour l'administrateur.
    
       Accueil  -> /
       Gallerie -> /gallerie
+                  /gallerie/{id}
+      
+      
       Contact  -> /contact
       Login    -> /login
+                  
+      
       
     PanierController
     
-      Gallerie -> /gallerie
+      Gallerie -> /gallerie/panier
  
 
 ## Managers :
@@ -136,6 +144,15 @@ Un CRUD sera implémenté pour l'administrateur.
      updateImage(Image $Image)
      deleteImage(int $id)
      createrImage(Image $Image)
+     
+    FacturationAddressManager
+       getAllImages() 
+     getImageById(int $id)
+     getImageByEmail(Image $Image)
+     updateImage(Image $Image)
+     deleteImage(int $id)
+     createrImage(Image $Image)
+     
      
                  
                       
