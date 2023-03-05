@@ -40,7 +40,7 @@ Un CRUD sera implémenté pour l'administrateur.
 
     User (id, email, password, role, number )
     
-    **FacturationAddress** (id ,user_id ,number, road, zip_code , country)
+     **FacturationAddress** (id ,user_id ,number, road, zip_code , country)
     LivraisonAddress (id ,user_id, number, road, zip_code , country)
     
     Product(id, name, description, prix, category_id)
