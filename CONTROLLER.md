@@ -12,6 +12,8 @@
 
 . `/login`
 
+. `/create-account`
+
 
 ## ProductCategoryController
 
