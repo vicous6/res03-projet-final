@@ -5,3 +5,4 @@
 - Category-manager
 - Material-manager
 - Order-manager
+- Image-Manager 
