@@ -1,4 +1,4 @@
-ROUTES
+## ROUTES
 
 
 
@@ -50,3 +50,7 @@ ROUTES
 
 /admin/products/:id/supprimer
 
+
+/admin/images/ajouter
+
+/admin/images/:id/supprimer
