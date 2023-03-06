@@ -10,9 +10,11 @@
 
 . /contact
 
+. /about
+
 . /login
 
-. /product/:id
+. /products/:id
 
 
 
