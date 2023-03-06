@@ -1,6 +1,7 @@
 ## Models
 
 # User
+
 - id
 - username
 - email
@@ -9,6 +10,7 @@
 - number
 
 # Order
+
 -id
 -total_price
 -date
@@ -18,6 +20,7 @@
 -product[]
 
 # Product
+
 -id
 -name
 -description
@@ -28,16 +31,19 @@
 
 
 # Material
+
 -   id
 - name
 - product[]
 
 
 # Category
+
 -   id
 - name
 
 # Image
+
 -   id
 - product_id
 - description
