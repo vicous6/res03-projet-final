@@ -151,5 +151,27 @@ Un CRUD sera implémenté pour l'administrateur.
     LivraisonAddressManager
       
      
-                 
+## models
+
+User
+   ?int $id
+   string $username
+   string $email
+   string $password
+   array $role[ ]
+   string $number
+   ?string $facturationAddress
+   ?string $livraisonAddress
+   
+   __construct($username,$email,$password,$number){
+   
+   this->id= null,
+   this->username=$username,
+   this->email=$email,
+   this->password=$password
+   this->number=$number
+   this->facturationAddress=$facturationAddress
+   this->livraisonAddress=$livraisonAddress
+   
+   }
                       
