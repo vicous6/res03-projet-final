@@ -19,6 +19,9 @@
 . /produits/:category
 
 
+- `/user/monCompte`
+
+
 . /admin/all-orders
 
 . /admin/all-orders/ajouter
