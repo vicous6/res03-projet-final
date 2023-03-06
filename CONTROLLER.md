@@ -8,10 +8,6 @@
 
 - `/a-propos`
 
-. `/gallerie`
-
-. `/gallerie/:category`
-
 . `/contact`
 
 . `/login`
@@ -21,7 +17,7 @@
 
 ### Routes publiques
 
-- `/product/:categorie`
+- `/produits/:categorie`
 
 ### Routes privées
 
@@ -36,23 +32,38 @@
 
 ### Routes publiques
 
-- `/products`
-- `/products/:id`
+- `/produits`
+- `/produits/:id`
 
 ### Routes privées
 
-- `/admin/projets`
-- `/admin/projets/ajouter`
-- `/admin/projets/:id/details`
-- `/admin/projets/:id/modifier`
-- `/admin/projets/:id/supprimer`
+- `/admin/produits`
+- `/admin/produits/ajouter`
+- `/admin/produits/:id/details`
+- `/admin/produits/:id/modifier`
+- `/admin/produits/:id/supprimer`
 
 
 
-## MediaController
+## ImageController
 
 ### Routes privées
 
-- `/admin/medias`
-- `/admin/medias/ajouter`
-- `/admin/medias/:id/supprimer`
+- `/admin/images`
+- `/admin/images/ajouter`
+- `/admin/images/:id/supprimer`
+
+## OrderController
+
+### Routes privées
+
+. `/admin/all-orders`
+
+. `/admin/all-orders/ajouter`
+
+. `/admin/all-orders/:id/details`
+
+. `/admin/all-orders/:id/modifier`
+
+. `/admin/all-orders/:id/supprimer`
+
