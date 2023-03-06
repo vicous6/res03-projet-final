@@ -26,6 +26,16 @@
 - `/admin/categories/:id/details`
 - `/admin/categories/:id/modifier`
 - `/admin/categories/:id/supprimer`
+## UserController
+
+### Routes privées
+
+- `/admin/utilisateur`
+- `/admin/utilisateur/ajouter`
+- `/admin/utilisateur/:id/details`
+- `/admin/utilisateur/:id/modifier`
+- `/admin/utilisateur/:id/supprimer`
+
 
 
 ## ProductController
