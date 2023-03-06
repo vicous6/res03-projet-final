@@ -4,19 +4,17 @@
 
 . /
 
-. /gallerie
-
-. /gallerie/:category
-
 . /contact
 
-. /about
+. /a-propos
 
 . /login
 
-. /products/:id
+. /produits/:id
 
+. /produits
 
+. /produits/:category
 
 
 . /admin/all-orders
@@ -29,6 +27,17 @@
 
 . /admin/all-orders/:id/supprimer
 
+
+
+. /admin/utilisateurs
+
+. /admin/utilisateurs/ajouter
+
+. /admin/utilisateurs/:id/details
+
+. /admin/utilisateurs/:id/modifier
+
+. /admin/utilisateurs/:id/supprimer
 
 
 
@@ -54,6 +63,8 @@
 
 . /admin/products/:id/supprimer
 
+
+. /admin/images
 
 . /admin/images/ajouter
 
