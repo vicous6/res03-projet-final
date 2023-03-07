@@ -10,7 +10,7 @@
 
 . /login
 
-. /create-account
+. /register
 
 . /produits/:id
 
