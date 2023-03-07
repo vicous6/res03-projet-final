@@ -12,7 +12,9 @@
 
 . `/login`
 
-. `/create-account`
+. `/register`
+
+. /register
 
 
 ## ProductCategoryController
