@@ -17,7 +17,7 @@
 . /register
 
 
-## ProductCategoryController
+## CategoryController
 
 ### Routes publiques
 
