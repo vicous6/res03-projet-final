@@ -19,10 +19,6 @@
 
 ## CategoryController
 
-### Routes publiques
-- `/produits`
-- `/produits/:categorie`
-- - `/produit/afficher/:id`
 
 ### Routes privées
 
@@ -47,9 +43,9 @@
 ## ProductController
 
 ### Routes publiques
-
 - `/produits`
-- `/produits/:id`
+- `/produits/:categorie`
+- - `/produit/afficher/:id`
 
 ### Routes privées
 
