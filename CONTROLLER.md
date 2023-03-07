@@ -22,6 +22,7 @@
 ### Routes publiques
 
 - `/produits/:categorie`
+- - `/produit/afficher/:id`
 
 ### Routes privées
 
