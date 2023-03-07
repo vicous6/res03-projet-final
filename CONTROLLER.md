@@ -14,7 +14,7 @@
 
 . `/register`
 
-. /register
+
 
 
 ## CategoryController
