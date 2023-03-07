@@ -2,7 +2,7 @@
 
 
 
-. /
+. /accueil
 
 . /contact
 
