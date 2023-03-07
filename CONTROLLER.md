@@ -4,7 +4,7 @@
 
 ### Routes publiques
 
-. `/`
+. `/accueil`
 
 - `/a-propos`
 
