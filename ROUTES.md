@@ -12,7 +12,7 @@
 
 . /register
 
-. /produits/:id
+. /produits/afficher/:id
 
 . /produits
 
