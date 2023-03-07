@@ -20,7 +20,7 @@
 ## CategoryController
 
 ### Routes publiques
-
+- `/produits`
 - `/produits/:categorie`
 - - `/produit/afficher/:id`
 
