@@ -1,0 +1,30 @@
+<?php
+
+// var_dump($data);
+foreach($data[0] as $product){
+    echo "<article>";
+        echo "<h1>";
+        echo $product->getId();
+        echo "</h1>";
+        echo "<p>";
+        echo $product->getName();
+        echo "</p>";
+        echo "<p>";
+        echo $product->getPrix()." euros";
+        echo "</p>";
+        echo "<p>";
+        echo $product->getStock();
+        echo "</p>";
+        echo "<p>";
+        echo $product->getCategory();
+        echo "</p>";
+    echo "</article>";
+}
+?>
+<section>
+    
+    
+    
+    
+    
+</section>
