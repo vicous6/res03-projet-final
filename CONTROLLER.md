@@ -40,12 +40,14 @@
 
 
 
-## ProductController
+## ProductPublicController
 
 ### Routes publiques
 - `/produits`
 - `/produits/:categorie`
-- - `/produit/:id`
+- `/produit/:id`
+- 
+## ProductPublicController
 
 ### Routes privées
 
