@@ -30,7 +30,7 @@
 ## UserController
 
 ### Routes privées
-- `/user/monCompte`
+- `/monCompte`
 
 - `/admin/utilisateur`
 - `/admin/utilisateur/ajouter`
