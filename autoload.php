@@ -12,6 +12,7 @@ require "controllers/admin/ImageController.php";
 require "controllers/admin/OrderController.php";
 require "controllers/admin/ProductAdminController.php";
 require "controllers/admin/UserController.php";
+require "controllers/public/LoginController.php";
 
 
 require "controllers/public/PageController.php";

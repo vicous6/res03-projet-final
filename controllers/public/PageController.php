@@ -3,13 +3,13 @@
 class PageController extends AbstractPublicController {
     
     
-//   private UserManager $manager;
+  private UserManager $manager;
 
  public function __construct()
     {
         
         
-        // $this->manager= new UserManager("tonygohin_distorsion","3306","db.3wa.io","tonygohin","f80620de30f1b8d1caba3a7e4b950a9a")  ;
+        $this->manager= new UserManager()  ;
     
        
         
@@ -32,8 +32,18 @@ class PageController extends AbstractPublicController {
     }
     public function register(){
         
-        
+       
         $this->renderPublic( "register" , ["page d'inscription"]); 
+    }
+    public function registerCreateUser(array $post){
+        
+      
+       
+         $newUser = new User( $post['registerUsername'],$post['registerEmail'], $post['registerPassword'], $post['number'], "customer");
+         $userManager = new UserManager();
+        $userManager->createUser($newUser);
+         echo "createUser";
+        $this->renderPublic( "login" , ["un user a été créer"]); 
     }
     public function contact(){
         

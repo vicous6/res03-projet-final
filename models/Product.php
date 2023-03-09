@@ -91,6 +91,8 @@ Class Product {
     {
         $this->category = $category;
     }
+    
+    
     public function addMaterial(string $material){
         
         array_push($materials, $material);

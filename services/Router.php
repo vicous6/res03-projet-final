@@ -11,6 +11,7 @@ class Router {
     private OrderController $orderController;
      private ProductPublicController $productPublicController;
      private ProductAdmincController $productAdminController;
+       private LoginController $loginController;
 
   
 
@@ -26,7 +27,7 @@ class Router {
         $this->orderController = new OrderController();
         $this->productPublicController = new ProductPublicController();
         $this->ProductAdmincController = new ProductPublicController();
-
+         $this->loginController = new LoginController();
     }
 
     public function checkRoute(){
@@ -47,12 +48,26 @@ class Router {
                 $this->pageController->aPropos();
             }
             if($route[0]=== "login"){
+                 if (!empty($_POST) && $_POST["formName"]=== "login"){
+                    $post = $_POST;
+                    //  $_POST = array();
+                     $this->loginController->auth($post);
+                }else{
+                
                 $this->pageController->login();
             }
+            }
             if($route[0]=== "register"){
+                 
+                if (!empty($_POST) && $_POST["formName"]=== "register"){
+                    $post = $_POST;
+                    //  $_POST = array();
+                     $this->pageController->registerCreateUser($post);
+                }else{
+                
                 $this->pageController->register();
             }
-            
+            }
             
             //ProductPublicController
             
@@ -121,11 +136,15 @@ class Router {
                     
                 }else 
                 if($route[1]==="utilisateur"&& $route[2]==="ajouter"){  //exemple admin/utilisateur/ajouter
+                
+                        
                     
                 }
                  else 
                 if($route[1]==="utilisateur"&& $route[3]==="modifier"){//exemple admin/utilisateur/2/modifier
                     
+                    
+                      
                 }
                 else 
                 if($route[1]==="utilisateur"&& $route[3]==="details"){//exemple admin/utilisateur/2/details

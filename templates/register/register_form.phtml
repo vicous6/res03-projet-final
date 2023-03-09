@@ -1,4 +1,4 @@
-<form  method="post">
+<form  action = "register" method="post">
   <h1>Création de compte</h1>
     <fieldset>
   <label for="firstName">Username</label>
@@ -17,11 +17,19 @@
   <label for="confirmPassword">Confirmation du mot de passe</label>
   <input type="password" id="#" name="registerConfirmPwd">
     </fieldset>
+    <fieldset>
+  <label for="number">Numero de Telephone</label>
+  <input type="number" id="number" name="number">
+    </fieldset>
     <fieldset id="buttons">
   <input type="hidden" name="formName" value="register">
 
   <button id="registerButton" type="submit" value="Créer un compte">Créer un compte</button>
   
-<!--  <button id="button2" type="submit" value="Se connecter" href = "index.php?route=">Se connecter</button>-->
     </fieldset>
 </form>
+<p>Pour se connecter cliquez <a href ="/res03-projet-final/login">ICI</a> </p>
+
+<?php 
+var_dump($_POST);
+?>

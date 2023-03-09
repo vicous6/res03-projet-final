@@ -4,22 +4,24 @@ Class User {
     
     //private attribute
     private ?int $id;
+    private string $username;
     private string $email;
     private string $password;
     private string $number;
-    private array $role;
+    private string $role;
     private array $facturation;
     private array $livraison;
 
 
     //public constructor
-    public function __construct(string $email, string $password, string $number)
+    public function __construct(string $username, string $email, string $password, string $number, string $role)
     {
         $this->id = null;
+        $this->username = $username;
         $this->email = $email;
         $this->password = $password;
-        $this->address=$number;
-        $this->roles=[];
+        $this->number=$number;
+        $this->role=$role;
         $this->facturation=[];
         $this->livraison=[];
         
@@ -31,6 +33,10 @@ Class User {
     {
         return $this->id;
     }
+     public function getUsername() : string
+    {
+        return $this->username;
+    }
     public function getEmail() : string
     {
         return $this->email;
@@ -39,17 +45,14 @@ Class User {
     {
         return $this->password;
     }
-     public function getAddress() : ?string
-    {
-        return $this->address;
-    }
-    public function getNumber() : int
+    
+    public function getNumber() : string
     {
         return $this->number;
     }
-     public function getRoles() : array
+     public function getRole() : string
     {
-        return $this->roles;
+        return $this->role;
     }
     public function getFacturation() : array
     {
@@ -67,6 +70,10 @@ Class User {
     {
         $this->id = $id;
     }
+    public function setUsername(string $username) : void
+    {
+        $this->email = $username;
+    }
     public function setEmail(string $email) : void
     {
         $this->email = $email;
@@ -80,7 +87,7 @@ Class User {
     {
         $this->number = $number;
     }
-    public function setRole(array $role) : void
+    public function setRole(string $role) : void
     {
         $this->role = $role;
     }
