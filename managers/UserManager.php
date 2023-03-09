@@ -17,7 +17,7 @@ public function createUser(User $user): void{
 	
 $query->execute($parameters);
     }
-public function getUserByEmail(string $email) : User
+public function getUserByEmail(string $email) : ?User
     {
         
        $query = $this->db->prepare('SELECT * FROM user WHERE email = :email');
@@ -26,7 +26,10 @@ public function getUserByEmail(string $email) : User
 	];
 $query->execute($parameters);
 $user = $query->fetch(PDO::FETCH_ASSOC);
-
+if($user ===false || $user === null){
+	
+	return null;
+}
 $theUser = new User ($user["username"],$user["email"],$user["password"],$user["phone_number"],$user["role"]);
 
 return $theUser;
