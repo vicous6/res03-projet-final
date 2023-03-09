@@ -32,7 +32,7 @@
 ### Routes privées
 - `/monCompte`
 
-- `/admin/utilisateur`
+- `/admin/utilisateurs`
 - `/admin/utilisateur/ajouter`
 - `/admin/utilisateur/:id/details`
 - `/admin/utilisateur/:id/modifier`
