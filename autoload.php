@@ -3,10 +3,19 @@ require "services/Router.php";
 require "models/User.php";
 require "models/Product.php";
 
-require "controllers/AbstractController.php";
-require "controllers/UserController.php";
-require "controllers/PageController.php";
-require "controllers/ProductController.php";
+require "controllers/AbstractPublicController.php";
+require "controllers/AbstractAdminController.php";
+
+
+require "controllers/admin/CategoryController.php";
+require "controllers/admin/ImageController.php";
+require "controllers/admin/OrderController.php";
+require "controllers/admin/ProductAdminController.php";
+require "controllers/admin/UserController.php";
+
+
+require "controllers/public/PageController.php";
+require "controllers/public/ProductPublicController.php";
 
 
 require "managers/AbstractManager.php";

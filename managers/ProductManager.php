@@ -5,11 +5,11 @@ class ProductManager extends AbstractManager {
 // private PDO $db; 
 
 
-    public function getAllProducts(){
+    public function getAllProducts(): array{
         
-     $query = $this->db->prepare('SELECT products.id, products.name ,products.description ,products.prix,products.stock,category.name as category
-    FROM products JOIN category
-    ON products.category_id = category.id');
+     $query = $this->db->prepare('SELECT product.id, product.name ,product.description ,product.prix,product.stock,category.name as category
+    FROM product JOIN category
+    ON product.category_id = category.id');
 	$parameters = [
 	    
 	];
@@ -33,13 +33,13 @@ class ProductManager extends AbstractManager {
         
      return $tab;
     }
-    public function getProductById(string $id){
-        
+    public function getProductById(string $id): Product{
+        // querry 1 join les categories
         $idd = intval( $id,$base = 10);
-         $query = $this->db->prepare('SELECT products.id, products.name ,products.description ,products.prix,products.stock,category.name as category
-    FROM products JOIN category
-    ON products.category_id = category.id
-    WHERE products.id = :id
+         $query = $this->db->prepare('SELECT product.id, product.name ,product.description ,product.prix,product.stock,category.name as category
+    FROM product JOIN category
+    ON product.category_id = category.id
+    WHERE product.id = :id
     ');
 	$parameters = [
 	   "id"=>$idd,
@@ -48,17 +48,35 @@ class ProductManager extends AbstractManager {
         $query->execute($parameters);
                 
         $product = $query->fetch(PDO::FETCH_ASSOC);
+        // querry 2 join la table de liaison materiaux
+//         $query2 = $this->db->prepare('SELECT product.id, product.name ,product.description ,product.prix,product.stock,product_has_material.name as category
+//     FROM product JOIN product_has_material
+//     ON product.category_id = category.id
+//     WHERE product.id = :id
+//     ');
+// 	$parameters = [
+// 	   "id"=>$idd,
+// 	];
+	
+//         $query2->execute($parameters);
+                
+//         $product2 = $query->fetch(PDO::FETCH_ASSOC);
+        
+        
+        
+        
+        
         
           $new = new Product($product["name"],$product["description"],$product["prix"],$product["stock"],$product["category"]);
         $new->setId($product["id"]);
         
         return $new;
     }
-    public function getProductByCategory(string $category){
+    public function getProductByCategory(string $category): array{
       
-  $query = $this->db->prepare('SELECT products.id, products.name ,products.description ,products.prix,products.stock,category.name as category
-    FROM products JOIN category
-    ON products.category_id = category.id
+  $query = $this->db->prepare('SELECT product.id, product.name ,product.description ,product.prix,product.stock,category.name as category
+    FROM product JOIN category
+    ON product.category_id = category.id
     WHERE category.name=:category');
 	$parameters = [
 	     "category"=>$category,

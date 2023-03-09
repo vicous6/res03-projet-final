@@ -7,10 +7,13 @@ foreach($data[0] as $product){
         echo $product->getId();
         echo "</h1>";
         echo "<p>";
-        echo $product->getName();
+        echo "nom : ".$product->getName();
         echo "</p>";
         echo "<p>";
         echo $product->getPrix()." euros";
+        echo "</p>";
+        echo "<p>";
+        echo " desciprtion: ".$product->getDesciption();
         echo "</p>";
         echo "<p>";
         echo $product->getStock();

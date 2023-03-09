@@ -1,9 +1,6 @@
 <?php
 
-// require 'AbstractController.php';
-// require 'managers/UserManager.php';
-
-class PageController extends AbstractController {
+class PageController extends AbstractPublicController {
     
     
 //   private UserManager $manager;
@@ -42,6 +39,11 @@ class PageController extends AbstractController {
         
         
         $this->renderPublic( "contact" , ["page de contact"]); 
+    }
+     public function display404(){
+        
+        
+        $this->renderPublic( "404" , ["page d'erreur"]); 
     }
     
 }

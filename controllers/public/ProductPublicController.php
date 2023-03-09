@@ -3,7 +3,7 @@
 // require 'AbstractController.php';
 // require 'managers/UserManager.php';
 
-class ProductController extends AbstractController {
+class ProductPublicController extends AbstractPublicController {
     
     
   private ProductManager $productManager;
