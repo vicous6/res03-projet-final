@@ -36,14 +36,31 @@ class PageController extends AbstractPublicController {
         $this->renderPublic( "register" , ["page d'inscription"]); 
     }
     public function registerCreateUser(array $post){
+        $userManager = new UserManager();
+        $result =  $userManager->getUserByEmail($post["registerEmail"]);
+        if($result === null ){
+            
+                // si on ne trouve pas un user qui a ce mail : renvoi null , donc verif duplication email ok.
+                 $hash = password_hash($post['registerPassword'], PASSWORD_DEFAULT); // hash le passwor avant de push le user en bdd
+           
+             $newUser = new User( $post['registerUsername'],$post['registerEmail'], $hash, $post['number'], "customer");
+             
+            $userManager->createUser($newUser);
+                echo "user créer";
+                 $this->renderPublic( "login" , ["un user a été créer"]); 
+        }else{
+            echo "le mail existe deja";
+             $this->renderPublic( "register" , ["raté ,l'email existe deja"]); 
+            
+        }
+
+     
         
-      
+        
+        
+        
+         
        
-         $newUser = new User( $post['registerUsername'],$post['registerEmail'], $post['registerPassword'], $post['number'], "customer");
-         $userManager = new UserManager();
-        $userManager->createUser($newUser);
-         echo "createUser";
-        $this->renderPublic( "login" , ["un user a été créer"]); 
     }
     public function contact(){
         
