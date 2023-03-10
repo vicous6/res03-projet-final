@@ -12,6 +12,8 @@
 
 . `/login`
 
+. `/logout`
+
 . `/register`
 
 
