@@ -10,9 +10,9 @@ creer un utilisateur
 fonction de login avec validation back et redirection
 join des categorie sur les products
 ### J'ai rencontrÃ© des difficultÃ©s avec les tÃ¢ches suivantes :
-
+les join sur les tables de liaisons 
 ### Actions prises :
-
+repoussé a la semaine prochaine
 ### Prochaines Ã©tapes:
 finir le routing.
 finir les controllers
