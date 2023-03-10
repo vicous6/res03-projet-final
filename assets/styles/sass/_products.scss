@@ -1,5 +1,7 @@
-#productsPage{
-    width:85%;
+#products{
+    
+  &> section{
+        width:85%;
     margin:0 auto ;
     display:grid;
     grid-template-columns:1fr 1fr 1fr;
@@ -10,5 +12,7 @@
         border:1px solid black;
         
     }
+      
+  }
     
 }

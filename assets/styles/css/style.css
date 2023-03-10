@@ -1,4 +1,4 @@
-#navBarPage {
+#navBar {
   font-size: 1.8rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -6,11 +6,11 @@
   background-color: #0093E9;
   background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
-#navBarPage > ul:nth-of-type(1) {
+#navBar > ul:nth-of-type(1) {
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
 }
-#navBarPage > ul:nth-of-type(1) > li {
+#navBar > ul:nth-of-type(1) > li {
   align-self: center;
   justify-self: center;
   height: 50%;
@@ -19,25 +19,25 @@
   justify-self: center;
   align-self: center;
 }
-#navBarPage > ul:nth-of-type(1) > li > a {
+#navBar > ul:nth-of-type(1) > li > a {
   border: 1px solid black;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   text-align: center;
   padding: 1.2vh 0.2vw;
   text-decoration: none;
 }
-#navBarPage > ul:nth-of-type(2) {
+#navBar > ul:nth-of-type(2) {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-#navBarPage > ul:nth-of-type(2) > li {
+#navBar > ul:nth-of-type(2) > li {
   height: 50%;
   width: 50%;
   align-self: center;
   justify-self: center;
   display: grid;
 }
-#navBarPage > ul:nth-of-type(2) > li > a {
+#navBar > ul:nth-of-type(2) > li > a {
   border: 1px solid black;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   text-align: center;
@@ -45,7 +45,7 @@
   text-decoration: none;
 }
 
-#productsPage {
+#products > section {
   width: 85%;
   margin: 0 auto;
   display: grid;
@@ -53,7 +53,7 @@
   grid-gap: 2rem;
   padding: 2rem;
 }
-#productsPage > article {
+#products > section > article {
   height: 25vh;
   border: 1px solid black;
 }

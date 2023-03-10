@@ -41,7 +41,8 @@ class LoginController extends AbstractPublicController {
                        echo "Le pass et le hash correspondent";
                 //  A FAIRE : gerer les sessions
                        
-                       
+                       $_SESSION["isConnected"] = true;
+                        $_SESSION["role"] = $emailExistence->getRole();
                        
                        
                        
@@ -61,7 +62,7 @@ class LoginController extends AbstractPublicController {
           $this->renderPublic( "login" ,["authentification ratée"]);
    }
    
-   
+   var_dump($_SESSION);
 //   a faire : verifier la coresspondance de $truc et $post 
 // rediriger vers login ou produits suivant resultat
 // appeler le manager de produits pour render les data si render produit

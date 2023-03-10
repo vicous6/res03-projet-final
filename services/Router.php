@@ -47,6 +47,9 @@ class Router {
             if($route[0]=== "aPropos"){
                 $this->pageController->aPropos();
             }
+            if($route[0]=== "logout"){
+                $this->pageController->logout();
+            }
             if($route[0]=== "login"){
                  if (!empty($_POST) && $_POST["formName"]=== "login"){
                     $post = $_POST;

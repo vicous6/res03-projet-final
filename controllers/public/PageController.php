@@ -17,22 +17,22 @@ class PageController extends AbstractPublicController {
     
     public function homepage(){
         
-        
+        var_dump($_SESSION);
         $this->renderPublic( "homepage" , ["page de connexion"]); 
     }
     public function aPropos(){
         
-        
+        var_dump($_SESSION);
         $this->renderPublic( "aPropos" , ["a-propos"]); 
     }
     public function login(){
         
-        
+        var_dump($_SESSION);
         $this->renderPublic( "login" , ["page de login"]); 
     }
     public function register(){
         
-       
+       var_dump($_SESSION);
         $this->renderPublic( "register" , ["page d'inscription"]); 
     }
     public function registerCreateUser(array $post){
@@ -56,6 +56,13 @@ class PageController extends AbstractPublicController {
             
         }
 
+    }
+    public function logout(){
+        
+        session_destroy();
+        
+        var_dump($_SESSION);
+        $this->renderPublic( "homepage" , ["Logout"]); 
     }
     public function contact(){
         
