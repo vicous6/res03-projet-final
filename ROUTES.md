@@ -9,6 +9,7 @@
 . /a-propos
 
 . /login
+. /logout
 
 . /register
 
