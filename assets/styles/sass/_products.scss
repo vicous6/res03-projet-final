@@ -1,0 +1,14 @@
+#productsPage{
+    width:85%;
+    margin:0 auto ;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-gap:2rem;
+    padding:2rem;
+    &> article{
+        height: 25vh;
+        border:1px solid black;
+        
+    }
+    
+}

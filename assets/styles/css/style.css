@@ -1,0 +1,111 @@
+#navBarPage {
+  font-size: 1.8rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 11vh;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+#navBarPage > ul:nth-of-type(1) {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+}
+#navBarPage > ul:nth-of-type(1) > li {
+  align-self: center;
+  justify-self: center;
+  height: 50%;
+  width: 50%;
+  display: grid;
+  justify-self: center;
+  align-self: center;
+}
+#navBarPage > ul:nth-of-type(1) > li > a {
+  border: 1px solid black;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  text-align: center;
+  padding: 1.2vh 0.2vw;
+  text-decoration: none;
+}
+#navBarPage > ul:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#navBarPage > ul:nth-of-type(2) > li {
+  height: 50%;
+  width: 50%;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+}
+#navBarPage > ul:nth-of-type(2) > li > a {
+  border: 1px solid black;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  text-align: center;
+  padding: 1vh 2vw;
+  text-decoration: none;
+}
+
+#productsPage {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 2rem;
+}
+#productsPage > article {
+  height: 25vh;
+  border: 1px solid black;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
