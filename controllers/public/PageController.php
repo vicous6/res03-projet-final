@@ -38,6 +38,8 @@ class PageController extends AbstractPublicController {
     public function registerCreateUser(array $post){
         $userManager = new UserManager();
         $result =  $userManager->getUserByEmail($post["registerEmail"]);
+        
+        // si on ne trouve pas un user qui a ce mail : renvoi null , donc verif duplication email ok.
         if($result === null ){
             
                 // si on ne trouve pas un user qui a ce mail : renvoi null , donc verif duplication email ok.
@@ -54,13 +56,6 @@ class PageController extends AbstractPublicController {
             
         }
 
-     
-        
-        
-        
-        
-         
-       
     }
     public function contact(){
         

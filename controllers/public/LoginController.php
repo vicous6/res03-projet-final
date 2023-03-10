@@ -20,8 +20,8 @@ class LoginController extends AbstractPublicController {
      
      $userManager = new UserManager();
    $emailExistence =   $userManager->getUserByEmail($post["login"]);
-   echo "truc =";
-   var_dump ($emailExistence);
+//   echo "truc =";
+//   var_dump ($emailExistence);
 //   var_dump($truc);
 //   var_dump($post);
    
@@ -39,7 +39,7 @@ class LoginController extends AbstractPublicController {
                     if($isPassOk=== true){
                          
                        echo "Le pass et le hash correspondent";
-                    //   var_dump($isPassOk);
+                //  A FAIRE : gerer les sessions
                        
                        
                        
@@ -49,9 +49,9 @@ class LoginController extends AbstractPublicController {
                        $productManager = new ProductManager()  ;
                        $all=   $productManager->getAllProducts();
                         // $objAll= new Product()
-                        $this->renderPublic( "login" , [$all]); 
+                        $this->renderPublic( "products" , [$all]); 
                     }else{
-                        echo "le mail est bon mais pas le pass";
+                        echo "le mail existe mais pas le pass";
                         $this->renderPublic( "login" , ["raté"]); 
                     }  
       
@@ -67,4 +67,5 @@ class LoginController extends AbstractPublicController {
 // appeler le manager de produits pour render les data si render produit
    
  }   
+ 
 }
