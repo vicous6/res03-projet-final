@@ -1,63 +1,3 @@
-#navBar {
-  font-size: 1.8rem;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  height: 11vh;
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-}
-#navBar > ul:nth-of-type(1) {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
-}
-#navBar > ul:nth-of-type(1) > li {
-  align-self: center;
-  justify-self: center;
-  height: 50%;
-  width: 50%;
-  display: grid;
-  justify-self: center;
-  align-self: center;
-}
-#navBar > ul:nth-of-type(1) > li > a {
-  border: 1px solid black;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-  text-align: center;
-  padding: 1.2vh 0.2vw;
-  text-decoration: none;
-}
-#navBar > ul:nth-of-type(2) {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-#navBar > ul:nth-of-type(2) > li {
-  height: 50%;
-  width: 50%;
-  align-self: center;
-  justify-self: center;
-  display: grid;
-}
-#navBar > ul:nth-of-type(2) > li > a {
-  border: 1px solid black;
-  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-  text-align: center;
-  padding: 1vh 2vw;
-  text-decoration: none;
-}
-
-#products > section {
-  width: 85%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 2rem;
-  padding: 2rem;
-}
-#products > section > article {
-  height: 25vh;
-  border: 1px solid black;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -106,6 +46,300 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+#aPropos {
+  background: url("../../images/atelier-bijoux-atelier-creatif.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#aPropos > main {
+  height: 89vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.4fr 1fr 1fr 1fr;
+}
+#aPropos > main > h1 {
+  font-size: 4rem;
+  grid-row: 2/3;
+  grid-column: 2/4;
+  font-weight: bold;
+}
+#aPropos > main > p {
+  padding: 1rem;
+  border: 1px solid grey;
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.65);
+  grid-row: 3/4;
+  grid-column: 2/4;
+}
+
+footer {
+  height: 10vh;
+  width: 100vw;
+  background: black;
+}
+
+body {
+  height: 100%;
+}
+
+#navBar {
+  width: 100vw;
+  font-size: 1.8rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 11vh;
+  min-height: 120px;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+#navBar > ul:nth-of-type(1) {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+}
+#navBar > ul:nth-of-type(1) > li {
+  align-self: center;
+  justify-self: center;
+  height: 50%;
+  width: 78%;
+  display: grid;
+  justify-self: center;
+  align-self: center;
+}
+#navBar > ul:nth-of-type(1) > li > a {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  text-align: center;
+  padding: 1.8vh 0.2vw;
+  text-decoration: none;
+}
+#navBar > ul:nth-of-type(1) > li > a:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  text-align: center;
+}
+#navBar > ul:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#navBar > ul:nth-of-type(2) > li {
+  height: 50%;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+}
+#navBar > ul:nth-of-type(2) > li > a {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  text-align: center;
+  padding: 1.8vh 2vw;
+  text-decoration: none;
+}
+#navBar > ul:nth-of-type(2) > li > a:hover {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  text-align: center;
+}
+
+#register > section {
+  background: url("https://pro-artista.fr/profiles/breches-bijoux/breches-bijoux-b6bc7-lg.jpeg");
+  background-size: cover;
+  height: 79vh;
+  display: grid;
+}
+#register > section > form {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  justify-self: center;
+  align-self: center;
+  height: 72vh;
+  width: 25vw;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr 0.8fr;
+  background: rgba(255, 255, 255, 0.2);
+}
+#register > section > form > h1 {
+  justify-self: center;
+  align-self: center;
+  font-size: 3rem;
+  width: 78%;
+}
+#register > section > form > fieldset:nth-of-type(1) {
+  justify-self: center;
+  align-self: center;
+  width: 70%;
+  height: 78%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+#register > section > form > fieldset:nth-of-type(1) > label {
+  font-size: 2rem;
+}
+#register > section > form > fieldset:nth-of-type(1) > input {
+  height: 100%;
+  font-size: 1.5rem;
+}
+#register > section > form > fieldset:nth-of-type(2) {
+  justify-self: center;
+  align-self: center;
+  width: 70%;
+  height: 78%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+#register > section > form > fieldset:nth-of-type(2) > label {
+  font-size: 2rem;
+}
+#register > section > form > fieldset:nth-of-type(2) > input {
+  height: 100%;
+  font-size: 1.5rem;
+}
+#register > section > form > fieldset:nth-of-type(3) {
+  justify-self: center;
+  align-self: center;
+  height: 78%;
+  width: 70%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+#register > section > form > fieldset:nth-of-type(3) > label {
+  font-size: 2rem;
+}
+#register > section > form > fieldset:nth-of-type(3) > input {
+  height: 100%;
+  font-size: 1.5rem;
+}
+#register > section > form > fieldset:nth-of-type(4) {
+  justify-self: center;
+  align-self: center;
+  height: 78%;
+  width: 70%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+#register > section > form > fieldset:nth-of-type(4) > label {
+  font-size: 2rem;
+}
+#register > section > form > fieldset:nth-of-type(4) > input {
+  height: 100%;
+  font-size: 1.5rem;
+}
+#register > section > form > fieldset:nth-of-type(5) {
+  justify-self: center;
+  align-self: center;
+  height: 78%;
+  width: 70%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+#register > section > form > fieldset:nth-of-type(5) > label {
+  font-size: 2rem;
+}
+#register > section > form > fieldset:nth-of-type(5) > input {
+  height: 100%;
+  font-size: 1.5rem;
+}
+#register > section > form > fieldset:nth-of-type(6) {
+  justify-self: center;
+  align-self: center;
+  height: 65%;
+  width: 65%;
+}
+#register > section > form > fieldset:nth-of-type(6) > button {
+  width: 100%;
+  height: 100%;
+  font-size: 1.8rem;
+  padding: 0.3rem;
+}
+#register > section > form > p {
+  justify-self: center;
+  align-self: center;
+  font-size: 1.8rem;
+}
+
+#login > section {
+  background: url("https://pro-artista.fr/profiles/breches-bijoux/breches-bijoux-b6bc7-lg.jpeg");
+  background-size: cover;
+  height: 79vh;
+  display: grid;
+}
+#login > section > form {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  justify-self: center;
+  align-self: center;
+  height: 50vh;
+  width: 25vw;
+  display: grid;
+  background: rgba(255, 255, 255, 0.2);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+#login > section > form > h1 {
+  font-size: 3rem;
+  align-self: center;
+  justify-self: center;
+}
+#login > section > form > fieldset:nth-of-type(1) {
+  width: 70%;
+  justify-self: center;
+  font-size: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+#login > section > form > fieldset:nth-of-type(1) > label {
+  padding: 0.3rem;
+}
+#login > section > form > fieldset:nth-of-type(1) > input {
+  height: 80%;
+}
+#login > section > form > fieldset:nth-of-type(2) {
+  width: 70%;
+  justify-self: center;
+  font-size: 2rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+#login > section > form > fieldset:nth-of-type(2) > label {
+  padding: 0.3rem;
+}
+#login > section > form > fieldset:nth-of-type(2) > input {
+  height: 80%;
+}
+#login > section > form > fieldset:nth-of-type(3) {
+  justify-self: center;
+  align-self: center;
+  font-size: 2rem;
+  width: 60%;
+  height: 60%;
+  display: grid;
+}
+#login > section > form > fieldset:nth-of-type(3) > button {
+  justify-self: center;
+  width: 85%;
+  font-size: 1.8rem;
+}
+#login > section > form > p {
+  font-size: 1.6rem;
+  align-self: center;
+  justify-self: center;
+}
+
+#products > section {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 2rem;
+}
+#products > section > article {
+  height: 25vh;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+#products > section > article > figure {
+  height: 22vh;
+  padding: 1rem;
+}
+#products > section > article > figure > img {
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

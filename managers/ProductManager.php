@@ -9,7 +9,8 @@ class ProductManager extends AbstractManager {
         
      $query = $this->db->prepare('SELECT product.id, product.name ,product.description ,product.prix,product.stock,category.name as category
     FROM product JOIN category
-    ON product.category_id = category.id');
+    ON product.category_id = category.id
+    ORDER BY product.id desc');
 	$parameters = [
 	    
 	];

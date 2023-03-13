@@ -21,9 +21,32 @@ class ProductPublicController extends AbstractPublicController {
    
     public function allProducts(){
          $productManager = new ProductManager()  ;
-       $all=   $productManager->getAllProducts();
+         $imageManager = new ImageManager();
+        $images =  $imageManager-> getAllImages();
+       $products=   $productManager->getAllProducts();
+       
+      $tab= [];
+       // echo count($images);
+       // echo count($products);
+       
+       // un tableau qui contient un tableau d'images pour chaque produits
+       foreach($products as $product){
+           
+           $imageTab = ["id"=>$product->getId()];
+           
+           foreach($images as $image){
+           
+            if($image->getProductName() === $product->getName()){
+             
+             array_push($imageTab, $image->getUrl());
+            }
+            
+           }
+        array_push($tab,$imageTab);
+       }
+       
         // $objAll= new Product()
-        $this->renderPublic( "products" , [$all]); 
+        $this->renderPublic( "products" , ["products"=>$products,"images"=>$tab]); 
     }
     public function allProductsByCategory($routeName){
         
