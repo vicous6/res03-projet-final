@@ -1,5 +1,8 @@
 # res03-projet-final
 
+A FAIRE POUR LE DEPLOIEMENT
+-> changer l'url de l'explode dans js
+
 
 # Site vente de bijoux
 
