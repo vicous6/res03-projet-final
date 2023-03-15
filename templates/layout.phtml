@@ -8,17 +8,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&family=Special+Elite&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/styles/css/style.css" />
-<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="/res03-projet-final/assets/styles/css/style.css" />
+<!--<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">-->
 </head>
 <body id= <?php echo $template ?>>
 
 
 <?php 
 
+if($_SESSION){
+    
+    require 'partials/_userHeader.phtml';
+    
+}else{
+    
+   require 'partials/_header.phtml'; 
+}
 
 
-require 'partials/_header.phtml';
 
 require "templates/".$template."/".$template.".phtml";
 
@@ -28,7 +35,7 @@ require 'partials/_footer.phtml';
 
 
 
-<script type="module" src="assets/styles/js/script.js"></script>
+<script type="module" src="/res03-projet-final/script.js"></script>
 
 </body>
 </html>

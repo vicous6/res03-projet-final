@@ -34,7 +34,7 @@ class ProductManager extends AbstractManager {
         
      return $tab;
     }
-    public function getProductById(string $id): Product{
+    public function getProductById(string $id): ?Product{
         // querry 1 join les categories
         $idd = intval( $id,$base = 10);
          $query = $this->db->prepare('SELECT product.id, product.name ,product.description ,product.prix,product.stock,category.name as category
@@ -49,29 +49,15 @@ class ProductManager extends AbstractManager {
         $query->execute($parameters);
                 
         $product = $query->fetch(PDO::FETCH_ASSOC);
-        // querry 2 join la table de liaison materiaux
-//         $query2 = $this->db->prepare('SELECT product.id, product.name ,product.description ,product.prix,product.stock,product_has_material.name as category
-//     FROM product JOIN product_has_material
-//     ON product.category_id = category.id
-//     WHERE product.id = :id
-//     ');
-// 	$parameters = [
-// 	   "id"=>$idd,
-// 	];
-	
-//         $query2->execute($parameters);
-                
-//         $product2 = $query->fetch(PDO::FETCH_ASSOC);
         
-        
-        
-        
-        
-        
+        if($product){
+            
           $new = new Product($product["name"],$product["description"],$product["prix"],$product["stock"],$product["category"]);
         $new->setId($product["id"]);
-        
-        return $new;
+            return $new;
+        }
+        return null ;
+    
     }
     public function getProductByCategory(string $category): array{
       

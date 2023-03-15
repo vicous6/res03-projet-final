@@ -10,6 +10,7 @@ Class Product {
     private int $stock;
     private string $category;
     private array $materials;
+    private array $images;
     
 
 
@@ -24,6 +25,7 @@ Class Product {
          $this->stock = $stock;
           $this->category = $category;
           $this->materials=[];
+          $this->images=[];
           
           
     }
@@ -58,6 +60,14 @@ Class Product {
     public function getCategory() : string
     {
         return $this->category;
+    }
+    public function getImages() : array
+    {
+        return $this->images;
+    }
+    public function getMaterials() : array
+    {
+        return $this->materials;
     }
 
     
@@ -95,7 +105,11 @@ Class Product {
     
     public function addMaterial(string $material){
         
-        array_push($materials, $material);
+        array_push($this->materials, $material);
+    }
+    public function addImages(string $material){
+        
+        array_push($this->images, $material);
     }
     
    

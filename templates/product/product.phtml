@@ -1,9 +1,51 @@
+
+<section>
+    
 <?php
+//  var_dump($_SESSION);
+// var_dump($data["products"]);
 
-
-var_dump($data);
-
-echo "<h1>Product</h1>";
+    echo "<article>";
+    // var_dump($key);
+        echo "<button class ='caroussel'>></button>";
+            //   var_dump($product->getImages());
+            foreach($data["products"]->getImages() as $key2 => $image){
+                
+                
+                echo "<a class= 'image'><figure><img src=".$image." ></figure></a>";
+                
+            }
+         
+      
+      
+ 
+       echo "<ul>";
+       echo "<li>";
+            echo "id : ".$data["products"]->getId();
+            echo "</li>";
+            echo "<li>";
+            echo "nom : ".$data["products"]->getName();
+            echo "</li>";
+            echo "<li>";
+            echo $data["products"]->getPrix()." euros";
+            echo "</li>";
+            echo "<li>";
+            echo " desciprtion: ".$data["products"]->getDesciption();
+            echo "</li>";
+            echo "<li>";
+            echo $data["products"]->getStock();
+            echo "</li>";
+            echo "<li>";
+            echo $data["products"]->getCategory();
+            echo "</li>";
+            echo "<button>Ajouter au Panier</button>";
+        echo "</ul>";
+    echo "</article>";
 
 ?>
 
+    
+    
+    
+    
+</section>

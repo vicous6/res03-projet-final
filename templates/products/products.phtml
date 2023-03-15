@@ -1,42 +1,46 @@
 
 <section>
     
-<?php
- 
-// var_dump($data["images"]);
-foreach($data["products"] as $product){
+<?php //  var_dump($_SESSION);
+// var_dump($data["products"]);
+foreach ($data["products"] as $key => $product) {
     echo "<article>";
-    
-        foreach($data["images"] as $imageData){
-             
-          if($imageData["id"]=== $product->getId()){
-              
-              echo "<figure><img src=".$imageData[0]."></img></figure>";
-          }
-        // echo $imageData["name"];
-        // echo  $product->getName();
- };
-       echo "<ul>";
-            echo "<li>";
-            echo "nom : ".$product->getName();
-            echo "</li>";
-            echo "<li>";
-            echo $product->getPrix()." euros";
-            echo "</li>";
-            echo "<li>";
-            echo " desciprtion: ".$product->getDesciption();
-            echo "</li>";
-            echo "<li>";
-            echo $product->getStock();
-            echo "</li>";
-            echo "<li>";
-            echo $product->getCategory();
-            echo "</li>";
-            echo "<button>Ajouter au Panier</button>";
-        echo "</ul>";
+    // var_dump($key);
+    echo "<button class ='caroussel'>></button>";
+    //   var_dump($product->getImages());
+    foreach ($product->getImages() as $key2 => $image) {
+        echo "<a class=" .
+            $key .
+            " href='produit/" .
+            $product->getId() .
+            "'><figure><img src=" .
+            $image .
+            " ></figure></a>";
+    }
+
+    echo "<ul>";
+    echo "<li>";
+    echo "id : " . $product->getId();
+    echo "</li>";
+    echo "<li>";
+    echo "nom : " . $product->getName();
+    echo "</li>";
+    echo "<li>";
+    echo $product->getPrix() . " euros";
+    echo "</li>";
+    echo "<li>";
+    echo " desciprtion: " . $product->getDesciption();
+    echo "</li>";
+    echo "<li>";
+    echo $product->getStock();
+    echo "</li>";
+    echo "<li>";
+    echo $product->getCategory();
+    echo "</li>";
+    echo "<button>Ajouter au Panier</button>";
+    echo "</ul>";
     echo "</article>";
-}
-?>
+} ?>
 
     
     

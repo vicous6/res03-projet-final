@@ -34,7 +34,7 @@ class Router {
     
 
         if(isset($_GET["path"])){
-            
+            // var_dump($_GET["path"]);
             $route = explode("/",$_GET["path"]);
             
             // Pages publics gerer par -> PageController
@@ -46,6 +46,9 @@ class Router {
             }
             if($route[0]=== "aPropos"){
                 $this->pageController->aPropos();
+            }
+            if($route[0]=== "monPanier"){
+                $this->pageController->monPanier();
             }
             if($route[0]=== "logout"){
                 $this->pageController->logout();
@@ -92,10 +95,9 @@ class Router {
             if($route[0]=== "produit"){
                 
                 // je n'ai que /produit
-                if(!isset($route[1])){
+                if(isset($route[1])){ // exemple produit/11
+                
                     
-                    $this->productPublicController->allProducts();
-                }else if(isset($route[1])){ // exemple produit/11
                     
                     $this->productPublicController->ProductById($route[1]);
                     
@@ -112,7 +114,7 @@ class Router {
                 
                 if($route[1]=== "categories" && !isset($route[2])){ // exemple admin/categories
                     
-                    // category controller ->getAllCategories()
+                    $this->categoryController->allCategories();
                 }else
                 if($route[1]=== "categorie" && $route[2] === "ajouter"){ //exemple admin/categorie/ajouter
              
@@ -132,7 +134,7 @@ class Router {
                 }
                 //////////////////////////////UserController////////////////////////////
                 
-                if($route[1]==="utilisateurs"){
+                if($route[1]==="utilisateurs"){  //exemple admin/utilisateurs
                     
                    
                     // $this->userController->getAllUsers();
