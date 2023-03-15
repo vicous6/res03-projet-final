@@ -25,6 +25,11 @@ class PageController extends AbstractPublicController {
         // var_dump($_SESSION);
         $this->renderPublic( "aPropos" , ["a-propos"]); 
     }
+    public function monPanier(){
+        
+        // var_dump($_SESSION);
+        $this->renderPublic( "monPanier" , [""]); 
+    }
     public function login(){
         
         // var_dump($_SESSION);
@@ -48,10 +53,10 @@ class PageController extends AbstractPublicController {
              $newUser = new User( $post['registerUsername'],$post['registerEmail'], $hash, $post['number'], "customer");
              
             $userManager->createUser($newUser);
-                echo "user créer";
-                 $this->renderPublic( "login" , ["un user a été créer"]); 
+                // echo "user créer";
+                   header('Location: login');
         }else{
-            echo "le mail existe deja";
+            // echo "le mail existe deja";
              $this->renderPublic( "register" , ["raté ,l'email existe deja"]); 
             
         }
@@ -62,7 +67,7 @@ class PageController extends AbstractPublicController {
         session_destroy();
         
         var_dump($_SESSION);
-        $this->renderPublic( "homepage" , ["Logout"]); 
+           header('Location: accueil');
     }
     public function contact(){
         

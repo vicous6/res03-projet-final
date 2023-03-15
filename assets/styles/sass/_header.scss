@@ -1,11 +1,7 @@
 // liste de box shadow: https://getcssscan.com/css-box-shadow-examples
-body{
-    // enleve le scroll
-    height: 100%; 
-    // overflow: hidden
-}
+
 #navBar{
-    width:100vw;
+    width:100%;
     font-size:1.8rem;
     display:grid;
     grid-template-columns:2fr 1fr;
@@ -45,7 +41,7 @@ background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     }
     & > ul:nth-of-type(2){
         display:grid;
-        grid-template-columns:1fr 1fr ;
+        grid-template-columns:1fr 3fr 3fr  ;
     //     height:80%;
     //   width:80%;
          & > li{

@@ -10,10 +10,6 @@ class OrderController extends AbstractAdminController {
     {
         
         
-        // $this->productManager= new ProductManager()  ;
-    
-       
-        
     }
     
 }

@@ -43,36 +43,18 @@ class LoginController extends AbstractPublicController {
                        
                        $_SESSION["isConnected"] = true;
                        $_SESSION["role"] = $emailExistence->getRole();
+                        $_SESSION["username"] = $emailExistence->getUsername();
                        
+                    //   si l'utilisateur qui se connecte est l'admin
+                       if(isset($_SESSION)&& $_SESSION["role"]=== "admin"){
+                           
+                           header('Location: admin/categories'); 
+                       }else{
+                          header('Location: produits'); 
+                       }
                        
-                       
-                    //   recupère les data produits pour les afficher
-                      $productManager = new ProductManager()  ;
-                                                  $imageManager = new ImageManager();
-                                                  $images =  $imageManager-> getAllImages();
-                                                  $products=   $productManager->getAllProducts();
-                        // $objAll= new Product()
-                        // sert a recuperer toutes infos pour afficher les produits
-                                                                     $tab= [];
-                                                   // echo count($images);
-                                                   // echo count($products);
-                                                   
-                                                   // un tableau qui contient un tableau d'images pour chaque produits
-                                                   foreach($products as $product){
-                                                       
-                                                       $imageTab = ["id"=>$product->getId()];
-                                                       
-                                                       foreach($images as $image){
-                                                       
-                                                        if($image->getProductName() === $product->getName()){
-                                                         
-                                                         array_push($imageTab, $image->getUrl());
-                                                        }
-                                                        
-                                                       }
-                                                    array_push($tab,$imageTab);
-                                                   }
-                        $this->renderPublic( "products" , ["products"=>$products,"images"=>$tab]); 
+                   
+                   
                     }else{
                         echo "le mail existe mais pas le pass";
                         $this->renderPublic( "login" , ["raté"]); 

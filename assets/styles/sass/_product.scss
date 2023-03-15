@@ -1,0 +1,15 @@
+#product {
+    
+    &>section{
+        height:79vh;
+        padding:3rem;
+        display:grid;
+        &>article{
+            justify-self:center;
+            align-self:center;
+            height:80%;
+            width:80%;
+            
+        }
+    }
+}

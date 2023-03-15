@@ -15,10 +15,11 @@
             grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1.2fr 0.8fr;
             background:rgb(255,255,255,0.2);
            &>h1{
-                 justify-self:center;
+                //  justify-self:center;
                align-self:center;
                 font-size: 3rem;
-                width:78%;
+                width:100%;
+                text-align:center;
            }
            &>fieldset:nth-of-type(1){
                justify-self:center;

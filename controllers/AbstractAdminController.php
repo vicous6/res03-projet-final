@@ -8,7 +8,7 @@ public function renderAdmin(string $view, array $values) : void{
     
     $template= $view;
     $data=$values;
-    require 'templates/admin-layout.phtml';
+    require 'templates/admin/layoutAdmin.phtml';
 }
 
 
