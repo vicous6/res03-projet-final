@@ -39,7 +39,7 @@ class ImageManager extends AbstractManager {
           return $tab;   
              
          }
-    
+    // recupère toutes images d'un produit
     public function getImagesById($id):array{
         
          $idd = intval( $id,$base = 10);
@@ -80,7 +80,26 @@ class ImageManager extends AbstractManager {
              
          }
     
-    
+    public function deleteImageById($id):void{
+        
+         $query= $this->db->prepare("DELETE FROM images WHERE id=:value");
+        $parameters = [
+        'value' => $id,
+        ];
+        $query->execute($parameters);
+        $allProducts = $query->fetch(PDO::FETCH_ASSOC);
+    }
+    public function createImage($post){
+         $query = $this->db->prepare('INSERT INTO images (id, description, url, product_id) VALUES (NULL, :description, :url , :product_id )');
+var_dump($post);
+
+    	$parameters = [
+	    "description"=>$post["name"],
+	    "url"=>$post["url"],
+	    "product_id"=>$post["produit"]
+	];
+$query->execute($parameters);
+    }
     
 }
         

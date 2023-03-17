@@ -1,7 +1,8 @@
 
 <section>
-    
-<?php //  var_dump($_SESSION);
+   
+<?php 
+
 // var_dump($data["products"]);
 foreach ($data["products"] as $key => $product) {
     echo "<article>";
@@ -9,34 +10,24 @@ foreach ($data["products"] as $key => $product) {
     echo "<button class ='caroussel'>></button>";
     //   var_dump($product->getImages());
     foreach ($product->getImages() as $key2 => $image) {
-        echo "<a class=" .
-            $key .
-            " href='produit/" .
-            $product->getId() .
-            "'><figure><img src=" .
-            $image .
-            " ></figure></a>";
+        
+        echo "<a class=" .$key." href='produit/".$product->getId()."'><figure><img src='/res03-projet-final/".$image."'></figure></a>";
     }
 
     echo "<ul>";
-    echo "<li>";
-    echo "id : " . $product->getId();
-    echo "</li>";
-    echo "<li>";
-    echo "nom : " . $product->getName();
-    echo "</li>";
-    echo "<li>";
-    echo $product->getPrix() . " euros";
-    echo "</li>";
-    echo "<li>";
-    echo " desciprtion: " . $product->getDesciption();
-    echo "</li>";
-    echo "<li>";
-    echo $product->getStock();
-    echo "</li>";
-    echo "<li>";
-    echo $product->getCategory();
-    echo "</li>";
+           
+            echo "<li>id: " . $product->getId()."</li>";
+            echo "<li> nom: " . $product->getName()."</li>";
+            echo "<li>".$product->getCategory()."</li>";
+            echo "<li>desciprtion: " . $product->getDesciption()."</li>";
+            echo "<li>Prix: ".$product->getPrix() ." euros</li>";
+            echo "<li>".$product->getStock()."</li>";
+            
+            foreach ($product->getMaterials() as $key3 => $material) {
+        
+                  echo "<li> Materiau(x): ".$material."</li>";
+             }
+          
     echo "<button>Ajouter au Panier</button>";
     echo "</ul>";
     echo "</article>";

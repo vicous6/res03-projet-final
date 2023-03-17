@@ -41,6 +41,21 @@ class PageController extends AbstractPublicController {
         $this->renderPublic( "register" , ["page d'inscription"]); 
     }
     public function registerCreateUser(array $post){
+        // verif back du formulaire (champ vide)
+        var_dump($post);
+         if(isset($post["registerUsername"])&&!empty($post["registerUsername"])
+     && isset($post["registerEmail"]) && !empty($post["registerEmail"])
+     && isset($post["registerPassword"]) && !empty($post["registerPassword"])
+     && isset($post["registerConfirmPwd"]) && !empty($post["registerConfirmPwd"])
+     && isset($post["number"]) && !empty($post["number"])
+     && isset($post["formName"]) && !empty($post["formName"])
+     && $post["registerPassword"]=== $post["registerConfirmPwd"]
+     && $post["formName"]==="register"
+     
+     
+     ){
+         
+         
         $userManager = new UserManager();
         $result =  $userManager->getUserByEmail($post["registerEmail"]);
         
@@ -60,7 +75,9 @@ class PageController extends AbstractPublicController {
              $this->renderPublic( "register" , ["raté ,l'email existe deja"]); 
             
         }
-
+    }else{
+          $this->renderPublic( "register" , ["raté un des champs est vide"]); 
+    }
     }
     public function logout(){
         

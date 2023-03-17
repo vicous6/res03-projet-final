@@ -7,26 +7,23 @@ class MaterialManager extends AbstractManager {
 
     public function getAllMaterials(): array{
         
-     $query = $this->db->prepare('SELECT product.id, product.name ,product.description ,product.prix,product.stock,category.name as category
-    FROM product JOIN category
-    ON product.category_id = category.id
-    ORDER BY product.id desc');
+     $query = $this->db->prepare('SELECT * FROM material');
 	$parameters = [
 	    
 	];
 	
         $query->execute($parameters);
                 
-        $allProducts = $query->fetchAll(PDO::FETCH_ASSOC);
+        $materials = $query->fetchAll(PDO::FETCH_ASSOC);
         
         // $obj = new Product();
         $tab= [];
-        foreach($allProducts as $product){
+        foreach($materials as $material){
             
             
             
-            $new = new Product($product["name"],$product["description"],$product["prix"],$product["stock"],$product["category"]);
-        $new->setId($product["id"]);
+            $new = new Material($material["name"]);
+        $new->setId($material["id"]);
         
         array_push($tab, $new);
         
@@ -36,6 +33,82 @@ class MaterialManager extends AbstractManager {
     }
     
     
+    public function createMaterial(array $post){
+         $query = $this->db->prepare('INSERT INTO material VALUES (null, :name)');
+var_dump($post);
+    	$parameters = [
+	    "name"=>$post["name"]
+	];
+$query->execute($parameters);
+$material = $query->fetch(PDO::FETCH_ASSOC);
+
+
+return $material;
+        
+    }
+    public function deleteMaterialById(string $id){
+        
+          $query= $this->db->prepare("DELETE FROM material WHERE id=:value");
+        $parameters = [
+        'value' => $id,
+        ];
+        $query->execute($parameters);
+    }
+    public function modifyMaterial(array $post){
+         $query= $this->db->prepare("UPDATE material SET name =:name WHERE material.id = :id");
+        $parameters = [
+        'id' =>$post["id"],
+        'name' =>$post["name"]
+        ];
+        $query->execute($parameters);
+        
+    }
+    public function getMaterialById(string $id){
+         $query = $this->db->prepare('SELECT * FROM material WHERE id= :id');
+	$parameters = [
+	    "id"=>$id
+	];
+	
+        $query->execute($parameters);
+                
+        $material = $query->fetch(PDO::FETCH_ASSOC);
+        
+        $new = new Material($material["name"]);
+        $new->setId($material['id']);
+        return $new;
+        
+    }
+    
+    // joiture produits /materiaux
+    public function getAllMaterialsByProductId($id){
+        
+        $query= $this->db->prepare(
+            "SELECT material.* from product_has_material 
+             JOIN material ON product_has_material.material_id=material.id
+             JOIN product ON product_has_material.product_id=product.id WHERE product.id = :id
+            ");
+        $parameters = [
+        'id' =>$id,
+        
+        ];
+        $query->execute($parameters);
+        
+          $materials = $query->fetchAll(PDO::FETCH_ASSOC);
+        //   var_dump($materials);
+          
+          $tab= [];
+        foreach($materials as $material){
+            
+            
+            
+            $new = new Material($material["name"]);
+            $new->setId($material["id"]);
+            // var_dump($new);
+            array_push($tab, $new);
+        
+        }
+        return $tab;
+    }
     
     
     

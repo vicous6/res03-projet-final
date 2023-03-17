@@ -1,0 +1,45 @@
+<?php 
+// var_dump($data);
+
+?>
+<main class=" justify-content-center">
+    <h1>Gestion des Utilisateurs</h1>
+<table id = "usersTable" class="table table-striped col-lg-6 table-bordered table-striped text-center">
+                 <tr>
+                     <th>id </th>
+                      <th>Identifiant </th>
+                     
+                     
+                        <th>Email </th>
+                        <th>Telephone </th>
+                        
+                        <th>addresse de livraison</th>
+                        <th>addresse de facturation</th>
+                        <th>Supprimer</th>
+                 </tr>
+                 <?php 
+
+    
+                 foreach($data["users"]as $user){
+                     
+                     echo "<tr>";
+                            echo "<td  scope='row'>".$user->getId()."</td>";
+                            echo "<td>".$user->getUsername()."</td>";
+                            echo "<td>".$user->getEmail()."</td>";
+                            echo "<td>".$user->getNumber()."</td>";
+                            echo "<td>".$user->getFacturation()."</td>";
+                            echo "<td>".$user->getLivraison()."</td>";
+                            echo "<td> <a href='/res03-projet-final/admin/utilisateur/".$user->getId()."/supprimer'>Supprimer</a></td>";
+                            
+                     echo "</tr>";
+                     
+                     
+                     
+                 }
+                 
+                 
+                 ?>
+                 
+                 
+             </table>
+             </main>

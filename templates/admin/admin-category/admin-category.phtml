@@ -1,3 +1,47 @@
 <?php 
-var_dump($data);
+// var_dump($data);
+
 ?>
+<main class=" justify-content-center">
+      <h1>Gestion des Categories</h1>
+<table id = "categoriesTable" class="table table-striped col-lg-6 table-bordered table-striped text-center">
+  
+    <?php echo " <a href='/res03-projet-final/admin/categorie/ajouter'><button>Créer une Categorie</button></a>"; ?>
+              <thead>
+                     <tr >
+                     <th>id </th>
+                      <th>name </th>
+                     
+                     
+                        
+                        <th>Detail </th>
+                        
+                        <th>Modifier </th>
+                        <th>Supprimer </th>
+                 </tr>
+                 </thead>
+                 <tbody>
+                 <?php 
+                   
+
+                 foreach($data["categories"]as $category){
+                     
+                     echo "<tr>";
+                            echo "<td scope='row'>".$category->getId()."</td>";
+                            echo "<td>".$category->getTitle()."</td>";
+                            echo "<td> <a href='/res03-projet-final/admin/categories'>X</a></td>";
+                            echo "<td> <a href='/res03-projet-final/admin/categorie/".$category->getId()."/modifier'>Modifier</a></td>";
+                            echo "<td> <a href='/res03-projet-final/admin/categorie/".$category->getId()."/supprimer'>Supprimer</a></td>";
+                     echo "</tr>";
+                     
+                     
+                     
+                 }
+                 
+                 
+                 ?>
+                 </tbody>
+                 
+             </table>
+             
+             </main>

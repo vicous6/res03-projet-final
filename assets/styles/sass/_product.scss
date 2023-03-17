@@ -9,7 +9,15 @@
             align-self:center;
             height:80%;
             width:80%;
-            
+            &>a{
+                &>figure{
+                    img{
+                        width:30vw;
+                        // max-height:50vh;
+                    }
+                }
+            }
         }
     }
+    
 }

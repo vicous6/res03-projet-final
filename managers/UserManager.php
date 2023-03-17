@@ -17,6 +17,36 @@ public function createUser(User $user): void{
 	
 $query->execute($parameters);
     }
+    
+    
+public function getAllUsers():array{
+    	
+    	  $query = $this->db->prepare('SELECT * FROM user');
+	$parameters = [
+	    
+	];
+$query->execute($parameters);
+$users = $query->fetchAll(PDO::FETCH_ASSOC);
+// var_dump($users);
+ $tab= [];
+        foreach($users as $user){
+            
+            
+            
+            $new = new User($user["username"],
+            $user["email"],
+            $user["password"],
+            $user["phone_number"]
+            ,$user["role"]);
+        $new->setId($user["id"]);
+        
+        array_push($tab, $new);
+        
+        }
+        return $tab;
+    }
+    
+    
 public function getUserByEmail(string $email) : ?User
     {
         
@@ -35,4 +65,17 @@ $theUser = new User ($user["username"],$user["email"],$user["password"],$user["p
 return $theUser;
 
         }
+
+public function deleteUserById(string $id): void{
+    
+    
+        
+         $query= $this->db->prepare("DELETE FROM user WHERE id=:value");
+        $parameters = [
+        'value' => $id,
+        ];
+        $query->execute($parameters);
+        
+        
+    }
 }

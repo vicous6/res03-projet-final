@@ -26,5 +26,49 @@ class CategoryController extends AbstractAdminController {
        
         
     }
+    public function addCategory($post){
+       
+        var_dump($post);
+        if(isset($post)&&!empty($post)){
+            
+             $categoryManager = new CategoryManager();
+        $categoryManager->createCategory($post);
+        
+            header('Location: /res03-projet-final/admin/categories');
+        }else{
+            
+            $this->renderAdmin( "admin-category-create" , []); 
+        }
+    }
+    
+    
+    public function updateCategory($post){
+    // var_dump($post); 
+        $categoryManager = new CategoryManager();
+        
+        
+        if(isset($post)&&!empty($post)){
+            
+        $categoryManager->modifyCategory($post);
+        
+        header('Location: /res03-projet-final/admin/categories');
+        
+        }else{
+             $route = explode("/",$_GET["path"]);
+             $toDisplay = $categoryManager->getCategoryById($route[2]);
+             
+             $this->renderAdmin( "admin-category-update" , ["toDisplay"=>$toDisplay]); 
+        }
+    }
+    
+    
+    public function deleteCategory($id){
+        $categoryManager = new CategoryManager();
+     
+             $action = $categoryManager->deleteCategoryById($id);
+      
+             header('Location: /res03-projet-final/admin/categories');
+             
+    }
     
 }

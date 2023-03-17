@@ -1,0 +1,50 @@
+<?php 
+// var_dump($data);
+
+?>
+<main class="adminImage">
+    
+<table id = "imageTable" class="table table-striped col-lg-6 table-bordered table-striped text-center">
+    <h1>Gestion des Images</h1>
+    <?php echo " <a href='/res03-projet-final/admin/image/ajouter'><button>Créer une Image</button></a>"; ?>
+              <thead>
+                     <tr >
+                     <th>id </th>
+                      <th>description </th>
+                      <th>url </th>
+                      <th>nom du produit </th>
+                     
+                     
+                        
+                        <th>Detail </th>
+                        
+                       
+                        <th>Supprimer </th>
+                 </tr>
+                 </thead>
+                 <tbody>
+                 <?php 
+                   
+
+                 foreach($data["images"]as $image){
+                     
+                     echo "<tr>";
+                            echo "<td scope='row'>".$image->getId()."</td>";
+                            echo "<td>".$image->getDescription()."</td>";
+                            echo "<td>".$image->getUrl()."</td>";
+                            echo "<td>".$image->getProductName()."</td>";
+                            echo "<td><figure> <img src ='/res03-projet-final/".$image->getUrl()."'></figure></td>";
+                            echo "<td> <a href='/res03-projet-final/admin/image/".$image->getId()."/supprimer'>Supprimer</a></td>";
+                     echo "</tr>";
+                     
+                     
+                     
+                 }
+                 
+                 
+                 ?>
+                 </tbody>
+                 
+             </table>
+             
+             </main>

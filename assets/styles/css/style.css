@@ -398,6 +398,9 @@ body {
   height: 80%;
   width: 80%;
 }
+#product > section > article > a > figure img {
+  width: 30vw;
+}
 
 #products > section {
   width: 85%;
@@ -419,6 +422,13 @@ body {
 }
 #products > section > article > a > figure > img {
   height: 100%;
+}
+#imageTable img {
+  width: 180px;
+}
+
+.adminProduits img {
+  width: 130px;
 }
 
 /*# sourceMappingURL=style.css.map */

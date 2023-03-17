@@ -16,20 +16,14 @@ class LoginController extends AbstractPublicController {
     }
  
  public function auth($post){
-     
-     
+    //  var_dump($post);
+    //  verification back du form (les champ sont il vide)
+     if(isset($post["login"])&&!empty($post["login"])
+     && isset($post["password"]) && !empty($post["password"])){
+         
+         
      $userManager = new UserManager();
    $emailExistence =   $userManager->getUserByEmail($post["login"]);
-//   echo "truc =";
-//   var_dump ($emailExistence);
-//   var_dump($truc);
-//   var_dump($post);
-   
-//   echo $post["password"];
-
-    
-
-
 
     // si l'email n'existe pas -> on verifie si les pass correspondent
    if($emailExistence !== null){
@@ -65,11 +59,11 @@ class LoginController extends AbstractPublicController {
          echo "Ce mail n'existe pas";
           $this->renderPublic( "login" ,["authentification ratée"]);
    }
+     }else{
+         
+          $this->renderPublic( "login" ,["un champ n'est pas rempli"]);
+     }
    
-   var_dump($_SESSION);
-//   a faire : verifier la coresspondance de $truc et $post 
-// rediriger vers login ou produits suivant resultat
-// appeler le manager de produits pour render les data si render produit
    
  }   
  

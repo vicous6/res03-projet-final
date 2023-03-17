@@ -89,4 +89,23 @@ class ProductManager extends AbstractManager {
         
      return $tab;
     }
+    public function createProduct(array $post):void{
+        var_dump($post);
+         $query = $this->db->prepare('INSERT INTO product (id, name, description, prix, stock, category_id) VALUES (NULL, :name,:description,:prix,:stock,:category_id)');
+
+    	$parameters = [
+	    "name"=>$post["name"],
+	    "description"=>$post["description"],
+	    "prix"=>$post["prix"],
+	    "stock"=>$post["stock"],
+	    
+	    "category_id"=>$post["category_id"],
+	    
+	];
+        $query->execute($parameters);
+        $material = $query->fetch(PDO::FETCH_ASSOC);
+
+        
+        
+    }
 }

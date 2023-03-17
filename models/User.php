@@ -7,14 +7,14 @@ Class User {
     private string $username;
     private string $email;
     private string $password;
-    private string $number;
+    private int $number;
     private string $role;
-    private array $facturation;
-    private array $livraison;
+    private ?string $facturation;
+    private ?string $livraison;
 
 
     //public constructor
-    public function __construct(string $username, string $email, string $password, string $number, string $role)
+    public function __construct(string $username, string $email, string $password, int $number, string $role)
     {
         $this->id = null;
         $this->username = $username;
@@ -22,8 +22,8 @@ Class User {
         $this->password = $password;
         $this->number=$number;
         $this->role=$role;
-        $this->facturation=[];
-        $this->livraison=[];
+        $this->facturation= null;
+        $this->livraison=null;
         
     }
 
@@ -46,7 +46,7 @@ Class User {
         return $this->password;
     }
     
-    public function getNumber() : string
+    public function getNumber() : int
     {
         return $this->number;
     }
@@ -54,11 +54,11 @@ Class User {
     {
         return $this->role;
     }
-    public function getFacturation() : array
+    public function getFacturation() : ?string
     {
         return $this->facturation;
     }
-    public function getLivraison() : array
+    public function getLivraison() : ?string
     {
         return $this->livraison;
     }
@@ -91,11 +91,11 @@ Class User {
     {
         $this->role = $role;
     }
-    public function setFacturation(array $facturation) : void
+    public function setFacturation(string $facturation) : void
     {
         $this->facturation = $facturation;
     }
-    public function setLivraison(array $livraison) : void
+    public function setLivraison(string $livraison) : void
     {
         $this->livraison = $livraison;
     }

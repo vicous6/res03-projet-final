@@ -4,7 +4,7 @@ class Category {
     //private attribute
     private ?int $id;
     private string $title;
-    private array $salon;
+    
 
 
 
@@ -13,7 +13,7 @@ public function __construct(string $title)
 {
     $this->id = null;
     $this->title = $title;
-    $this->salon = [];
+    
 }
 
     //public getter
@@ -28,11 +28,7 @@ public function __construct(string $title)
         return $this->title;
     }
     
-    public function getSalon() : array
-    {
-        return $this->salon;
-    }
-
+  
     
     
     //public setter
@@ -47,18 +43,6 @@ public function __construct(string $title)
         $this->title = $title;
     }
     
-    public function setSalon(array $salon) : void
-    {
-        $this->salon = $salon;
-    }
-    
-    
-    public function addSalonInCategories(Salon $salon) : void
-    {
-        
-        array_push($this->salon, $salon);
-        
-    }
 }
 
 ?>
