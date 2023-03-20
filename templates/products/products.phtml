@@ -11,22 +11,27 @@ foreach ($data["products"] as $key => $product) {
     //   var_dump($product->getImages());
     foreach ($product->getImages() as $key2 => $image) {
         
-        echo "<a class=" .$key." href='produit/".$product->getId()."'><figure><img src='/res03-projet-final/".$image."'></figure></a>";
+        echo "<a class=" .$key." href='produit/".$product->getId()."'>
+                <figure>
+                
+                    <img src='/res03-projet-final/".$image."'>
+                
+                </figure></a>";
     }
 
     echo "<ul>";
            
-            echo "<li>id: " . $product->getId()."</li>";
+            // echo "<li>id: " . $product->getId()."</li>";
             echo "<li> nom: " . $product->getName()."</li>";
             echo "<li>".$product->getCategory()."</li>";
             echo "<li>desciprtion: " . $product->getDesciption()."</li>";
             echo "<li>Prix: ".$product->getPrix() ." euros</li>";
-            echo "<li>".$product->getStock()."</li>";
+            // echo "<li>".$product->getStock()."</li>";
             
-            foreach ($product->getMaterials() as $key3 => $material) {
+            // foreach ($product->getMaterials() as $key3 => $material) {
         
-                  echo "<li> Materiau(x): ".$material."</li>";
-             }
+            //       echo "<li> Materiau(x): ".$material."</li>";
+            //  }
           
     echo "<button>Ajouter au Panier</button>";
     echo "</ul>";

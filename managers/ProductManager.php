@@ -89,7 +89,7 @@ class ProductManager extends AbstractManager {
         
      return $tab;
     }
-    public function createProduct(array $post):void{
+    public function createProduct(array $post):?int{
         var_dump($post);
          $query = $this->db->prepare('INSERT INTO product (id, name, description, prix, stock, category_id) VALUES (NULL, :name,:description,:prix,:stock,:category_id)');
 
@@ -103,9 +103,36 @@ class ProductManager extends AbstractManager {
 	    
 	];
         $query->execute($parameters);
+        $lastId = $this->db->lastInsertId();
         $material = $query->fetch(PDO::FETCH_ASSOC);
 
         
+        // var_dump($lastId);
+        return $lastId;
+    }
+    public function deleteProductById($id){
+        // querry 1:delete les images associés au produit
+        // querry 2:delete les materiaux associés au produit 
+        // querry 3:delete le product
+        // (tous ca pour eviter les rreur sql type : integrity violation)
+         $query= $this->db->prepare("DELETE FROM images WHERE product_id=:value");
+        $parameters = [
+        'value' => $id,
+        ];
+        $query->execute($parameters);
         
+        $query= $this->db->prepare("DELETE FROM product_has_material WHERE product_id=:value");
+        $parameters = [
+        'value' => $id,
+        ];
+        $query->execute($parameters);
+        
+        
+         $query= $this->db->prepare("DELETE FROM product WHERE id=:value");
+        $parameters = [
+        'value' => $id,
+        ];
+        $query->execute($parameters);
+       
     }
 }

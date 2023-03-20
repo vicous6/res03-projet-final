@@ -254,7 +254,7 @@ class Router {
                 else 
                 if($route[1]==="produit"&& $route[3]==="supprimer"){//exemple admin/produit/2/supprimer
                     
-                    //  $this->imageController->deleteImage($route[2]);    
+                     $this->productAdminController->deleteProduct($route[2]);    
                 }
                 
             }

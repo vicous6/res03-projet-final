@@ -110,6 +110,46 @@ return $material;
         return $tab;
     }
     
-    
+    public function createMaterialOnProduct($post,$productIdInDb){
+        
+        if(!empty($post["materiaux"])){
+            
+            $query = $this->db->prepare('INSERT INTO product_has_material VALUES (:id, :name)');
+
+            $parameters = [
+                "id"=>$productIdInDb,
+        	    "name"=>$post["materiaux"]
+        	];
+        	
+            $query->execute($parameters);
+            
+        }
+        if(!empty($post["materiaux2"])){
+            
+            $query = $this->db->prepare('INSERT INTO product_has_material VALUES (:id, :name)');
+
+            $parameters = [
+                "id"=>$productIdInDb,
+        	    "name"=>$post["materiaux2"]
+        	];
+        	
+            $query->execute($parameters);
+            
+            
+        }
+        if(!empty($post["materiaux3"])){
+            
+            $query = $this->db->prepare('INSERT INTO product_has_material VALUES (:id, :name)');
+
+            $parameters = [
+                "id"=>$productIdInDb,
+        	    "name"=>$post["materiaux3"]
+        	];
+        	
+            $query->execute($parameters);
+            
+        }
+        
+    }
     
 }

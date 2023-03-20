@@ -70,10 +70,11 @@ class ProductAdminController extends AbstractAdminController {
              $materielManager = new MaterialManager();
              $categoryManager = new CategoryManager();
              
-             $productManager->createProduct($post);
-             $materialManager->createMaterialOnProduct($post);
+             $productIdInDb = $productManager->createProduct($post);
              
-             die;
+             $materielManager->createMaterialOnProduct($post,$productIdInDb);
+             
+             
              
              
              
@@ -92,6 +93,13 @@ class ProductAdminController extends AbstractAdminController {
              $data2 = $materialManager->getAllMaterials();
             $this->renderAdmin( "admin-product-create" , ["categories"=>$data, "materiaux"=>$data2]); 
         }
+    }
+    public function deleteProduct(string $id){
+     
+     $productManager = new ProductManager();
+     $productManager->deleteProductById($id);
+      
+       header('Location: /res03-projet-final/admin/produits');
     }
     
 }

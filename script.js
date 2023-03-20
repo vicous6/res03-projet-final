@@ -1,12 +1,12 @@
 import { create } from "/res03-projet-final/assets/js/create-user.js";
 import { caroussel } from "/res03-projet-final/assets/js/caroussel.js";
 import { carousselProduct } from "/res03-projet-final/assets/js/carousselProduct.js";
-
+import { initCart } from "./cart/cart.js";
 
 window.addEventListener("DOMContentLoaded",function(){
     
 //   console.log(window.location.href)
-    
+    initCart();
     // creer la route vers create User
  
  
