@@ -26,9 +26,66 @@ class PageController extends AbstractPublicController {
         $this->renderPublic( "aPropos" , ["a-propos"]); 
     }
     public function monPanier(){
-        
         // var_dump($_SESSION);
-        $this->renderPublic( "monPanier" , [""]); 
+         $cart=[]; 
+         $imageManager = new ImageManager();
+         $images =  $imageManager-> getAllImages();
+        //  var_dump($images);
+         
+        if(isset($_SESSION["cart"]) && !empty($_SESSION["cart"])
+        
+        ){ foreach($_SESSION['cart']as $id){
+         
+         if($id !== ""){
+              $productManager = new ProductManager();
+           $result = $productManager->getProductById($id);
+           
+           foreach($images as $image ){
+              
+               if($image->getProductName() === $result->getName()){
+                   
+                  $result->addImages($image->getUrl());
+                   
+                   
+               }
+           }
+           
+           
+           
+           array_push($cart, $result);
+         }
+        }
+        }
+        // var_dump($_SESSION);
+        $this->renderPublic( "monPanier" , ["cart"=>$cart]); 
+    }
+    
+    public function addPanier($id){
+        // var_dump($_SESSION);
+
+
+         $_SESSION["cart"][]=$id;
+         
+   
+        
+    }
+    public function deleteFromCart($id){
+        
+        // var_dump($_SESSION["cart"]);
+        foreach($_SESSION["cart"] as $index=>$produit){
+            
+            if($produit === $id){
+                
+               $_SESSION["cart"][$index]="";
+                
+                
+                header('Location: /res03-projet-final/monPanier');
+                die;
+            }
+            
+        }
+        
+        
     }
     public function login(){
         

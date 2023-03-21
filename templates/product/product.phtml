@@ -38,7 +38,7 @@
             echo "<li>";
             echo $data["products"]->getCategory();
             echo "</li>";
-            echo "<button>Ajouter au Panier</button>";
+            echo "<button product=".$data["products"]->getId()." class=paniers>Ajouter au Panier</button>";
         echo "</ul>";
     echo "</article>";
 

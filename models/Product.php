@@ -30,7 +30,9 @@ Class Product {
           
     }
     
-    
+    public function test() {
+		return  get_object_vars($this);
+	}
     
     
      public function getId() : ?int
@@ -107,9 +109,9 @@ Class Product {
         
         array_push($this->materials, $material);
     }
-    public function addImages(string $material){
+    public function addImages(string $image){
         
-        array_push($this->images, $material);
+        array_push($this->images, $image);
     }
     
    

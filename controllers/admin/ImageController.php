@@ -40,10 +40,6 @@ class ImageController extends AbstractAdminController {
            
              $post["url"]=$media->getUrl();
             
-           
-           
-           
-           
              $imageManager = new ImageManager();
              $imageManager->createImage($post);
         

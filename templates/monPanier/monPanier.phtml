@@ -1,21 +1,34 @@
- <body class="cart-open">
+ <?php 
+ $data["cart"] =array_reverse($data["cart"]);
+ ?>
+
         <main>
-
-        </main>
-        <aside>
-            <header>
+             <header>
                 <h2>Mon panier</h2>
-                <p id="cart-total-price">Total : 59 $</p>
+                
             </header>
-            <main>
-                <ul>
-
-                </ul>
-            </main>
-            <footer>
-                <a class="btn btn-cart-back" href="">Continuer mes achats</a>
+            <section>
+                
+                    <?php foreach($data["cart"]as $product){ ?>
+                       
+                        <article>
+                            <figure>
+                                <img src=<?= $product->getImages()[0]; ?>>
+                            </figure>
+                        
+                        <p> <?= ucfirst($product->getName()) ?> </p>
+                        <p class = "prix"><?=$product->getPrix() ?>.0</p>
+                        <a href= "/res03-projet-final/deleteFromCart/<?php echo $product->getId(); ?>">Supprimer</a>
+                        </article>
+                    <?php } ?>
+                    
+                   
+                <p id="cart-total-price">Total : 59 $</p>
+            </section>
+            <section>
+                <a class="btn btn-cart-back" href="/res03-projet-final/produits">Continuer mes achats</a>
                 <a class="btn btn-cart-order" href="">Finaliser la commande</a>
-            </footer>
-        </aside>
-        <script type="module" src="assets/javascript/main.js"></script>
-    </body>
+            </section>
+        </main>
+       
+  

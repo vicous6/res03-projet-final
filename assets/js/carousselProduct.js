@@ -2,11 +2,11 @@ function carousselProduct() {
 
 
     let articles = document.getElementsByTagName("article");
-
+console.log(articles)
 
 
     let tab = document.getElementsByClassName(`image`)
-
+console.log(tab)
 
     for (let j = 0; j < tab.length; j++) {
         if (j !== 0) {

@@ -50,7 +50,22 @@ class Router {
                 $this->pageController->aPropos();
             }else
             if($route[0]=== "monPanier"){
+                
+                
                 $this->pageController->monPanier();
+                
+            }else
+            if($route[0]=== "addPanier"){
+                
+                
+                $this->pageController->addPanier($route[1]);
+                
+            }else
+            if($route[0]=== "deleteFromCart"){
+                
+                $this->pageController->deleteFromCart($route[1]);
+               
+                
             }else
             if($route[0]=== "logout"){
                 $this->pageController->logout();

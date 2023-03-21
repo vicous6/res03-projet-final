@@ -1,7 +1,8 @@
 import { create } from "/res03-projet-final/assets/js/create-user.js";
 import { caroussel } from "/res03-projet-final/assets/js/caroussel.js";
 import { carousselProduct } from "/res03-projet-final/assets/js/carousselProduct.js";
-import { initCart } from "./cart/cart.js";
+import { total } from "/res03-projet-final/assets/js/cart/makeTotalPrice.js";
+import { initCart } from "/res03-projet-final/assets/js/cart/cart.js";
 
 window.addEventListener("DOMContentLoaded",function(){
     
@@ -25,6 +26,11 @@ window.addEventListener("DOMContentLoaded",function(){
        
     carousselProduct()
     console.log("oucou")
+   }
+   if("https://victoroustiakine.sites.3wa.io/res03-projet-final/monPanier"){
+ 
+    total()
+    
    }
    
  

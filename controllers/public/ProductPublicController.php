@@ -20,6 +20,7 @@ class ProductPublicController extends AbstractPublicController {
     
    
     public function allProducts(){
+     // var_dump($_SESSION);
          $productManager = new ProductManager()  ;
          $imageManager = new ImageManager();
          $materialManager = new MaterialManager();
