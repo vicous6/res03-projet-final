@@ -3,12 +3,12 @@
  ?>
 
         <main>
-             <header>
-                <h2>Mon panier</h2>
-                
-            </header>
+             
             <section>
-                
+                <header>
+                <h2>Mon panier</h2>
+                <!--<p> Nombre de produits: <?= count($data["cart"]); ?></p>-->
+            </header>
                     <?php foreach($data["cart"]as $product){ ?>
                        
                         <article>
@@ -17,18 +17,21 @@
                             </figure>
                         
                         <p> <?= ucfirst($product->getName()) ?> </p>
-                        <p class = "prix"><?=$product->getPrix() ?>.0</p>
+                        <p class = "prix"><?=$product->getPrix() ?> €</p>
                         <a href= "/res03-projet-final/deleteFromCart/<?php echo $product->getId(); ?>">Supprimer</a>
                         </article>
                     <?php } ?>
                     
                    
-                <p id="cart-total-price">Total : 59 $</p>
+                <p id="cart-total-price">Total : 0 $</p>
             </section>
             <section>
-                <a class="btn btn-cart-back" href="/res03-projet-final/produits">Continuer mes achats</a>
-                <a class="btn btn-cart-order" href="">Finaliser la commande</a>
+                
             </section>
+            <!--<section>-->
+            <!--    <a class="btn btn-cart-back" href="/res03-projet-final/produits">Continuer mes achats</a>-->
+            <!--    <a class="btn btn-cart-order" href="">Finaliser la commande</a>-->
+            <!--</section>-->
         </main>
        
   

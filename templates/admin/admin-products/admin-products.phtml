@@ -1,5 +1,5 @@
 <?php 
-var_dump($data);
+// var_dump($data);
 
 ?>
 <main class="adminProduits">
@@ -25,7 +25,7 @@ var_dump($data);
                    
 
                  foreach($data["products"]as $product){
-                     
+                    //   var_dump($product->getPrix());
                      echo "<tr>";
                             echo "<td scope='row'>".$product->getId()."</td>";
                             echo "<td>".$product->getName()."</td>";

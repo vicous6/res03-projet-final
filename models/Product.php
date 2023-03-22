@@ -49,7 +49,7 @@ Class Product {
     {
         return $this->description;
     }
-    public function getPrix() : int
+    public function getPrix() : float
     {
         return $this->prix;
     }
