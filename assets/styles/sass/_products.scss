@@ -8,8 +8,12 @@
         grid-gap: 2rem;
         padding: 2rem;
         &>article {
-            max-width:300px;
+            justify-self:center;
+            align-self:center;
+            width:22vw;
             height: 60vh;
+            min-height:700px;
+            
             border: 1px solid black;
             display: grid;
             grid-template-rows: 2fr 1fr;
@@ -23,10 +27,11 @@
                     &>img {
 
                         width: 100%;
-                        
+                        max-height:40vh;
+                        min-height:266px;
                     }
                 }
-            }
+              }
             }
 
             &>h1 {}
