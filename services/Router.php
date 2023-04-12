@@ -259,7 +259,7 @@ class Router {
                 if($route[1]==="produit"&& $route[3]==="modifier"){//exemple admin/produit/2/modifier
                     
                     $post = $_POST;
-                    //   $this->imageController->updateImage($post);   
+                      $this->productAdminController->updateProduct($post);   
                 }
                 else 
                 if($route[1]==="produit"&& $route[3]==="details"){//exemple admin/produit/2/details

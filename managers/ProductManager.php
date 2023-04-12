@@ -135,4 +135,25 @@ class ProductManager extends AbstractManager {
         $query->execute($parameters);
        
     }
+    public function modifyProduct($post){
+       
+          $query= $this->db->prepare("
+          UPDATE product SET 
+          name =:name ,
+          description=:description,
+          prix=:prix,
+          stock=:stock
+          
+          WHERE id = :id");
+        $parameters = [
+        'id' =>$post["id"],
+        'name' =>$post["name"],
+        'description' =>$post["description"],
+        'prix' =>$post["prix"],
+        'stock' =>$post["stock"],
+        
+        ];
+        $query->execute($parameters);
+        
+    }
 }

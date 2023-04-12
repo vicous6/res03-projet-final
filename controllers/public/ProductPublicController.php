@@ -24,7 +24,7 @@ class ProductPublicController extends AbstractPublicController {
          $productManager = new ProductManager()  ;
          $imageManager = new ImageManager();
          $materialManager = new MaterialManager();
-         
+          $categorieManager = new CategoryManager()  ;
          $images =  $imageManager-> getAllImages();
          $products=   $productManager->getAllProducts();
        
@@ -59,9 +59,12 @@ class ProductPublicController extends AbstractPublicController {
        // 
        // 
        // 
+        $categories = $categorieManager->getAllCategories();
+       // var_dump($categories);
+       
        
         // $objAll= new Product()
-        $this->renderPublic( "products" , ["products"=>$products]); 
+        $this->renderPublic( "products" , ["products"=>$products,"categories"=>$categories]); 
     }
     public function allProductsByCategory($routeName){
         
@@ -76,18 +79,29 @@ class ProductPublicController extends AbstractPublicController {
         
          $productManager = new ProductManager()  ;
           $imageManager = new ImageManager()  ;
+          $materialManager = new MaterialManager()  ;
+         
         
        $all=$productManager->getProductById($routeId);
        
        $images= $imageManager->getImagesById($routeId);
        
+       $materials =  $materialManager-> getAllMaterialsByProductId($routeId);
+       // var_dump($materials);
        foreach($images as $image){
         
         $all->addImages($image->getUrl());
        }
        
+       foreach($materials as $material){
 
+                   $all->addMaterial($material->getName());
+           
+           }
        
+       
+       
+      
         $this->renderPublic( "product" , ["products" => $all]); 
     }
 }
