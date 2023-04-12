@@ -1,41 +1,47 @@
 
-<section>
-   
-<?php 
 
-// var_dump($data["products"]);
-foreach ($data["products"] as $key => $product) {
+
+
+
+<ul>
+<?php foreach ($data["categories"] as $key => $categorie){ ?>
     
-    echo "<article>";
-    // var_dump($key);
-    echo "<button class ='caroussel'>></button>";
-    //   var_dump($product->getImages());
-      echo "<header>";
-    foreach ($product->getImages() as $key2 => $image) {
+    <li href= '/produits/<?= $categorie->getTitle();?> '<><?= $categorie->getTitle()?> </li>
+ 
+<?php } ?>
+  </ul>
+
+
+    <section>
+<?php foreach ($data["products"] as $key => $product) { ?>
+    
+   <article>
+    <header>
+    <?php foreach ($product->getImages() as $key2 => $image) { ?>
       
-        echo "<a class=" .$key." href='produit/".$product->getId()."'>
+        <a class=<?= $key?> href='produit/<?=$product->getId() ?>'>
                 <figure>
+             
+                    <img src='/res03-projet-final/<?= $image ?>'>
                 
-                    <img src='/res03-projet-final/".$image."'>
-                
-                </figure></a>";
+                </figure></a>
                 
                
-    }
- echo "</header>";
-    echo "<ul>";
+    <?php } ?>
+    <button class ='caroussel'>></button>
+ </header>
+    <ul>
            
-            // echo "<li>id: " . $product->getId()."</li>";
-            echo "<li> nom: " . ucfirst($product->getName())."</li>";
-            echo "<li>".$product->getCategory()."</li>";
-            echo "<li>desciprtion: " .$product->getDesciption()."</li>";
-            echo "<li>Prix: ".$product->getPrix() ." euros</li>";
+            <li><?= ucfirst($product->getName()) ?></li>
+            <li><?= $product->getPrix() ?> €</li>
             
           
-    echo "<button product=".$product->getId()." class=paniers>Ajouter au Panier</button>";
-    echo "</ul>";
-    echo "</article>";
-} ?>
+   <button product= <?=$product->getId() ?> class=paniers>Ajouter au Panier</button>
+    </ul>
+    </article>
+
+<?php } ?>
+
 
     
     

@@ -12,12 +12,14 @@
                      <th>Id </th>
                      <th>Name</th>
                       <th>Description </th>
-                      <th>Prix </th>
+                      <th>PrixHT</th>
                       <th>Stock </th>
                       <th>Categorie</th>
                       <th>Materiau</th>
+                      <th>Modifier </th>
+                      <th>Supprimer </th>
                       <th>Images</th>
-                        <th>Supprimer </th>
+                        
                  </tr>
                  </thead>
                  <tbody>
@@ -41,12 +43,14 @@
                                 echo "<br>";
                                 echo "<br>";
                             }
+                        echo "<td> <a href='/res03-projet-final/admin/produit/".$product->getId()."/modifier'>Modifier</a></td>";
+                        echo "<td> <a href='/res03-projet-final/admin/produit/".$product->getId()."/supprimer'>Supprimer</a></td>";
+
                             foreach ($product->getImages() as $key2 => $image) {
                             "</td>";
         
         echo "<td><figure><img src='/res03-projet-final/".$image."'></figure></td>";
     }
-                            echo "<td> <a href='/res03-projet-final/admin/produit/".$product->getId()."/supprimer'>Supprimer</a></td>";
                      echo "</tr>";
                      
                      

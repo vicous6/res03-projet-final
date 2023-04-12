@@ -1,3 +1,5 @@
+
+ 
  <?php 
  $data["cart"] =array_reverse($data["cart"]);
  ?>
@@ -9,24 +11,36 @@
                 <h2>Mon panier</h2>
                 <!--<p> Nombre de produits: <?= count($data["cart"]); ?></p>-->
             </header>
-                    <?php foreach($data["cart"]as $product){ ?>
+                    <?php foreach($data["cart"]as $key =>$product){ ?>
                        
                         <article>
+                          
                             <figure>
+                                  <a class=<?= $key; ?> href='produit/<?= $product->getId();?>"'>
                                 <img src=<?= $product->getImages()[0]; ?>>
+                                </a>
                             </figure>
                         
                         <p> <?= ucfirst($product->getName()) ?> </p>
-                        <p class = "prix"><?=$product->getPrix() ?> €</p>
-                        <a href= "/res03-projet-final/deleteFromCart/<?php echo $product->getId(); ?>">Supprimer</a>
+                        <p class = "prix"><?=$product->getPrix()*1.2 ?> €</p>
+                        
+                        <a href= "/res03-projet-final/deleteFromCart/<?php echo $product->getId(); ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                         </article>
                     <?php } ?>
                     
                    
-                <p id="cart-total-price">Total : 0 $</p>
+                
             </section>
             <section>
+                <p>Frais d'envoi:</p>
+                <p id="cart-ship-price">8 euros</p>
+                <p>Taxe 20%: </p>
+                <p id="cart-tax-price"></p>
+                <p>TOTAL</p>
+                <p id="cart-total-price"></p>
                 
+                <button><a href= "/res03-projet-final/produits">Retour à la Gallerie</a></button>
+                <button><a>Commander</a></button>
             </section>
             <!--<section>-->
             <!--    <a class="btn btn-cart-back" href="/res03-projet-final/produits">Continuer mes achats</a>-->

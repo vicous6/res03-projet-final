@@ -27,7 +27,7 @@
             echo "nom : ".$data["products"]->getName();
             echo "</li>";
             echo "<li>";
-            echo $data["products"]->getPrix()." euros";
+            echo $data["products"]->getPrix()." €";
             echo "</li>";
             echo "<li>";
             echo " desciprtion: ".$data["products"]->getDesciption();
@@ -37,6 +37,11 @@
             echo "</li>";
             echo "<li>";
             echo $data["products"]->getCategory();
+            echo "</li>";
+            echo "<li>";
+            foreach($data["products"]->getMaterials() as $material){
+                echo "<li>".$material."</li>";
+            }
             echo "</li>";
             echo "<button product=".$data["products"]->getId()." class=paniers>Ajouter au Panier</button>";
         echo "</ul>";
