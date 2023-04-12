@@ -27,7 +27,7 @@ function caroussel(){
     
    for(let i = 0 ; i < buttonCaroussel.length; i ++){
        
-        buttonCaroussel[i].style.position="absolute"
+        buttonCaroussel[i].style.zIndex = 1000
         buttonCaroussel[i].addEventListener('click',function(){
             
             // console.log(tab[i])

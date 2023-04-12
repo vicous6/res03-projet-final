@@ -1,0 +1,8 @@
+#homepage{
+    height:100vh;
+    background:url("../../images/deFilsEnPerles.jpg");
+    background-size:cover;
+    &>main{
+        height:89vh;
+    }
+}

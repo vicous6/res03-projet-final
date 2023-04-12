@@ -2,6 +2,8 @@ function total (){
     
     let prices = document.getElementsByClassName("prix");
     let displayTotal = document.getElementById("cart-total-price")
+      let taxeContainer = document.getElementById("cart-tax-price");
+      
     console.log(prices);
     let total = 0.0;
     for(let i = 0 ; i < prices.length ; i++){
@@ -20,7 +22,7 @@ function total (){
             }else{
                 let value = parseFloat(StringOfNumber)
                 total += value;
-                console.log(value, total)
+                // console.log(value, total)
                 break
             }
         }
@@ -28,8 +30,29 @@ function total (){
         
         // total += parseInt( prices[i].innerHTML)
     }
+    let taxPourcent = 1.20
+    let shipPrice = 8
+    let taxesValue = calculateTax(taxPourcent,total.toFixed(2))
+    console.log(total)
+    taxeContainer.innerHTML= taxesValue.toFixed(2)+" euros"
     
-    displayTotal.innerHTML= "Total = "+total.toFixed(2)+" euros"
+    
+    displayTotal.innerHTML= (total+shipPrice).toFixed(2)+" euros"
+    
+    
 }
+
+
+
+// % de tax en paramètre, montant total hors taxes
+function calculateTax(pourcent,totalTTC){
+  
+    
+    let TaxeValue =  totalTTC-totalTTC /pourcent
+    
+    
+   return TaxeValue 
+}
+
 
 export { total };
