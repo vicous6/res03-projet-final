@@ -101,5 +101,25 @@ class ProductAdminController extends AbstractAdminController {
       
        header('Location: /res03-projet-final/admin/produits');
     }
+    public function updateProduct($post){
+      
+     $productManager = new ProductManager;
+     
+      if(isset($post)&&!empty($post)){
+    
+    
+        $productManager->modifyProduct($post);
+       
+  
+        header('Location: /res03-projet-final/admin/produits');
+        
+        }else{
+         
+             $route = explode("/",$_GET["path"]);
+             $toDisplay = $productManager->getProductById($route[2]);
+             
+             $this->renderAdmin( "admin-product-update" , ["toDisplay"=>$toDisplay]); 
+        }
+    }
     
 }
