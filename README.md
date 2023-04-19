@@ -1,5 +1,15 @@
 # res03-projet-final
 
+A faire :
+
+page accueil 
+page a propos 
+page contact
+page categories (+managers)
+page un produit
+footer.
+page les produit(les categories)
+
 A FAIRE POUR LE DEPLOIEMENT
 -> changer l'url de l'explode dans js
 
