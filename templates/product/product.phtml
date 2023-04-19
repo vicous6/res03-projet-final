@@ -2,17 +2,19 @@
 <section>
     
 <?php
+echo "<h2 class='sr-only'>Un Produit</h2>";
 //  var_dump($_SESSION);
 // var_dump($data["products"]);
 
     echo "<article>";
+    echo "<h2 class='sr-only'>Un article</h2>";
     // var_dump($key);
         echo "<button class ='caroussel'>></button>";
             //   var_dump($product->getImages());
             foreach($data["products"]->getImages() as $key2 => $image){
                 
                 
-                echo "<a class= 'image'><figure><img src='/res03-projet-final/".$image."' ></figure></a>";
+                echo "<a class= 'image'><figure><img src='/res03-projet-final/".$image."'  alt='Image produit'></figure></a>";
                 
             }
          
@@ -38,12 +40,12 @@
             echo "<li>";
             echo $data["products"]->getCategory();
             echo "</li>";
-            echo "<li>";
+            
             foreach($data["products"]->getMaterials() as $material){
                 echo "<li>".$material."</li>";
             }
-            echo "</li>";
-            echo "<button product=".$data["products"]->getId()." class=paniers>Ajouter au Panier</button>";
+            
+            echo "<li><button id=".$data["products"]->getId()." class=paniers>Ajouter au Panier</button></li>";
         echo "</ul>";
     echo "</article>";
 
