@@ -57,24 +57,7 @@ table {
   height: 89vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 0.4fr 1fr 1fr 1fr;
 }
-#aPropos > main > h1 {
-  font-size: 2.5rem;
-  grid-row: 2/3;
-  grid-column: 2/4;
-  font-weight: bold;
-}
-#aPropos > main > p {
-  padding: 1rem;
-  border: 1px solid grey;
-  font-size: 1.4rem;
-  background: rgba(255, 255, 255, 0.65);
-  grid-row: 3/4;
-  grid-column: 2/4;
-}
-
 #contact {
   overflow: hidden;
 }
@@ -88,118 +71,153 @@ footer {
 }
 
 #navBar {
-  width: 100%;
-  font-size: 1.8rem;
+  background: grey;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  height: 11vh;
-  min-height: 120px;
-  background-color: white;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  grid-template-columns: 1.7fr 1fr;
+  height: 21vh;
+  min-height: 100px;
+  max-height: 140px;
 }
 #navBar > ul:nth-of-type(1) {
   display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
 }
 #navBar > ul:nth-of-type(1) > li {
-  align-self: center;
-  justify-self: center;
-  height: 50%;
-  width: 78%;
   display: grid;
-  justify-self: center;
-  align-self: center;
 }
 #navBar > ul:nth-of-type(1) > li > a {
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  text-align: center;
-  padding: 1.8vh 0.2vw;
+  justify-self: center;
+  align-self: center;
   text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
 }
 #navBar > ul:nth-of-type(1) > li > a:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-  text-align: center;
+  animation-duration: 0.5s;
+  animation-name: shake;
+}
+#navBar > ul:nth-of-type(1) > :nth-of-type(1) {
+  display: block;
+}
+#navBar > ul:nth-of-type(1) > :nth-of-type(1) > a {
+  width: 100%;
+  height: 100%;
+  background-image: url("/res03-projet-final/assets/images/LOGOS VISIO.png");
+}
+#navBar > ul:nth-of-type(1) > :nth-of-type(1) > a > figure {
+  padding: 0.5rem;
+}
+#navBar > ul:nth-of-type(1) > :nth-of-type(1) > a > figure > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 #navBar > ul:nth-of-type(2) {
   display: grid;
   grid-template-columns: 1fr 3fr 3fr;
 }
 #navBar > ul:nth-of-type(2) > li {
-  height: 50%;
-  align-self: center;
-  justify-self: center;
   display: grid;
 }
 #navBar > ul:nth-of-type(2) > li > a {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-  text-align: center;
-  padding: 1.8vh 2vw;
+  justify-self: center;
+  align-self: center;
+  color: black;
   text-decoration: none;
+  font-size: 1.2rem;
 }
 #navBar > ul:nth-of-type(2) > li > a:hover {
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  text-align: center;
+  animation-duration: 0.5s;
+  animation-name: shake;
 }
 
+@keyframes shake {
+  33% {
+    transform: rotate(5deg);
+  }
+  66% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 body {
   height: 100%;
 }
 
 #navBarUser {
-  width: 100%;
-  font-size: 1.8rem;
+  background: grey;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  height: 11vh;
-  min-height: 120px;
-  background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  grid-template-columns: 1.7fr 1fr;
+  height: 21vh;
+  min-height: 100px;
+  max-height: 140px;
 }
 #navBarUser > ul:nth-of-type(1) {
   display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
 }
 #navBarUser > ul:nth-of-type(1) > li {
-  align-self: center;
-  justify-self: center;
-  height: 50%;
-  width: 78%;
   display: grid;
-  justify-self: center;
-  align-self: center;
 }
 #navBarUser > ul:nth-of-type(1) > li > a {
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  text-align: center;
-  padding: 1.8vh 0.2vw;
+  justify-self: center;
+  align-self: center;
   text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
 }
 #navBarUser > ul:nth-of-type(1) > li > a:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-  text-align: center;
+  animation-duration: 0.5s;
+  animation-name: shake;
+}
+#navBarUser > ul:nth-of-type(1) > :nth-of-type(1) {
+  display: block;
+}
+#navBarUser > ul:nth-of-type(1) > :nth-of-type(1) > a {
+  width: 100%;
+  height: 100%;
+  background-image: url("/res03-projet-final/assets/images/LOGOS VISIO.png");
+}
+#navBarUser > ul:nth-of-type(1) > :nth-of-type(1) > a > figure {
+  padding: 0.5rem;
+}
+#navBarUser > ul:nth-of-type(1) > :nth-of-type(1) > a > figure > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 #navBarUser > ul:nth-of-type(2) {
-  width: 96%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 3fr 3fr;
 }
 #navBarUser > ul:nth-of-type(2) > li {
-  height: 50%;
-  align-self: center;
-  justify-self: center;
   display: grid;
 }
 #navBarUser > ul:nth-of-type(2) > li > a {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-  text-align: center;
-  padding: 1.8vh 2vw;
+  justify-self: center;
+  align-self: center;
+  color: black;
   text-decoration: none;
+  font-size: 1.2rem;
 }
 #navBarUser > ul:nth-of-type(2) > li > a:hover {
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  text-align: center;
+  animation-duration: 0.5s;
+  animation-name: shake;
 }
 
+@keyframes shake {
+  33% {
+    transform: rotate(5deg);
+  }
+  66% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 #homepage {
   height: 100vh;
   background: url("../../images/deFilsEnPerles.jpg");

@@ -2,6 +2,7 @@
     background: #E8E8E8;
     min-height: 100vh;
     &>main {
+        min-height: 45vh;
         width: 90%;
         margin: 0 auto;
         display: grid;

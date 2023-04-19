@@ -5,7 +5,7 @@ let buttons = document.getElementsByClassName("paniers");
       
     for(let i = 0 ; i < buttons.length ; i++){
         
-        let id = buttons[i].getAttribute("product")
+        let id = buttons[i].getAttribute("id")
         buttons[i].addEventListener("click",function(){
             
            

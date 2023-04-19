@@ -7,26 +7,12 @@
       height:89vh;
       width:100vw;
       display:grid;
-      grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows:1fr 0.4fr 1fr 1fr 1fr;
+     
         & > h1{
-           font-size:2.5rem;
-        //   width:30vw;
-        //   margin:0 auto;
-        grid-row:2/3;
-        grid-column:2/4;
-        font-weight:bold;
+
     }
         & > p{
-            padding:1rem;
-            border:1px solid grey;
-           font-size:1.4rem; 
-           background:rgb(255,255,255,0.65);
-           
-            grid-row:3/4;
-            grid-column:2/4;
-            // width:30vw;
-            // margin:0 auto;
+
     }
   }
 }
