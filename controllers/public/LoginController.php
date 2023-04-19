@@ -18,12 +18,16 @@ class LoginController extends AbstractPublicController {
  public function auth($post){
     //  var_dump($post);
     //  verification back du form (les champ sont il vide)
-     if(isset($post["login"])&&!empty($post["login"])
+    
+    // var_dump($post);
+    // die;
+    
+     if(isset($post["email"])&&!empty($post["email"])
      && isset($post["password"]) && !empty($post["password"])){
          
          
      $userManager = new UserManager();
-   $emailExistence =   $userManager->getUserByEmail($post["login"]);
+   $emailExistence =   $userManager->getUserByEmail($post["email"]);
 
     // si l'email n'existe pas -> on verifie si les pass correspondent
    if($emailExistence !== null){
