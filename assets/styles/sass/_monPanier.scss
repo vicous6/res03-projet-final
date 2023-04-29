@@ -9,6 +9,7 @@
         padding: 3rem;
         grid-template-columns: 1fr 1fr;
         &>section:nth-of-type(1) {
+                min-width: 513px;
             background: white;
             border-radius: 10px; // justify-self: center;
             // align-self: center;

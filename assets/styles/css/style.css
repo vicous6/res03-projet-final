@@ -49,33 +49,85 @@ table {
 }
 
 #aPropos {
-  background: url("../../images/atelier-bijoux-atelier-creatif.jpg");
+  background: url("../../images/photo-font.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 #aPropos > main {
-  height: 89vh;
   width: 100vw;
   display: grid;
 }
+#aPropos > main > h1 {
+  background: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 3rem;
+}
+#aPropos > main > ul > li {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+#aPropos > main > ul > li:first-of-type {
+  margin-top: 2rem;
+}
+#aPropos > main > ul > li:nth-of-type(even) {
+  line-height: 2rem;
+  background: grey;
+  opacity: 0.95;
+  margin-left: 40vw;
+  width: 50%;
+  border-radius: 5px;
+  font-size: 1.8rem;
+}
+#aPropos > main > ul > li:nth-of-type(odd) {
+  margin-left: 2rem;
+  line-height: 2rem;
+  background: grey;
+  opacity: 0.95;
+  width: 60%;
+  border-radius: 5px;
+  font-size: 1.8rem;
+}
+
 #contact {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 #contact > section {
   height: 79vh;
 }
 
 footer {
-  height: 10vh;
-  background: black;
-}
-
-#navBar {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
   background: grey;
+}
+footer > h1 {
+  padding-top: 1rem;
+  line-height: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+footer > ul:nth-of-type(1) {
+  text-align: center;
+  line-height: 2rem;
+}
+footer > ul:nth-of-type(2) {
+  text-align: center;
+  display: flex;
+  line-height: 2rem;
+  flex-direction: row;
+  justify-self: center;
+  font-size: 3rem;
+}
+footer > ul:nth-of-type(2) > li {
+  margin-left: 1rem;
+}
+#navBar {
+  background-color: rgb(255, 153, 204);
   display: grid;
   grid-template-columns: 1.7fr 1fr;
   height: 21vh;
-  min-height: 100px;
+  min-height: 140px;
   max-height: 140px;
 }
 #navBar > ul:nth-of-type(1) {
@@ -96,20 +148,21 @@ footer {
   animation-duration: 0.5s;
   animation-name: shake;
 }
-#navBar > ul:nth-of-type(1) > :nth-of-type(1) {
-  display: block;
+#navBar > ul:nth-of-type(1) > li:nth-of-type(1) {
+  display: grid;
 }
-#navBar > ul:nth-of-type(1) > :nth-of-type(1) > a {
+#navBar > ul:nth-of-type(1) > li:nth-of-type(1) > a {
+  display: grid;
+  align-self: center;
   width: 100%;
   height: 100%;
   background-image: url("/res03-projet-final/assets/images/LOGOS VISIO.png");
 }
-#navBar > ul:nth-of-type(1) > :nth-of-type(1) > a > figure {
+#navBar > ul:nth-of-type(1) > li:nth-of-type(1) > a > figure {
+  align-self: center;
   padding: 0.5rem;
 }
-#navBar > ul:nth-of-type(1) > :nth-of-type(1) > a > figure > img {
-  object-fit: cover;
-  height: 100%;
+#navBar > ul:nth-of-type(1) > li:nth-of-type(1) > a > figure > img {
   width: 100%;
 }
 #navBar > ul:nth-of-type(2) {
@@ -147,11 +200,11 @@ body {
 }
 
 #navBarUser {
-  background: grey;
+  background-color: rgb(255, 153, 204);
   display: grid;
   grid-template-columns: 1.7fr 1fr;
   height: 21vh;
-  min-height: 100px;
+  min-height: 140px;
   max-height: 140px;
 }
 #navBarUser > ul:nth-of-type(1) {
@@ -184,8 +237,6 @@ body {
   padding: 0.5rem;
 }
 #navBarUser > ul:nth-of-type(1) > :nth-of-type(1) > a > figure > img {
-  object-fit: cover;
-  height: 100%;
   width: 100%;
 }
 #navBarUser > ul:nth-of-type(2) {
@@ -219,12 +270,24 @@ body {
   }
 }
 #homepage {
-  height: 100vh;
-  background: url("../../images/deFilsEnPerles.jpg");
+  background: url("../../images/DEA511D0-3B31-4D28-A825-BBC9DFB41DC2.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 #homepage > main {
-  height: 89vh;
+  height: 109vh;
+}
+#homepage > main > h1 {
+  font-weight: bold;
+  font-size: 3.3rem;
+  color: #F5F5DC;
+  transform: rotate(-18deg);
+}
+#homepage > main > h2 {
+  background: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 3rem;
 }
 
 #register > section {
@@ -238,14 +301,14 @@ body {
   justify-self: center;
   align-self: center;
   height: 72vh;
-  width: 25vw;
+  width: 35vw;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr 0.8fr;
   background: rgba(255, 255, 255, 0.2);
 }
 #register > section > form > h1 {
   align-self: center;
-  font-size: 3rem;
+  font-size: 2rem;
   width: 100%;
   text-align: center;
 }
@@ -258,11 +321,11 @@ body {
   grid-template-rows: 1fr 1fr;
 }
 #register > section > form > fieldset:nth-of-type(1) > label {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 #register > section > form > fieldset:nth-of-type(1) > input {
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 #register > section > form > fieldset:nth-of-type(2) {
   justify-self: center;
@@ -273,11 +336,11 @@ body {
   grid-template-rows: 1fr 1fr;
 }
 #register > section > form > fieldset:nth-of-type(2) > label {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 #register > section > form > fieldset:nth-of-type(2) > input {
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 #register > section > form > fieldset:nth-of-type(3) {
   justify-self: center;
@@ -288,11 +351,11 @@ body {
   grid-template-rows: 1fr 1fr;
 }
 #register > section > form > fieldset:nth-of-type(3) > label {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 #register > section > form > fieldset:nth-of-type(3) > input {
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 #register > section > form > fieldset:nth-of-type(4) {
   justify-self: center;
@@ -303,11 +366,11 @@ body {
   grid-template-rows: 1fr 1fr;
 }
 #register > section > form > fieldset:nth-of-type(4) > label {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 #register > section > form > fieldset:nth-of-type(4) > input {
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 #register > section > form > fieldset:nth-of-type(5) {
   justify-self: center;
@@ -318,11 +381,11 @@ body {
   grid-template-rows: 1fr 1fr;
 }
 #register > section > form > fieldset:nth-of-type(5) > label {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 #register > section > form > fieldset:nth-of-type(5) > input {
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 #register > section > form > fieldset:nth-of-type(6) {
   justify-self: center;
@@ -333,13 +396,13 @@ body {
 #register > section > form > fieldset:nth-of-type(6) > button {
   width: 100%;
   height: 100%;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   padding: 0.3rem;
 }
 #register > section > form > p {
   justify-self: center;
   align-self: center;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 #login > section {
@@ -424,6 +487,7 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 #monPanier > main > section:nth-of-type(1) {
+  min-width: 513px;
   background: white;
   border-radius: 10px;
   display: grid;
@@ -546,25 +610,71 @@ body {
 }
 #product > section {
   height: 79vh;
-  padding: 3rem;
+  min-height: 600px;
+  padding: 0rem;
   display: grid;
 }
 #product > section > article {
+  width: 70%;
   justify-self: center;
   align-self: center;
-  height: 80%;
-  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.5rem;
+  border: 1px solid black;
 }
 #product > section > article > a > figure img {
   width: 30vw;
 }
+#product > section > article > ul {
+  padding: 3rem;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+}
+#product > section > article > ul > li {
+  background: grey;
+  display: grid;
+}
+#product > section > article > ul > li > p {
+  font-size: 1.6rem;
+  align-self: center;
+  text-align: center;
+}
+#product > section > article > ul > li > p > span {
+  font-weight: bold;
+}
 
 #products {
-  background: #f6f6f6;
+  background: #fefee0;
+}
+#products > h1 {
+  background: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 3rem;
 }
 #products > ul {
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+#products > ul > li {
+  min-height: 48px;
+  height: 5vh;
+  display: grid;
+  border-radius: 10px 100px/120px;
+  background: grey;
+  width: 50%;
+  border-radius: 100px;
+  justify-self: center;
+  align-self: center;
+}
+#products > ul > li > a {
+  font-size: 1.6rem;
+  justify-self: center;
+  align-self: center;
+  text-decoration: none;
+  color: white;
 }
 #products > section {
   width: 82%;
@@ -596,18 +706,18 @@ body {
   border-top-radius: 5px;
   width: 100%;
   max-height: 40vh;
-  min-height: 290px;
+  min-height: 330px;
 }
 #products > section > article > header > a > figure > img:hover {
   opacity: 0.8;
 }
 #products > section > article > ul {
   display: grid;
-  grid-template-rows: 2fr 1fr 2fr;
+  grid-template-rows: 2fr 1fr 1fr;
 }
 #products > section > article > ul > li:nth-of-type(1) {
   padding: 0.2rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   text-align: center;
   align-self: center;
@@ -621,18 +731,118 @@ body {
   justify-self: end;
 }
 #products > section > article > ul > li:nth-of-type(3) {
+  width: 100%;
+  height: 100%;
   font-size: 1.3rem;
   text-align: center;
   align-self: center;
   justify-self: center;
 }
-#products > section > article > ul > li:nth-of-type(4) {
+#products > section > article > ul > li:nth-of-type(3) > button {
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  border-bottom-radius: 5px;
+}
+
+#productsCategory {
+  background: #f6f6f6;
+}
+#productsCategory > h2 {
+  background: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 3rem;
+}
+#productsCategory > ul {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#productsCategory > ul > li {
+  height: 5vh;
+  display: grid;
+  border-radius: 10px 100px/120px;
+  background: grey;
+  width: 50%;
+  border-radius: 100px;
+  justify-self: center;
+  align-self: center;
+}
+#productsCategory > ul > li > a {
+  font-size: 1.6rem;
+  justify-self: center;
+  align-self: center;
+  text-decoration: none;
+  color: white;
+}
+#productsCategory > section {
+  width: 82%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 2rem;
+}
+#productsCategory > section > article {
+  border-radius: 5px;
+  background: white;
+  justify-self: center;
+  align-self: center;
+  width: 25vw;
+  min-height: 400px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+}
+#productsCategory > section > article > header {
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+#productsCategory > section > article > header > a > figure {
+  grid-template-columns: 9fr 1fr;
+}
+#productsCategory > section > article > header > a > figure > img {
+  border-top-radius: 5px;
+  width: 100%;
+  max-height: 40vh;
+  min-height: 290px;
+}
+#productsCategory > section > article > header > a > figure > img:hover {
+  opacity: 0.8;
+}
+#productsCategory > section > article > ul {
+  display: grid;
+  grid-template-rows: 2fr 1fr 2fr;
+}
+#productsCategory > section > article > ul > li:nth-of-type(1) {
+  padding: 0.2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+}
+#productsCategory > section > article > ul > li:nth-of-type(2) {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  text-align: center;
+  align-self: center;
+  justify-self: end;
+}
+#productsCategory > section > article > ul > li:nth-of-type(3) {
+  width: 60%;
   font-size: 1.3rem;
   text-align: center;
   align-self: center;
   justify-self: center;
 }
-#products > section > article > ul > button {
+#productsCategory > section > article > ul > li:nth-of-type(4) {
+  font-size: 1.3rem;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+}
+#productsCategory > section > article > ul > button {
   font-size: 1.3rem;
   padding: 0.5rem;
   border-bottom-radius: 5px;

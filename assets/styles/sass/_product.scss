@@ -1,23 +1,43 @@
 #product {
-    
-    &>section{
-        height:79vh;
-        padding:3rem;
-        display:grid;
-        &>article{
-            justify-self:center;
-            align-self:center;
-            height:80%;
-            width:80%;
-            &>a{
-                &>figure{
-                    img{
-                        width:30vw;
-                        // max-height:50vh;
+
+    &>section {
+        height: 79vh;
+        min-height: 600px;
+        padding: 0rem;
+        display: grid;
+        &>article {
+            width:70%;
+            justify-self: center;
+            align-self: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 0.5rem;
+            border: 1px solid black;
+            &>a {
+                &>figure {
+                    img {
+                        width: 30vw; // max-height:50vh;
+                    }
+                }
+            }
+            &>ul {
+                padding:3rem;
+                display: grid;
+                grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+                &>li {
+                     background:grey;
+                    display: grid;
+                    &>p {
+                        font-size:1.6rem;
+                        align-self: center;
+                        text-align: center;
+                        &>span{
+                            font-weight:bold;
+                        }
                     }
                 }
             }
         }
     }
-    
+
 }
