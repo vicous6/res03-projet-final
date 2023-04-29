@@ -1,3 +1,39 @@
-<?php
+<?php 
+$data["products"] =array_reverse($data["products"] );
+$title = $data["products"][0]->getCategory();
 
-var_dump($data);
+?>
+<h2> <?= $title; ?></h2>
+    <section>
+        <h2 class="sr-only" > Listes des Produits</h2>
+<?php foreach ($data["products"] as $key => $product) { ?>
+    
+   <article>
+       <h3 class="sr-only" > $product->getName</h3>
+    <header>
+    <?php foreach ($product->getImages() as $key2 => $image) { ?>
+      
+        <a class=<?= $key ;?> href='../produit/<?=$product->getId() ?>'>
+                <figure>
+             
+                    <img src='/res03-projet-final/<?= $image ?>' alt = "une image">
+                
+                </figure></a>
+                
+               
+    <?php } ?>
+    <button class ='caroussel'>></button>
+ </header>
+    <ul>
+           
+            <li><?= ucfirst($product->getName()) ?></li>
+            <li><?= $product->getPrix() ?> €</li>
+            
+          
+          <li> <button type="button" id=<?=$product->getId()?> class="paniers">Ajouter au Panier</button></li>
+    </ul>
+    </article>
+
+<?php } ?>
+</section>
+

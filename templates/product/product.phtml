@@ -22,29 +22,30 @@ echo "<h2 class='sr-only'>Un Produit</h2>";
       
  
        echo "<ul>";
-       echo "<li>";
-            echo "id : ".$data["products"]->getId();
-            echo "</li>";
-            echo "<li>";
-            echo "nom : ".$data["products"]->getName();
-            echo "</li>";
-            echo "<li>";
-            echo $data["products"]->getPrix()." €";
-            echo "</li>";
-            echo "<li>";
-            echo " desciprtion: ".$data["products"]->getDesciption();
-            echo "</li>";
-            echo "<li>";
-            echo $data["products"]->getStock();
-            echo "</li>";
-            echo "<li>";
-            echo $data["products"]->getCategory();
-            echo "</li>";
+    //   echo "<li>";
+    //         echo "id : ".$data["products"]->getId();
+    //         echo "</li>";
             
+            echo "<li><p><span>".$data["products"]->getName()."<span></p></li>";
+            
+            
+            
+            
+         
+            echo "<li> <p>Description : ".$data["products"]->getDesciption()."</p></li>";
+            
+           
+            echo "<li><p>Stock : ".$data["products"]->getStock()."</p></li>";
+            
+           
+            // echo "<li><p> ".$data["products"]->getCategory()."</p></li>";
+           
+             echo "<li><p>Materiaux : ";
             foreach($data["products"]->getMaterials() as $material){
-                echo "<li>".$material."</li>";
+               echo $material." ";
             }
-            
+            echo "</p></li>";
+            echo "<li><p>Prix : ".$data["products"]->getPrix()." €</p></li>";
             echo "<li><button id=".$data["products"]->getId()." class=paniers>Ajouter au Panier</button></li>";
         echo "</ul>";
     echo "</article>";
