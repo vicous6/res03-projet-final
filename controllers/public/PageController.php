@@ -140,7 +140,7 @@ class PageController extends AbstractPublicController {
         
         session_destroy();
         
-        var_dump($_SESSION);
+        
            header('Location: accueil');
     }
     public function contact(){
