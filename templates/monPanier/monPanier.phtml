@@ -22,7 +22,7 @@
                             </figure>
                         
                         <p> <?= ucfirst($product->getName()) ?> </p>
-                        <p class = "prix"><?=$product->getPrix()*1.2 ?> €</p>
+                        <p class = "prix"><?=$product->getPrix() ?> €</p>
                         
                         <a href= "/res03-projet-final/deleteFromCart/<?php echo $product->getId(); ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                         </article>
