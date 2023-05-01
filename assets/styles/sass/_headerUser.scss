@@ -1,82 +1,6 @@
 // liste de box shadow: https://getcssscan.com/css-box-shadow-examples
-body {
-    // enleve le scroll
-    height: 100%; // overflow: hidden
-}
-
-// liste de box shadow: https://getcssscan.com/css-box-shadow-examples
-#navBarUser {
-    
-    background-color :rgb(255,153,204);
-    display: grid;
-    grid-template-columns: 1.7fr 1fr;
-    height: 21vh;
-    min-height: 140px;
-    max-height: 140px;
-    &>ul:nth-of-type(1) {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
-
-
-        &>li {
-            display: grid;
-
-            &>a {
-                justify-self: center;
-                align-self: center;
-                text-decoration: none;
-                color: black;
-                font-size: 1.2rem;
-            }
-            &>a:hover {
-                animation-duration: 0.5s;
-                animation-name: shake;
-
-            }
-
-        }
-
-        &>:nth-of-type(1) {
-            display: block;
-            &>a {
-                width: 100%;
-                height: 100%;
-                background-image: url("/res03-projet-final/assets/images/LOGOS VISIO.png");
-                &>figure {
-                    padding: 0.5rem;
-                    &>img {
-
-                        // height: 15vh;
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
-
-    &>ul:nth-of-type(2) {
-        display: grid;
-        grid-template-columns: 1fr 3fr 3fr; //     height:80%;
-        //   width:80%;
-        &>li {
-
-            display: grid;
-            &>a {
-                justify-self: center;
-                align-self: center;
-                color: black;
-                text-decoration: none;
-                font-size: 1.2rem;
-                &>i {}
-            }
-            &>a:hover {
-                animation-duration: 0.5s;
-                animation-name: shake;
-
-            }
-
-        }
-    }
+nav {
+    font-family: "Montserrat"sans-serif;
 }
 
 
@@ -91,4 +15,268 @@ body {
     100% {
         transform: rotate(0deg);
     }
+}
+
+@media screen and (max-width: 767px) {}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #navBarUser {
+        background: url("/res03-projet-final/assets/images/LOGOS-VISIO.png") rgba(245, 245, 225, 0.8);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: grid;
+        grid-template-rows: 1fr 0.8fr;
+        height: 600px;
+
+        &>ul:nth-of-type(1) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+
+            &>li {
+                display: grid;
+
+                &>a {
+                    padding: 1rem;
+                    background: white;
+                    justify-self: center;
+                    align-self: center;
+                    text-decoration: none;
+                    color: black;
+                    font-size: 1.8rem;
+                    text-align: center;
+                    align-self: flex-end
+                }
+                &>a:hover {
+                    animation-duration: 0.5s;
+                    animation-name: shake;
+
+                }
+
+            }
+
+            &>li:nth-of-type(1) {
+                display: none;
+
+                &>a {
+                    display: grid;
+                    align-self: center;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url("/res03-projet-final/assets/images/LOGOS VISIO.png");
+                    &>figure {
+                        align-self: center;
+                        padding: 0.5rem;
+                        display: grid;
+                        &>img {
+                            justify-self: center;
+
+                            min-height: 120px;
+                            max-height: 126px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &>ul:nth-of-type(2) {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr; //     height:80%;
+            //   width:80%;
+            &>li {
+
+                display: grid;
+                &>a {
+                    padding: 1rem;
+                    background: white;
+                    margin-top: 20px;
+                    justify-self: center;
+                    align-self: flex-start;
+                    color: black;
+                    text-decoration: none;
+                    font-size: 1.8rem;
+                    text-align: center;
+                    &>i {}
+                }
+                &>a:hover {
+                    animation-duration: 0.5s;
+                    animation-name: shake;
+
+                }
+
+            }
+            &>li:nth-of-type(2) {
+                &>a {
+                    //   visibility:hidden;
+                }
+            }
+        }
+    }
+
+
+}
+
+// Pour afficher le menu burger en dessous de la largeur de l'écran de téléphone
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
+    #navBarUser {
+        background-color: beige;
+        display: grid;
+        grid-template-columns: 1.7fr 1fr;
+        height: 21vh;
+        min-height: 140px;
+        max-height: 140px;
+
+        &>ul:nth-of-type(1) {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+
+
+            &>li {
+                display: grid;
+
+                &>a {
+                    justify-self: center;
+                    align-self: center;
+                    text-decoration: none;
+                    color: black;
+                    font-size: 1.2rem;
+                }
+                &>a:hover {
+                    animation-duration: 0.5s;
+                    animation-name: shake;
+
+                }
+
+            }
+
+            &>li:nth-of-type(1) {
+                display: grid;
+
+                &>a {
+                    display: grid;
+                    align-self: center;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url("/res03-projet-final/assets/images/LOGOS VISIO.png");
+                    &>figure {
+                        align-self: center;
+                        padding: 0.5rem;
+                        &>img {
+
+
+                            min-height: 120px;
+                            max-height: 126px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &>ul:nth-of-type(2) {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr; //     height:80%;
+            //   width:80%;
+            &>li {
+
+                display: grid;
+                &>a {
+                    justify-self: center;
+                    align-self: center;
+                    color: black;
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                    &>i {}
+                }
+                &>a:hover {
+                    animation-duration: 0.5s;
+                    animation-name: shake;
+
+                }
+
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 1300px) {
+    #navBarUser {
+        background-color: beige;
+        display: grid;
+        grid-template-columns: 1.7fr 1fr;
+        height: 21vh;
+        min-height: 140px;
+        max-height: 140px;
+
+        &>ul:nth-of-type(1) {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+
+
+            &>li {
+                display: grid;
+
+                &>a {
+                    justify-self: center;
+                    align-self: center;
+                    text-decoration: none;
+                    color: black;
+                    font-size: 1.2rem;
+                }
+                &>a:hover {
+                    animation-duration: 0.5s;
+                    animation-name: shake;
+
+                }
+
+            }
+
+            &>li:nth-of-type(1) {
+                display: grid;
+
+                &>a {
+                    display: grid;
+                    align-self: center;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url("/res03-projet-final/assets/images/LOGOS VISIO.png");
+                    &>figure {
+                        align-self: center;
+                        padding: 0.5rem;
+                        &>img {
+
+
+                            min-height: 120px;
+                            max-height: 126px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &>ul:nth-of-type(2) {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr; //     height:80%;
+            //   width:80%;
+            &>li {
+
+                display: grid;
+                &>a {
+                    justify-self: center;
+                    align-self: center;
+                    color: black;
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                    &>i {}
+                }
+                &>a:hover {
+                    animation-duration: 0.5s;
+                    animation-name: shake;
+
+                }
+
+            }
+        }
+    }
+
 }

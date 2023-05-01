@@ -14,7 +14,6 @@ window.addEventListener("DOMContentLoaded",function(){
 
    let truc = window.location.href;
    let route = truc.split("/");
-   console.log(route)
 //   exemple : res03-projet-final/produit/{id}
 
  if(window.location.href === "https://victoroustiakine.sites.3wa.io/res03-projet-final/produits"){
@@ -25,7 +24,7 @@ window.addEventListener("DOMContentLoaded",function(){
    if(route[route.length-2]=== "produit" && route[route.length-3]==="res03-projet-final"){
        
     carousselProduct()
-    console.log("oucou")
+  
    }else
    if(window.location.href === "https://victoroustiakine.sites.3wa.io/res03-projet-final/monPanier"){
  

@@ -1,0 +1,9 @@
+#navBarAdmin {
+    font-size: 3rem;
+    &>ul {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        &>li {}
+    }
+}

@@ -2,11 +2,9 @@ function carousselProduct() {
 
 
     let articles = document.getElementsByTagName("article");
-console.log(articles)
-
 
     let tab = document.getElementsByClassName(`image`)
-console.log(tab)
+
 
     for (let j = 0; j < tab.length; j++) {
         if (j !== 0) {
@@ -16,7 +14,7 @@ console.log(tab)
         }
     }
     //  recupère un tableau d'image pour chaque produit
-    //  console.log(tab)
+
 
 
 
@@ -30,10 +28,9 @@ console.log(tab)
         buttonCaroussel[i].addEventListener('click', function() {
 
             // tab = liste des balise qui contiennent les images
-            console.log(tab)
             for (let j = 0; j < tab.length; j++) {
 
-                console.log(tab[j])
+
                 if (tab[j].style.display !== "none" && j !== tab.length - 1) {
 
                     tab[j].style.display = "none";

@@ -1,48 +1,48 @@
-#aPropos{
-    background:url("../../images/photo-font.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-    
-  & > main{
-      
-      width:100vw;
-      display:grid;
-     
-        & > h1{
-            background:white;
-                padding: 1rem;
-            text-align:center;
-            font-size:3rem;
+#aPropos {
 
+    &>main {
+        background: url("../../images/photo-font.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        width: 100vw;
+        display: grid;
+
+        &>h1 {
+            background: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 3rem;
+
+        }
+        &>ul {
+
+
+            &>li {
+                margin-bottom: 1rem;
+                padding: 1rem;
+            }
+            &>li:first-of-type {
+                margin-top: 2rem;
+            }
+            &>li:nth-of-type(even) {
+                line-height: 2rem;
+                background: beige;
+                opacity: 0.95;
+                margin-left: 40vw;
+                width: 50%;
+                border-radius: 5px;
+                font-size: 1.8rem;
+            }
+            &>li:nth-of-type(odd) {
+                margin-left: 2rem;
+                line-height: 2rem;
+                background: beige;
+                opacity: 0.95;
+                width: 60%;
+                border-radius: 5px;
+                font-size: 1.8rem;
+            }
+        }
     }
-     & > ul{
-         
-         
-         & > li{
-             margin-bottom:1rem;
-             padding:1rem;
-         } 
-         & > li:first-of-type{
-             margin-top:2rem;
-         }
-         & > li:nth-of-type(even){
-             line-height:2rem;
-             background:grey;
-             opacity:0.95;
-             margin-left:40vw;
-             width:50%;
-             border-radius:5px;
-             font-size:1.8rem;
-         }
-          & > li:nth-of-type(odd){
-              margin-left:2rem;
-             line-height:2rem;
-             background:grey;
-             opacity:0.95;
-             width:60%;
-              border-radius:5px;
-              font-size:1.8rem;
-         }
-     }
-  }
 }
