@@ -65,8 +65,11 @@ class ImageController extends AbstractAdminController {
     
     
     public function deleteImage($id){
-        echo "ierfvzergvrgtvretgv";
-         $imageManager = new ImageManager();
+        $imageManager = new ImageManager();
+       
+        // $fileToDeleteUrl = $media[]->getUrl();
+        // unlink($fileToDeleteUrl);
+         
     
              $truc =  $imageManager->deleteImageById($id);
       

@@ -81,7 +81,7 @@ class ImageManager extends AbstractManager {
          }
     
     public function deleteImageById($id):void{
-        
+       
          $query= $this->db->prepare("DELETE FROM images WHERE id=:value");
         $parameters = [
         'value' => $id,
@@ -99,6 +99,7 @@ var_dump($post);
 	    "product_id"=>$post["produit"]
 	];
 $query->execute($parameters);
+
     }
     
 }

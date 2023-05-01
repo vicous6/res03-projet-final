@@ -273,6 +273,7 @@ class Router {
                 }
                 
             }
+            // Toute les url qui ne correspondent a rien de valide
             else{
                   header('Location: /res03-projet-final/produits'); 
                   
