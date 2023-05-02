@@ -213,7 +213,7 @@ table {
     overflow-x: hidden;
     background: beige;
   }
-  #contact > section > h1 {
+  #contact > section > h2 {
     background: white;
     padding: 1rem;
     text-align: center;
@@ -261,7 +261,7 @@ table {
     overflow-x: hidden;
     background: beige;
   }
-  #contact > section > h1 {
+  #contact > section > h2 {
     background: white;
     padding: 1rem;
     text-align: center;
@@ -309,7 +309,7 @@ table {
     overflow-x: hidden;
     background: beige;
   }
-  #contact > section > h1 {
+  #contact > section > h2 {
     background: white;
     padding: 1rem;
     text-align: center;
@@ -357,7 +357,7 @@ table {
     overflow-x: hidden;
     background: beige;
   }
-  #contact > section > h1 {
+  #contact > section > h2 {
     background: white;
     padding: 1rem;
     text-align: center;
@@ -2392,6 +2392,18 @@ nav {
   }
 }
 @media screen and (max-width: 767px) {
+  #product > h2 {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+  #product > h2 > a {
+    position: absolute;
+    left: 1vw;
+    font-size: 2rem;
+    font-family: Montserrat, sans-serif;
+  }
   #product > section {
     min-height: 600px;
     padding: 0rem;
@@ -2441,6 +2453,18 @@ nav {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  #product > h2 {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+  #product > h2 > a {
+    position: absolute;
+    left: 1vw;
+    font-size: 2rem;
+    font-family: Montserrat, sans-serif;
+  }
   #product > section {
     min-height: 600px;
     padding: 0rem;
@@ -2491,6 +2515,18 @@ nav {
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1299px) {
+  #product > h2 {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+  #product > h2 > a {
+    position: absolute;
+    left: 1vw;
+    font-size: 2rem;
+    font-family: Montserrat, sans-serif;
+  }
   #product > section {
     min-height: 600px;
     padding: 0rem;
@@ -2541,6 +2577,18 @@ nav {
   }
 }
 @media screen and (min-width: 1300px) {
+  #product > h2 {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+  #product > h2 > a {
+    position: absolute;
+    left: 1vw;
+    font-size: 2rem;
+    font-family: Montserrat, sans-serif;
+  }
   #product > section {
     height: 72vh;
     min-height: 600px;
@@ -3045,7 +3093,7 @@ nav {
     position: absolute;
     left: 1vw;
     font-size: 1rem;
-    margin-top: 10vh;
+    margin-top: 60px;
     font-family: Montserrat, sans-serif;
   }
   #productsCategory > ul {
@@ -3152,8 +3200,7 @@ nav {
   #productsCategory > h2 > a {
     position: absolute;
     left: 1vw;
-    font-size: 1.4rem;
-    margin-top: 10vh;
+    font-size: 1.2rem;
     font-family: Montserrat, sans-serif;
   }
   #productsCategory > ul {
@@ -3271,7 +3318,6 @@ nav {
     position: absolute;
     left: 1vw;
     font-size: 1.8rem;
-    margin-top: 7vh;
     font-family: Montserrat, sans-serif;
   }
   #productsCategory > ul {
@@ -3389,7 +3435,6 @@ nav {
     position: absolute;
     left: 1vw;
     font-size: 1.8rem;
-    margin-top: 7vh;
     font-family: Montserrat, sans-serif;
   }
   #productsCategory > ul {

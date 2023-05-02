@@ -1,6 +1,19 @@
 @media screen and (max-width: 767px) {
     #product {
-
+&>h2 {
+            background: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 3rem;
+            &>a {
+                position: absolute;
+                left: 1vw;
+                font-size: 2rem;
+                // margin-top: 10vh;
+                font-family:Montserrat,sans-serif;
+            }
+        
+        }
         &>section {
 
             min-height: 600px;
@@ -57,7 +70,19 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     #product {
-
+&>h2 {
+            background: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 3rem;
+            &>a {
+                position: absolute;
+                left: 1vw;
+                font-size: 2rem;
+                // margin-top: 10vh;
+                font-family:Montserrat,sans-serif;
+            }
+        }
         &>section {
 
             min-height: 600px;
@@ -114,7 +139,19 @@
 
 @media screen and (min-width: 1024px) and (max-width: 1299px) {
     #product {
-
+&>h2 {
+            background: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 3rem;
+            &>a {
+                position: absolute;
+                left: 1vw;
+                font-size: 2rem;
+                // margin-top: 10vh;
+                font-family:Montserrat,sans-serif;
+            }
+        }
         &>section {
 
             min-height: 600px;
@@ -171,7 +208,19 @@
 
 @media screen and (min-width: 1300px) {
     #product {
-
+&>h2 {
+            background: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 3rem;
+            &>a {
+                position: absolute;
+                left: 1vw;
+                font-size: 2rem;
+                // margin-top: 10vh;
+                font-family:Montserrat,sans-serif;
+            }
+        }
         &>section {
             height: 72vh;
             min-height: 600px;

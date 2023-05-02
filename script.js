@@ -32,7 +32,6 @@ window.addEventListener("DOMContentLoaded",function(){
     
    }else
    
-   console.log(route)
    if(route[route.length-3]==="res03-projet-final"&& route[route.length-2]=== "produits"){
        
        caroussel()

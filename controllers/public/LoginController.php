@@ -23,7 +23,7 @@ class LoginController extends AbstractPublicController
         ) {
             $userManager = new UserManager();
             $emailExistence = $userManager->getUserByEmail($post["email"]);
-
+            
             // si l'email existe -> on verifie si les pass correspondent
             if ($emailExistence !== null) {
                 // si les pas correspondent on LOGIN A FAIRE

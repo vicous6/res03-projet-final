@@ -3,10 +3,14 @@
 
 ?> <main class="justify-content-center">
   <table id="categoriesTable" class="table table-striped col-lg-6 table-bordered table-striped text-center">
-    <h1>Gestion des Materiaux</h1> <?php echo "
+    <h1>Gestion des Materiaux</h1> 
+    
+    <h3>Si le Supprimer ne marche pas => un produit contient encore le materiaux en question </h3>
+    <h3>Supprimer ce produit d'abord </h3>
 		<a href='/res03-projet-final/admin/materiel/ajouter'>
 			<button>Créer un Materiel</button>
-		</a>" ?> <thead>
+		</a>
+		<thead>
       <tr>
         <th>id </th>
         <th>name </th>
@@ -22,12 +26,10 @@
           <a href='/res03-projet-final/admin/materiel'>X</a>
         </td>
         <td>
-          <a href='/res03-projet-final/admin/materiel/
-						<?= $material->getId() ?>/modifier'>Modifier </a>
+          <a href='/res03-projet-final/admin/materiel/<?= $material->getId() ?>/modifier'>Modifier </a>
         </td>
         <td>
-          <a href='/res03-projet-final/admin/materiel/
-						<?= $material->getId() ?>/supprimer'>Supprimer </a>
+          <a href='/res03-projet-final/admin/materiel/<?= $material->getId() ?>/supprimer'>Supprimer </a>
         </td>
       </tr> <?php   }  ?> </tbody>
   </table>

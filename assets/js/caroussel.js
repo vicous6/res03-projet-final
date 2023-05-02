@@ -7,7 +7,7 @@ function caroussel() {
 
         let truc = document.getElementsByClassName(`${i}`)
         tab.push(truc);
-        console.log(truc)
+        
 
         for (let j = 0; j < truc.length; j++) {
             if (j !== 0) {

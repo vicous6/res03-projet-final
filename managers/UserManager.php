@@ -15,7 +15,7 @@ class UserManager extends AbstractManager
             "password" => $user->getPassword(),
             "number" => $user->getNumber(),
         ];
-
+var_dump($parameters);
         $query->execute($parameters);
     }
 
@@ -50,6 +50,7 @@ class UserManager extends AbstractManager
         ];
         $query->execute($parameters);
         $user = $query->fetch(PDO::FETCH_ASSOC);
+      
         if ($user === false || $user === null) {
             return null;
         }
