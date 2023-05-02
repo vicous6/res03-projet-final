@@ -7,7 +7,13 @@
             padding: 1rem;
             text-align: center;
             font-size: 3rem;
-
+            &>a {
+                position: absolute;
+                left: 1vw;
+                font-size: 1rem;
+                margin-top: 10vh;
+                font-family:Montserrat,sans-serif;
+            }
         }
         &>ul {
             margin-top: 2rem;
@@ -127,7 +133,13 @@
             padding: 1rem;
             text-align: center;
             font-size: 3rem;
-
+            &>a {
+                position: absolute;
+                left: 1vw;
+                font-size: 1.4rem;
+                margin-top: 10vh;
+                font-family:Montserrat,sans-serif;
+            }
         }
         &>ul {
             margin-top: 2rem;
@@ -184,7 +196,7 @@
 
                         &>figure {
 
-                            grid-template-columns: 9fr 1fr; 
+                            grid-template-columns: 9fr 1fr;
                             &>img {
 
                                 border-top-radius: 5px;
@@ -256,7 +268,13 @@
             padding: 1rem;
             text-align: center;
             font-size: 3rem;
-
+            &>a {
+                position: absolute;
+                left: 1vw;
+                font-size: 1.8rem;
+                margin-top: 7vh;
+                font-family:Montserrat,sans-serif;
+            }
         }
         &>ul {
             margin-top: 2rem;
@@ -294,6 +312,7 @@
             grid-template-columns: 1fr 1fr 1fr;
             grid-gap: 1rem;
             padding: 2rem;
+
             &>article {
                 border-radius: 5px;
                 background: white;
@@ -386,6 +405,13 @@
             padding: 1rem;
             text-align: center;
             font-size: 3rem;
+            &>a {
+                position: absolute;
+                left: 1vw;
+                font-size: 1.8rem;
+                margin-top: 7vh;
+                font-family:Montserrat,sans-serif;
+            }
 
         }
         &>ul {
@@ -424,6 +450,8 @@
             grid-template-columns: 1fr 1fr 1fr;
             grid-gap: 1rem;
             padding: 2rem;
+
+
             &>article {
                 border-radius: 5px;
                 background: white;

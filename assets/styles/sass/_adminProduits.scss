@@ -3,4 +3,17 @@
     img {
         width: 130px;
     }
+  
+    &> h1{
+        font-size:3rem;
+    }
+
+}
+#admin-category{
+    
+    &>main{
+        &> h1{
+            font-size:3rem;
+        }
+    }
 }

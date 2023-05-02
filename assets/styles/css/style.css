@@ -208,17 +208,203 @@ table {
     font-size: 1.8rem;
   }
 }
-#contact {
-  overflow-x: hidden;
+@media screen and (max-width: 767px) {
+  #contact {
+    overflow-x: hidden;
+    background: beige;
+  }
+  #contact > section > h1 {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+  #contact > section > ul:first-of-type {
+    margin-top: 2rem;
+    background: beige;
+  }
+  #contact > section > ul:first-of-type > li {
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 1.2rem;
+    line-height: 1rem;
+  }
+  #contact > section > ul:first-of-type > li > span {
+    font-size: 1rem;
+  }
+  #contact > section > ul:first-of-type > li > p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  #contact > section > ul:first-of-type > li:last-of-type {
+    text-align: center;
+  }
+  #contact > section > ul:last-of-type {
+    background: beige;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  #contact > section > ul:last-of-type > li:first-of-type {
+    justify-self: flex-end;
+    margin-right: 1rem;
+  }
+  #contact > section > ul:last-of-type > li:last-of-type {
+    justify-self: flex-start;
+    margin-left: 1rem;
+  }
 }
-#contact > section {
-  height: 79vh;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #contact {
+    overflow-x: hidden;
+    background: beige;
+  }
+  #contact > section > h1 {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+  #contact > section > ul:first-of-type {
+    margin-top: 2rem;
+    background: beige;
+  }
+  #contact > section > ul:first-of-type > li {
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 1.2rem;
+    line-height: 1rem;
+  }
+  #contact > section > ul:first-of-type > li > span {
+    font-size: 1rem;
+  }
+  #contact > section > ul:first-of-type > li > p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  #contact > section > ul:first-of-type > li:last-of-type {
+    text-align: center;
+  }
+  #contact > section > ul:last-of-type {
+    background: beige;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  #contact > section > ul:last-of-type > li:first-of-type {
+    justify-self: flex-end;
+    margin-right: 1rem;
+  }
+  #contact > section > ul:last-of-type > li:last-of-type {
+    justify-self: flex-start;
+    margin-left: 1rem;
+  }
 }
-
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
+  #contact {
+    overflow-x: hidden;
+    background: beige;
+  }
+  #contact > section > h1 {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+  #contact > section > ul:first-of-type {
+    margin-top: 2rem;
+    background: beige;
+  }
+  #contact > section > ul:first-of-type > li {
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 1.4rem;
+    line-height: 1rem;
+  }
+  #contact > section > ul:first-of-type > li > span {
+    font-size: 1.4rem;
+  }
+  #contact > section > ul:first-of-type > li > p {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+  #contact > section > ul:first-of-type > li:last-of-type {
+    text-align: center;
+  }
+  #contact > section > ul:last-of-type {
+    background: beige;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    font-size: 6rem;
+    margin-bottom: 2rem;
+  }
+  #contact > section > ul:last-of-type > li:first-of-type {
+    justify-self: flex-end;
+    margin-right: 1rem;
+  }
+  #contact > section > ul:last-of-type > li:last-of-type {
+    justify-self: flex-start;
+    margin-left: 1rem;
+  }
+}
+@media screen and (min-width: 1300px) {
+  #contact {
+    overflow-x: hidden;
+    background: beige;
+  }
+  #contact > section > h1 {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+  #contact > section > ul:first-of-type {
+    margin-top: 2rem;
+    background: beige;
+  }
+  #contact > section > ul:first-of-type > li {
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 1.4rem;
+  }
+  #contact > section > ul:first-of-type > li > span {
+    font-size: 1.4rem;
+  }
+  #contact > section > ul:first-of-type > li > p {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+  #contact > section > ul:first-of-type > li:last-of-type {
+    text-align: center;
+  }
+  #contact > section > ul:last-of-type {
+    background: beige;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    font-size: 6rem;
+    margin-bottom: 2rem;
+  }
+  #contact > section > ul:last-of-type > li:first-of-type {
+    justify-self: flex-end;
+    margin-right: 1rem;
+  }
+  #contact > section > ul:last-of-type > li:last-of-type {
+    justify-self: flex-start;
+    margin-left: 1rem;
+  }
+}
 footer {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   background: beige;
+  position: relative;
+  border-top: 1px solid black;
 }
 footer > h1 {
   padding-top: 1rem;
@@ -240,6 +426,7 @@ footer > ul:nth-of-type(2) {
 }
 footer > ul:nth-of-type(2) > li {
   margin-left: 1rem;
+  margin-right: 1rem;
 }
 nav {
   font-family: "Montserrat" sans-serif;
@@ -316,7 +503,7 @@ nav {
     display: grid;
   }
   #navBar > ul:nth-of-type(2) > li > a {
-    padding: 1rem;
+    padding: 0.5rem;
     background: white;
     margin-top: 20px;
     justify-self: center;
@@ -825,25 +1012,139 @@ nav {
     animation-name: shake;
   }
 }
-#homepage > main {
-  background: url("../../images/DEA511D0-3B31-4D28-A825-BBC9DFB41DC2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 109vh;
+@media screen and (max-width: 767px) {
+  #homepage > main {
+    background: url("../../images/DEA511D0-3B31-4D28-A825-BBC9DFB41DC2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 800px;
+  }
+  #homepage > main > h1 {
+    margin-top: 3rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 3.5rem;
+    color: #F5F5DC;
+    transform: rotate(-13deg);
+    width: 90%;
+    text-shadow: 1px 1px 2px rgb(128, 0, 0);
+  }
+  #homepage > main > h2 {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3.5rem;
+  }
+  #homepage > main > p {
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 150px;
+    width: 90%;
+    padding: 1rem;
+    background: beige;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgb(128, 0, 0);
+  }
 }
-#homepage > main > h1 {
-  font-weight: bold;
-  font-size: 3.3rem;
-  color: #F5F5DC;
-  transform: rotate(-18deg);
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #homepage > main {
+    background: url("../../images/DEA511D0-3B31-4D28-A825-BBC9DFB41DC2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 800px;
+  }
+  #homepage > main > h1 {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 4rem;
+    color: #F5F5DC;
+    transform: rotate(-18deg);
+    text-shadow: 1px 1px 2px rgb(128, 0, 0);
+  }
+  #homepage > main > h2 {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 4rem;
+  }
+  #homepage > main > p {
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 240px;
+    width: 80%;
+    padding: 1rem;
+    background: beige;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgb(128, 0, 0);
+  }
 }
-#homepage > main > h2 {
-  background: white;
-  padding: 1rem;
-  text-align: center;
-  font-size: 3rem;
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
+  #homepage > main {
+    background: url("../../images/DEA511D0-3B31-4D28-A825-BBC9DFB41DC2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 800px;
+  }
+  #homepage > main > h1 {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 4rem;
+    color: #F5F5DC;
+    transform: rotate(-18deg);
+    text-shadow: 1px 1px 2px rgb(128, 0, 0);
+  }
+  #homepage > main > h2 {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+  #homepage > main > p {
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 280px;
+    width: 60%;
+    padding: 1rem;
+    background: beige;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 2px rgb(128, 0, 0);
+  }
 }
-
+@media screen and (min-width: 1300px) {
+  #homepage > main {
+    background: url("../../images/DEA511D0-3B31-4D28-A825-BBC9DFB41DC2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 800px;
+  }
+  #homepage > main > h1 {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 4rem;
+    color: #F5F5DC;
+    transform: rotate(-18deg);
+    text-shadow: 1px 1px 2px rgb(128, 0, 0);
+  }
+  #homepage > main > h2 {
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+  #homepage > main > p {
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 280px;
+    width: 60%;
+    padding: 1rem;
+    background: beige;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 2px rgb(128, 0, 0);
+  }
+}
 @media screen and (max-width: 767px) {
   #register > section {
     background: url("https://pro-artista.fr/profiles/breches-bijoux/breches-bijoux-b6bc7-lg.jpeg");
@@ -958,6 +1259,7 @@ nav {
     padding: 0.3rem;
   }
   #register > section > form > p {
+    text-align: center;
     justify-self: center;
     align-self: center;
     font-size: 1.6rem;
@@ -2089,42 +2391,208 @@ nav {
     justify-self: center;
   }
 }
-#product > section {
-  height: 79vh;
-  min-height: 600px;
-  padding: 0rem;
-  display: grid;
+@media screen and (max-width: 767px) {
+  #product > section {
+    min-height: 600px;
+    padding: 0rem;
+    display: grid;
+  }
+  #product > section > article {
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.5rem;
+  }
+  #product > section > article > button {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+  #product > section > article > a {
+    display: grid;
+  }
+  #product > section > article > a > figure {
+    display: grid;
+    align-self: center;
+  }
+  #product > section > article > a > figure img {
+    justify-self: center;
+    width: 50vw;
+    max-height: 60vh;
+    min-height: 500px;
+  }
+  #product > section > article > ul {
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+  }
+  #product > section > article > ul > li {
+    background: beige;
+    display: grid;
+  }
+  #product > section > article > ul > li > p {
+    font-size: 1rem;
+    align-self: center;
+    text-align: center;
+  }
+  #product > section > article > ul > li > p > span {
+    font-weight: bold;
+  }
 }
-#product > section > article {
-  width: 70%;
-  justify-self: center;
-  align-self: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0.5rem;
-  border: 1px solid black;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #product > section {
+    min-height: 600px;
+    padding: 0rem;
+    display: grid;
+  }
+  #product > section > article {
+    width: 90%;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.5rem;
+  }
+  #product > section > article > button {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+  #product > section > article > a {
+    display: grid;
+  }
+  #product > section > article > a > figure {
+    display: grid;
+    align-self: center;
+  }
+  #product > section > article > a > figure img {
+    justify-self: center;
+    width: 50vw;
+    max-height: 60vh;
+    min-height: 500px;
+  }
+  #product > section > article > ul {
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+  }
+  #product > section > article > ul > li {
+    background: beige;
+    display: grid;
+  }
+  #product > section > article > ul > li > p {
+    font-size: 1.4rem;
+    align-self: center;
+    text-align: center;
+  }
+  #product > section > article > ul > li > p > span {
+    font-weight: bold;
+  }
 }
-#product > section > article > a > figure img {
-  width: 30vw;
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
+  #product > section {
+    min-height: 600px;
+    padding: 0rem;
+    display: grid;
+  }
+  #product > section > article {
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.5rem;
+  }
+  #product > section > article > button {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+  #product > section > article > a {
+    display: grid;
+  }
+  #product > section > article > a > figure {
+    display: grid;
+    align-self: center;
+  }
+  #product > section > article > a > figure img {
+    justify-self: center;
+    width: 40vw;
+    max-height: 60vh;
+    min-height: 500px;
+  }
+  #product > section > article > ul {
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+  }
+  #product > section > article > ul > li {
+    background: beige;
+    display: grid;
+  }
+  #product > section > article > ul > li > p {
+    font-size: 1.4rem;
+    align-self: center;
+    text-align: center;
+  }
+  #product > section > article > ul > li > p > span {
+    font-weight: bold;
+  }
 }
-#product > section > article > ul {
-  padding: 3rem;
-  display: grid;
-  grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+@media screen and (min-width: 1300px) {
+  #product > section {
+    height: 72vh;
+    min-height: 600px;
+    padding: 0rem;
+    display: grid;
+  }
+  #product > section > article {
+    min-height: 528px;
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.5rem;
+    height: 65vh;
+  }
+  #product > section > article > button {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+  #product > section > article > a {
+    display: grid;
+  }
+  #product > section > article > a > figure {
+    justify-self: center;
+    display: grid;
+  }
+  #product > section > article > a > figure img {
+    align-self: center;
+    width: 30vw;
+    max-height: 60vh;
+    min-height: 400px;
+  }
+  #product > section > article > ul {
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+  }
+  #product > section > article > ul > li {
+    background: beige;
+    display: grid;
+  }
+  #product > section > article > ul > li > p {
+    font-size: 1.4rem;
+    align-self: center;
+    text-align: center;
+  }
+  #product > section > article > ul > li > p > span {
+    font-weight: bold;
+  }
 }
-#product > section > article > ul > li {
-  background: grey;
-  display: grid;
-}
-#product > section > article > ul > li > p {
-  font-size: 1.6rem;
-  align-self: center;
-  text-align: center;
-}
-#product > section > article > ul > li > p > span {
-  font-weight: bold;
-}
-
 @media screen and (max-width: 767px) {
   #products {
     background: #fefee0;
@@ -2573,6 +3041,13 @@ nav {
     text-align: center;
     font-size: 3rem;
   }
+  #productsCategory > h2 > a {
+    position: absolute;
+    left: 1vw;
+    font-size: 1rem;
+    margin-top: 10vh;
+    font-family: Montserrat, sans-serif;
+  }
   #productsCategory > ul {
     margin-top: 2rem;
     display: grid;
@@ -2673,6 +3148,13 @@ nav {
     padding: 1rem;
     text-align: center;
     font-size: 3rem;
+  }
+  #productsCategory > h2 > a {
+    position: absolute;
+    left: 1vw;
+    font-size: 1.4rem;
+    margin-top: 10vh;
+    font-family: Montserrat, sans-serif;
   }
   #productsCategory > ul {
     margin-top: 2rem;
@@ -2785,6 +3267,13 @@ nav {
     text-align: center;
     font-size: 3rem;
   }
+  #productsCategory > h2 > a {
+    position: absolute;
+    left: 1vw;
+    font-size: 1.8rem;
+    margin-top: 7vh;
+    font-family: Montserrat, sans-serif;
+  }
   #productsCategory > ul {
     margin-top: 2rem;
     display: grid;
@@ -2896,6 +3385,13 @@ nav {
     text-align: center;
     font-size: 3rem;
   }
+  #productsCategory > h2 > a {
+    position: absolute;
+    left: 1vw;
+    font-size: 1.8rem;
+    margin-top: 7vh;
+    font-family: Montserrat, sans-serif;
+  }
   #productsCategory > ul {
     margin-top: 2rem;
     display: grid;
@@ -3001,8 +3497,19 @@ nav {
   width: 180px;
 }
 
+.adminImage > h1 {
+  font-size: 3rem;
+}
+
 .adminProduits img {
   width: 130px;
+}
+.adminProduits > h1 {
+  font-size: 3rem;
+}
+
+#admin-category > main > h1 {
+  font-size: 3rem;
 }
 
 #navBarAdmin {
@@ -3014,6 +3521,14 @@ nav {
 }
 #navBarAdmin > ul > li {
   margin-bottom: 1.3rem;
+}
+
+#admin-material > main > h1 {
+  font-size: 3rem;
+}
+
+#admin-user > main > h1 {
+  font-size: 3rem;
 }
 
 body {

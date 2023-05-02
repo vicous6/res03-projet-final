@@ -2,6 +2,8 @@ footer {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     background: beige;
+    position: relative;
+    border-top:1px solid black;
     &>h1 {
         padding-top: 1rem;
         line-height: 2rem;
@@ -22,6 +24,7 @@ footer {
         font-size: 3rem;
         &>li {
             margin-left: 1rem;
+            margin-right: 1rem;
             &>a {}
 
         }
