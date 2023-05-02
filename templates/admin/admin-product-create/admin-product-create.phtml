@@ -18,54 +18,54 @@
   </fieldset>
   <fieldset>
     <select name="category_id" id="name">
-      <option value="">--Choisir la categorie--</option> <?php  
-      foreach($data["categories"] as $produit){
+      <option value="">--Choisir la categorie--</option> 
+  <?php      foreach($data["categories"] as $produit){ ?>
          
-        echo "
-							<option value='".$produit->getId()."'>".$produit->getTitle()."</option>";
         
-      }
+							<option value='<?= $produit->getId() ?>'><?=$produit->getTitle() ?></option>";
+        
+  <?php    }       ?>
        
-       ?>
+
     </select>
   </fieldset>
   <fieldset>
     <select name="materiaux" id="materiaux">
-      <option value="">--Choisir un materiau--</option> <?php  
-      foreach($data["materiaux"] as $materiaux){
+      <option value="">--Choisir un materiau--</option> 
+    <?php    foreach($data["materiaux"] as $materiaux){  ?>
          
-        echo "
-							<option value='".$materiaux->getId()."'>".$materiaux->getName()."</option>";
         
-      }
+							<option value='<?=$materiaux->getId() ?> '><?=$materiaux->getName() ?></option>
+        
+    <?php  } ?>
        
-       ?>
+       
     </select>
   </fieldset>
   <fieldset>
     <select name="materiaux2" id="materiaux2">
-      <option value="">--Choisir un autre materiau--</option> <?php  
-      foreach($data["materiaux"]as $materiaux){
+      <option value="">--Choisir un autre materiau--</option>  
+   <?php    foreach($data["materiaux"]as $materiaux){ ?>
          
-        echo "
-							<option value='".$materiaux->getId()."'>".$materiaux->getName()."</option>";
         
-      }
+							<option value='<?= $materiaux->getId() ?>'><?=$materiaux->getName() ?></option>";
+        
+   <?php    } ?>
        
-       ?>
+      
     </select>
   </fieldset>
   <fieldset>
     <select name="materiaux3" id="materiaux3">
-      <option value="">--Choisir un autre materiau--</option> <?php  
-      foreach($data["materiaux"]as $materiaux){
+      <option value="">--Choisir un autre materiau--</option> 
+   <?php     foreach($data["materiaux"]as $materiaux){ ?>
          
-        echo "
-							<option value='".$materiaux->getId()."'>".$materiaux->getName()."</option>";
         
-      }
+							<option value='<?= $materiaux->getId() ?>'><?= $materiaux->getName() ?></option>";
+        
+  <?php      }   ?>
        
-       ?>
+      
     </select>
   </fieldset>
   <input type="hidden" name="formName" value="createProduct">

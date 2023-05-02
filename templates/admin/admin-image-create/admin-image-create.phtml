@@ -17,13 +17,13 @@
       <label for="name">Le produit</label>
     <select name="produit" id="name">
         <option value="">--Please choose an option--</option>
-       <?php  
-       foreach ($data["produits"]as $produit){
-         
-         echo "<option value='".$produit->getId()."'>".$produit->getName()."</option>";
-       }
        
-       ?>
+    <?php     foreach ($data["produits"]as $produit){  ?>
+         
+        <option value='<?=$produit->getId() ?>'><?= $produit->getName() ?></option>
+    <?php   }  ?>
+       
+     
     </select>
   </fieldset>
   
