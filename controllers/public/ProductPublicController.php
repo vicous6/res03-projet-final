@@ -21,7 +21,7 @@ class ProductPublicController extends AbstractPublicController
         $products = $productManager->getAllProducts();
 
         foreach ($products as $product) {
-            $imageTab = ["id" => $product->getId()];
+            $imageTab = ["id" => $product->getId()]; 
 
             $materials = $materialManager->getAllMaterialsByProductId(
                 $product->getId()

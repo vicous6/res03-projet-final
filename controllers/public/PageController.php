@@ -21,11 +21,9 @@ class PageController extends AbstractPublicController
     }
     public function monPanier()
     {
-        // var_dump($_SESSION);
         $cart = [];
         $imageManager = new ImageManager();
         $images = $imageManager->getAllImages();
-        //  var_dump($images);
 
         if (isset($_SESSION["cart"]) && !empty($_SESSION["cart"])) {
             foreach ($_SESSION["cart"] as $id) {
@@ -43,13 +41,13 @@ class PageController extends AbstractPublicController
                 }
             }
         }
-        // var_dump($_SESSION);
+
         $this->renderPublic("monPanier", ["cart" => $cart]);
     }
 
     public function addPanier($id)
     {
-        // var_dump($_SESSION);
+  
 
         $_SESSION["cart"][] = $id;
     }
@@ -67,12 +65,12 @@ class PageController extends AbstractPublicController
     }
     public function login()
     {
-        // var_dump($_SESSION);
+      
         $this->renderPublic("login", ["page de login"]);
     }
     public function register()
     {
-        //   var_dump($_SESSION);
+   
         $this->renderPublic("register", ["page d'inscription"]);
     }
     public function registerCreateUser(array $post)
