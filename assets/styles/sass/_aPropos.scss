@@ -1,4 +1,159 @@
+
+@media screen and (max-width: 767px){
 #aPropos {
+
+    &>main {
+        background: url("../../images/photo-font.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        width: 100vw;
+        display: grid;
+
+        &>h1 {
+            background: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 3rem;
+
+        }
+        &>ul {
+
+
+            &>li {
+                margin-bottom: 1rem;
+                padding: 1rem;
+            }
+            &>li:first-of-type {
+                margin-top: 2rem;
+            }
+            &>li:nth-of-type(even) {
+                line-height: 2rem;
+                background: beige;
+                opacity: 0.95;
+                margin-left: 40vw;
+                width: 50%;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+            &>li:nth-of-type(odd) {
+                margin-left: 2rem;
+                line-height: 2rem;
+                background: beige;
+                opacity: 0.95;
+                width: 60%;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+#aPropos {
+
+    &>main {
+        background: url("../../images/photo-font.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        width: 100vw;
+        display: grid;
+
+        &>h1 {
+            background: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 3rem;
+
+        }
+        &>ul {
+
+
+            &>li {
+                margin-bottom: 1rem;
+                padding: 1rem;
+            }
+            &>li:first-of-type {
+                margin-top: 2rem;
+            }
+            &>li:nth-of-type(even) {
+                line-height: 2rem;
+                background: beige;
+                opacity: 0.95;
+                margin-left: 40vw;
+                width: 50%;
+                border-radius: 5px;
+                font-size: 1.4rem;
+            }
+            &>li:nth-of-type(odd) {
+                margin-left: 2rem;
+                line-height: 2rem;
+                background: beige;
+                opacity: 0.95;
+                width: 60%;
+                border-radius: 5px;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1299px){
+ #aPropos {
+
+    &>main {
+        background: url("../../images/photo-font.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        width: 100vw;
+        display: grid;
+
+        &>h1 {
+            background: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 3rem;
+
+        }
+        &>ul {
+
+
+            &>li {
+                margin-bottom: 1rem;
+                padding: 1rem;
+            }
+            &>li:first-of-type {
+                margin-top: 2rem;
+            }
+            &>li:nth-of-type(even) {
+                line-height: 2rem;
+                background: beige;
+                opacity: 0.95;
+                margin-left: 40vw;
+                width: 50%;
+                border-radius: 5px;
+                font-size: 1.6rem;
+            }
+            &>li:nth-of-type(odd) {
+                margin-left: 2rem;
+                line-height: 2rem;
+                background: beige;
+                opacity: 0.95;
+                width: 60%;
+                border-radius: 5px;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+}
+
+@media screen and (min-width: 1300px){
+    #aPropos {
 
     &>main {
         background: url("../../images/photo-font.jpg");
@@ -46,3 +201,5 @@
         }
     }
 }
+}
+ 

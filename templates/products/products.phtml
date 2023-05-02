@@ -1,53 +1,28 @@
-
-
-
-
 <h1>Galerie</h1>
-<ul>
-<?php foreach ($data["categories"] as $key => $categorie){ ?>
-    
-    <li>
-       <a href= '/res03-projet-final/produits/<?= $categorie->getTitle();?>'> <?= $categorie->getTitle()?></a>     
-    </li>
- 
-<?php } ?>
-  </ul>
-
-
-    <section>
-        <h2 class="sr-only" > Listes des Produits</h2>
-<?php foreach ($data["products"] as $key => $product) { ?>
-    
-   <article>
-       <h3 class="sr-only" > $product->getName</h3>
-    <header>
-    <?php foreach ($product->getImages() as $key2 => $image) { ?>
-      
-        <a class=<?= $key?> href='produit/<?=$product->getId() ?>'>
-                <figure>
-             
-                    <img src='/res03-projet-final/<?= $image ?>' alt = "une image">
-                
-                </figure></a>
-                
-               
-    <?php } ?>
-    <button class ='caroussel'>></button>
- </header>
+<ul> <?php foreach ($data["categories"] as $key => $categorie){ ?> <li>
+    <a href='/res03-projet-final/produits/
+			
+			<?= $categorie->getTitle();?>'> <?= $categorie->getTitle()?> </a>
+  </li> <?php } ?> </ul>
+<section>
+  <h2 class="sr-only"> Listes des Produits</h2> <?php foreach ($data["products"] as $key => $product) { ?> <article>
+    <h3 class="sr-only"> $product->getName</h3>
+    <header> <?php foreach ($product->getImages() as $key2 => $image) { ?> <a class=<?= $key?> href='produit/
+				
+				<?=$product->getId() ?>'>
+        <figure>
+          <img src='/res03-projet-final/
+						
+						<?= $image ?>' alt="une image">
+        </figure>
+      </a> <?php } ?> <button class='caroussel'>></button>
+    </header>
     <ul>
-           
-            <li><?= ucfirst($product->getName()) ?></li>
-            <li><?= $product->getPrix() ?> €</li>
-            
-          
-          <li> <button type="button" id=<?=$product->getId()?> class="paniers">Ajouter au Panier</button></li>
+      <li> <?= ucfirst($product->getName()) ?> </li>
+      <li> <?= $product->getPrix() ?> € </li>
+      <li>
+        <button type="button" id=<?=$product->getId()?> class="paniers">Ajouter au Panier </button>
+      </li>
     </ul>
-    </article>
-
-<?php } ?>
+  </article> <?php } ?>
 </section>
-
-
-    
-    
- 

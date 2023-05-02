@@ -12,8 +12,9 @@
         &>ul {
             margin-top: 2rem;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
             &>li {
+                margin-bottom:1rem;
                 min-height: 48px;
                 height: 5vh;
                 display: grid;
@@ -59,8 +60,7 @@
 
                         &>figure {
 
-                            grid-template-columns: 9fr 1fr; // height: 40vh;
-                            // padding: 0.3rem;
+                            grid-template-columns: 9fr 1fr; 
                             &>img {
 
                                 border-top-radius: 5px;
@@ -79,7 +79,7 @@
 
                 &>ul {
                     display: grid;
-                    grid-template-rows: 2fr 1fr 1fr; //   padding:2rem;
+                    grid-template-rows: 2fr 1fr 1fr; 
                     &>li:nth-of-type(1) {
                         padding: 0.2rem;
                         font-size: 1.6rem;
@@ -186,8 +186,7 @@
 
                         &>figure {
 
-                            grid-template-columns: 9fr 1fr; // height: 40vh;
-                            // padding: 0.3rem;
+                            grid-template-columns: 9fr 1fr; 
                             &>img {
 
                                 border-top-radius: 5px;
@@ -206,7 +205,7 @@
 
                 &>ul {
                     display: grid;
-                    grid-template-rows: 2fr 1fr 1fr; //   padding:2rem;
+                    grid-template-rows: 2fr 1fr 1fr;  
                     &>li:nth-of-type(1) {
                         padding: 0.2rem;
                         font-size: 1.6rem;
@@ -317,8 +316,7 @@
 
                         &>figure {
 
-                            grid-template-columns: 9fr 1fr; // height: 40vh;
-                            // padding: 0.3rem;
+                            grid-template-columns: 9fr 1fr; 
                             &>img {
 
                                 border-top-radius: 5px;
@@ -337,7 +335,7 @@
 
                 &>ul {
                     display: grid;
-                    grid-template-rows: 2fr 1fr 1fr; //   padding:2rem;
+                    grid-template-rows: 2fr 1fr 1fr;
                     &>li:nth-of-type(1) {
                         padding: 0.2rem;
                         font-size: 1.6rem;
@@ -449,8 +447,7 @@
 
                         &>figure {
 
-                            grid-template-columns: 9fr 1fr; // height: 40vh;
-                            // padding: 0.3rem;
+                            grid-template-columns: 9fr 1fr;
                             &>img {
 
                                 border-top-radius: 5px;
@@ -469,7 +466,7 @@
 
                 &>ul {
                     display: grid;
-                    grid-template-rows: 2fr 1fr 1fr; //   padding:2rem;
+                    grid-template-rows: 2fr 1fr 1fr;
                     &>li:nth-of-type(1) {
                         padding: 0.2rem;
                         font-size: 1.6rem;

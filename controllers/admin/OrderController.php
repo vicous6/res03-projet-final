@@ -4,7 +4,7 @@
 class OrderController extends AbstractAdminController {
     
     
-//   private ProductManager $productManager;
+// exemple:   private ProductManager $productManager;
 
  public function __construct()
     {

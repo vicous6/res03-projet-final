@@ -1,54 +1,47 @@
 
 <section>
     
-<?php
-echo "<h2 class='sr-only'>Un Produit</h2>";
-//  var_dump($_SESSION);
-// var_dump($data["products"]);
 
-    echo "<article>";
-    echo "<h2 class='sr-only'>Un article</h2>";
-    // var_dump($key);
-        echo "<button class ='caroussel'>></button>";
-            //   var_dump($product->getImages());
-            foreach($data["products"]->getImages() as $key2 => $image){
+<h2 class='sr-only'>Un Produit</h2>
+    <article>
+    <h2 class='sr-only'>Un article</h2>
+
+        <button class ='caroussel'>></button>
+        <?php    foreach($data["products"]->getImages() as $key2 => $image){ ?>
                 
                 
-                echo "<a class= 'image'><figure><img src='/res03-projet-final/".$image."'  alt='Image produit'></figure></a>";
+                <a class= 'image'><figure><img src='/res03-projet-final/<?=$image?>'  alt="Image produit"></figure></a>
                 
-            }
+         <?php    } ?>
          
       
       
  
-       echo "<ul>";
-    //   echo "<li>";
-    //         echo "id : ".$data["products"]->getId();
-    //         echo "</li>";
-            
-            echo "<li><p><span>".$data["products"]->getName()."</span></p></li>";
+       <ul>
+       
+            <li><p><span><?= $data["products"]->getName() ?></span></p></li>
             
             
             
             
          
-            echo "<li> <p>Description : ".$data["products"]->getDesciption()."</p></li>";
+            <li> <p>Description : <?= $data["products"]->getDesciption() ?></p></li>
             
            
-            echo "<li><p>Stock : ".$data["products"]->getStock()."</p></li>";
+            <li><p>Stock : <?= $data["products"]->getStock() ?></p></li>
             
            
-            // echo "<li><p> ".$data["products"]->getCategory()."</p></li>";
+            <li><p> <?= $data["products"]->getCategory() ?></p></li>
            
-             echo "<li><p>Materiaux : ";
-            foreach($data["products"]->getMaterials() as $material){
-               echo $material." ";
-            }
-            echo "</p></li>";
-            echo "<li><p>Prix : ".$data["products"]->getPrix()." €</p></li>";
-            echo "<li><button id=".$data["products"]->getId()." class=paniers>Ajouter au Panier</button></li>";
-        echo "</ul>";
-    echo "</article>";
+             <li><p>Materiaux : 
+          <?php  foreach($data["products"]->getMaterials() as $material){ ?>
+               <?= $material ?>
+          <?php  }  ?>
+            </p></li>
+            <li><p>Prix : <?=$data["products"]->getPrix()?> €</p></li>
+            <li><button id= <?= $data["products"]->getId()?> class=paniers>Ajouter au Panier</button></li>
+        </ul>
+    </article>
 
 ?>
 

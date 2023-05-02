@@ -1,38 +1,28 @@
 <form action="/res03-projet-final/admin/produit/ajouter" method="post">
   <h1>Création de Produit</h1>
-  
-  <!--<?php var_dump($data["materiaux"]); ?>-->
-  <!---->
-  <!---->
-  <!--a faire: finir le form + gestion bdd creation de produit + setup le choix des materiaux-->
-  <!---->
-  <!---->
-  <!---->
   <fieldset>
-  <label for="name">Nom du Produit</label>
-  <input type="text" id="name" name="name">
+    <label for="name">Nom du Produit</label>
+    <input type="text" id="name" name="name">
   </fieldset>
   <fieldset>
-  <label for="description">Description du produit</label>
-  <input type="text" id="description" name="description">
+    <label for="description">Description du produit</label>
+    <input type="text" id="description" name="description">
   </fieldset>
   <fieldset>
-  <label for="prix">PrixHT</label>
-  <input type="number" step="0.01"id="prix" name="prix">
+    <label for="prix">PrixHT</label>
+    <input type="number" step="0.01" id="prix" name="prix">
   </fieldset>
   <fieldset>
-  <label for="stock">Stock</label>
-  <input type="number" id="stock" name="stock">
+    <label for="stock">Stock</label>
+    <input type="number" id="stock" name="stock">
   </fieldset>
   <fieldset>
-      
     <select name="category_id" id="name">
-      
-      <option value="">--Choisir la categorie--</option>
-       <?php  
+      <option value="">--Choisir la categorie--</option> <?php  
       foreach($data["categories"] as $produit){
          
-        echo "<option value='".$produit->getId()."'>".$produit->getTitle()."</option>";
+        echo "
+							<option value='".$produit->getId()."'>".$produit->getTitle()."</option>";
         
       }
        
@@ -40,14 +30,12 @@
     </select>
   </fieldset>
   <fieldset>
-      
     <select name="materiaux" id="materiaux">
-      
-      <option value="">--Choisir un materiau--</option>
-       <?php  
+      <option value="">--Choisir un materiau--</option> <?php  
       foreach($data["materiaux"] as $materiaux){
          
-        echo "<option value='".$materiaux->getId()."'>".$materiaux->getName()."</option>";
+        echo "
+							<option value='".$materiaux->getId()."'>".$materiaux->getName()."</option>";
         
       }
        
@@ -55,41 +43,35 @@
     </select>
   </fieldset>
   <fieldset>
-      
     <select name="materiaux2" id="materiaux2">
-      
-      <option value="">--Choisir un autre materiau--</option>
-       <?php  
+      <option value="">--Choisir un autre materiau--</option> <?php  
       foreach($data["materiaux"]as $materiaux){
          
-        echo "<option value='".$materiaux->getId()."'>".$materiaux->getName()."</option>";
+        echo "
+							<option value='".$materiaux->getId()."'>".$materiaux->getName()."</option>";
         
       }
        
        ?>
     </select>
   </fieldset>
-   <fieldset>
-      
+  <fieldset>
     <select name="materiaux3" id="materiaux3">
-      
-      <option value="">--Choisir un autre materiau--</option>
-       <?php  
+      <option value="">--Choisir un autre materiau--</option> <?php  
       foreach($data["materiaux"]as $materiaux){
          
-        echo "<option value='".$materiaux->getId()."'>".$materiaux->getName()."</option>";
+        echo "
+							<option value='".$materiaux->getId()."'>".$materiaux->getName()."</option>";
         
       }
        
        ?>
     </select>
   </fieldset>
-  
-  
   <input type="hidden" name="formName" value="createProduct">
-
-  <button id="registerButton" type="submit" value="Creer le Produit"><span class="fa-duotone fa-lock"></span>Créer le Produit</button>
-  
-    </fieldset>
-  <p>Revenir a la liste des produits<a href ="/res03-projet-final/admin/produits">ICI</a> </p>
+  <button id="registerButton" type="submit" value="Creer le Produit">
+    <span class="fa-duotone fa-lock"></span>Créer le Produit </button>
+  </fieldset>
+  <p>Revenir a la liste des produits <a href="/res03-projet-final/admin/produits">ICI</a>
+  </p>
 </form>

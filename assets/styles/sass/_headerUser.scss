@@ -17,7 +17,98 @@ nav {
     }
 }
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+     #navBarUser {
+        background: url("/res03-projet-final/assets/images/LOGOS-VISIO.png") rgba(245, 245, 225, 0.8);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: grid;
+        grid-template-rows: 1fr 0.8fr;
+        height: 600px;
+
+        &>ul:nth-of-type(1) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+
+            &>li {
+                display: grid;
+
+                &>a {
+                    padding: 1rem;
+                    background: white;
+                    justify-self: center;
+                    align-self: center;
+                    text-decoration: none;
+                    color: black;
+                    font-size: 0.8rem;
+                    text-align: center;
+                    align-self: flex-end
+                }
+                &>a:hover {
+                    animation-duration: 0.5s;
+                    animation-name: shake;
+
+                }
+
+            }
+
+            &>li:nth-of-type(1) {
+                display: none;
+
+                &>a {
+                    display: grid;
+                    align-self: center;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url("/res03-projet-final/assets/images/LOGOS VISIO.png");
+                    &>figure {
+                        align-self: center;
+                        padding: 0.5rem;
+                        display: grid;
+                        &>img {
+                            justify-self: center;
+
+                            min-height: 120px;
+                            max-height: 126px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &>ul:nth-of-type(2) {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr; 
+            
+            &>li {
+
+                display: grid;
+                &>a {
+                    padding: 1rem;
+                    background: white;
+                    margin-top: 20px;
+                    justify-self: center;
+                    align-self: flex-start;
+                    color: black;
+                    text-decoration: none;
+                    font-size: 0.8
+                    rem;
+                    text-align: center;
+                    &>i {}
+                }
+                &>a:hover {
+                    animation-duration: 0.5s;
+                    animation-name: shake;
+
+                }
+
+            }
+            
+        }
+    }
+}
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     #navBarUser {
@@ -81,8 +172,8 @@ nav {
 
         &>ul:nth-of-type(2) {
             display: grid;
-            grid-template-columns: 3fr 3fr 3fr; //     height:80%;
-            //   width:80%;
+            grid-template-columns: 3fr 3fr 3fr; 
+            
             &>li {
 
                 display: grid;
@@ -105,11 +196,7 @@ nav {
                 }
 
             }
-            &>li:nth-of-type(2) {
-                &>a {
-                    //   visibility:hidden;
-                }
-            }
+            
         }
     }
 
@@ -174,8 +261,8 @@ nav {
 
         &>ul:nth-of-type(2) {
             display: grid;
-            grid-template-columns: 3fr 3fr 3fr; //     height:80%;
-            //   width:80%;
+            grid-template-columns: 3fr 3fr 3fr; 
+           
             &>li {
 
                 display: grid;
@@ -256,8 +343,8 @@ nav {
 
         &>ul:nth-of-type(2) {
             display: grid;
-            grid-template-columns: 3fr 3fr 3fr; //     height:80%;
-            //   width:80%;
+            grid-template-columns: 3fr 3fr 3fr; 
+          
             &>li {
 
                 display: grid;

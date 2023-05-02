@@ -12,7 +12,7 @@ function initCart() {
             fetch(`/res03-projet-final/addPanier/${id}`);
             setTimeout(() => {
                 window.location.href = ("/res03-projet-final/monPanier");
-            }, "1000")
+            }, "300")
 
         })
     }

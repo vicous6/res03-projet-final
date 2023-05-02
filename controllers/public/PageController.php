@@ -1,157 +1,142 @@
 <?php
 
-class PageController extends AbstractPublicController {
-    
-    
-  private UserManager $manager;
+class PageController extends AbstractPublicController
+{
+    private UserManager $manager;
 
- public function __construct()
+    public function __construct()
     {
-        
-        
-        $this->manager= new UserManager()  ;
-    
-       
-        
+        $this->manager = new UserManager();
     }
-    
-    public function homepage(){
-        
+
+    public function homepage()
+    {
         // var_dump($_SESSION);
-        $this->renderPublic( "homepage" , ["page de connexion"]); 
+        $this->renderPublic("homepage", ["page de connexion"]);
     }
-    public function aPropos(){
-        
+    public function aPropos()
+    {
         // var_dump($_SESSION);
-        $this->renderPublic( "aPropos" , ["a-propos"]); 
+        $this->renderPublic("aPropos", ["a-propos"]);
     }
-    public function monPanier(){
+    public function monPanier()
+    {
         // var_dump($_SESSION);
-         $cart=[]; 
-         $imageManager = new ImageManager();
-         $images =  $imageManager-> getAllImages();
+        $cart = [];
+        $imageManager = new ImageManager();
+        $images = $imageManager->getAllImages();
         //  var_dump($images);
-         
-        if(isset($_SESSION["cart"]) && !empty($_SESSION["cart"])
-        
-        ){ foreach($_SESSION['cart']as $id){
-         
-         if($id !== ""){
-              $productManager = new ProductManager();
-           $result = $productManager->getProductById($id);
-           
-           foreach($images as $image ){
-              
-               if($image->getProductName() === $result->getName()){
-                   
-                  $result->addImages($image->getUrl());
-                   
-                   
-               }
-           }
-           
-           
-           
-           array_push($cart, $result);
-         }
-        }
-        }
-        // var_dump($_SESSION);
-        $this->renderPublic( "monPanier" , ["cart"=>$cart]); 
-    }
-    
-    public function addPanier($id){
-        // var_dump($_SESSION);
 
+        if (isset($_SESSION["cart"]) && !empty($_SESSION["cart"])) {
+            foreach ($_SESSION["cart"] as $id) {
+                if ($id !== "") {
+                    $productManager = new ProductManager();
+                    $result = $productManager->getProductById($id);
 
-         $_SESSION["cart"][]=$id;
-         
-   
-        
-    }
-    public function deleteFromCart($id){
-        
-        // var_dump($_SESSION["cart"]);
-        foreach($_SESSION["cart"] as $index=>$produit){
-            
-            if($produit === $id){
-                
-               $_SESSION["cart"][$index]="";
-                
-                
-                header('Location: /res03-projet-final/monPanier');
-                die;
+                    foreach ($images as $image) {
+                        if ($image->getProductName() === $result->getName()) {
+                            $result->addImages($image->getUrl());
+                        }
+                    }
+
+                    array_push($cart, $result);
+                }
             }
-            
         }
-        
-        
-    }
-    public function login(){
-        
         // var_dump($_SESSION);
-        $this->renderPublic( "login" , ["page de login"]); 
+        $this->renderPublic("monPanier", ["cart" => $cart]);
     }
-    public function register(){
-        
-    //   var_dump($_SESSION);
-        $this->renderPublic( "register" , ["page d'inscription"]); 
+
+    public function addPanier($id)
+    {
+        // var_dump($_SESSION);
+
+        $_SESSION["cart"][] = $id;
     }
-    public function registerCreateUser(array $post){
+    public function deleteFromCart($id)
+    {
+        // var_dump($_SESSION["cart"]);
+        foreach ($_SESSION["cart"] as $index => $produit) {
+            if ($produit === $id) {
+                $_SESSION["cart"][$index] = "";
+
+                header("Location: /res03-projet-final/monPanier");
+                die();
+            }
+        }
+    }
+    public function login()
+    {
+        // var_dump($_SESSION);
+        $this->renderPublic("login", ["page de login"]);
+    }
+    public function register()
+    {
+        //   var_dump($_SESSION);
+        $this->renderPublic("register", ["page d'inscription"]);
+    }
+    public function registerCreateUser(array $post)
+    {
         // verif back du formulaire (champ vide)
         var_dump($post);
-         if(isset($post["registerUsername"])&&!empty($post["registerUsername"])
-     && isset($post["registerEmail"]) && !empty($post["registerEmail"])
-     && isset($post["registerPassword"]) && !empty($post["registerPassword"])
-     && isset($post["registerConfirmPwd"]) && !empty($post["registerConfirmPwd"])
-     && isset($post["number"]) && !empty($post["number"])
-     && isset($post["formName"]) && !empty($post["formName"])
-     && $post["registerPassword"]=== $post["registerConfirmPwd"]
-     && $post["formName"]==="register"
-     
-     
-     ){
-         
-         
-        $userManager = new UserManager();
-        $result =  $userManager->getUserByEmail($post["registerEmail"]);
-        
-        // si on ne trouve pas un user qui a ce mail : renvoi null , donc verif duplication email ok.
-        if($result === null ){
-            
+        if (
+            isset($post["registerUsername"]) &&
+            !empty($post["registerUsername"]) &&
+            isset($post["registerEmail"]) &&
+            !empty($post["registerEmail"]) &&
+            isset($post["registerPassword"]) &&
+            !empty($post["registerPassword"]) &&
+            isset($post["registerConfirmPwd"]) &&
+            !empty($post["registerConfirmPwd"]) &&
+            isset($post["number"]) &&
+            !empty($post["number"]) &&
+            isset($post["formName"]) &&
+            !empty($post["formName"]) &&
+            $post["registerPassword"] === $post["registerConfirmPwd"] &&
+            $post["formName"] === "register"
+        ) {
+            $userManager = new UserManager();
+            $result = $userManager->getUserByEmail($post["registerEmail"]);
+
+            // si on ne trouve pas un user qui a ce mail : renvoi null , donc verif duplication email ok.
+            if ($result === null) {
                 // si on ne trouve pas un user qui a ce mail : renvoi null , donc verif duplication email ok.
-                 $hash = password_hash($post['registerPassword'], PASSWORD_DEFAULT); // hash le passwor avant de push le user en bdd
-           
-             $newUser = new User( $post['registerUsername'],$post['registerEmail'], $hash, $post['number'], "customer");
-             
-            $userManager->createUser($newUser);
+                $hash = password_hash(
+                    $post["registerPassword"],
+                    PASSWORD_DEFAULT
+                ); // hash le passwor avant de push le user en bdd
+
+                $newUser = new User(
+                    $post["registerUsername"],
+                    $post["registerEmail"],
+                    $hash,
+                    $post["number"],
+                    "customer"
+                );
+
+                $userManager->createUser($newUser);
                 // echo "user créer";
-                   header('Location: login');
-        }else{
-            // echo "le mail existe deja";
-             $this->renderPublic( "register" , ["raté ,l'email existe deja"]); 
-            
+                header("Location: login");
+            } else {
+                // echo "le mail existe deja";
+                $this->renderPublic("register", ["raté ,l'email existe deja"]);
+            }
+        } else {
+            $this->renderPublic("register", ["raté un des champs est vide"]);
         }
-    }else{
-          $this->renderPublic( "register" , ["raté un des champs est vide"]); 
     }
-    }
-    public function logout(){
-        
+    public function logout()
+    {
         session_destroy();
-        
-        
-           header('Location: accueil');
+
+        header("Location: accueil");
     }
-    public function contact(){
-        
-        
-        $this->renderPublic( "contact" , ["page de contact"]); 
+    public function contact()
+    {
+        $this->renderPublic("contact", ["page de contact"]);
     }
-     public function display404(){
-        
-        
-        $this->renderPublic( "404" , ["page d'erreur"]); 
+    public function display404()
+    {
+        $this->renderPublic("404", ["page d'erreur"]);
     }
-    
 }
