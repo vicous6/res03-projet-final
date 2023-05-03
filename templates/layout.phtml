@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang ="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>
+        De Fils En Perles
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/ed817aab73.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/res03-projet-final/assets/styles/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
+<!--metadata-->
+<meta name="title" content="De Fils en Perles">
+<meta name="description" content="Bijoux et macramés de fabrication artisanale">
+<meta name="keywords" content="Bijoux Perles Colliers">
+<meta name="robots" content="index, follow">
+
+<meta name="language" content="Francais">
+<link rel="icon" href="/res03-projet-final/assets/images/LOGOS-VISIO.png" >
+<meta property="og:image" content="https://victoroustiakine.sites.3wa.io/res03-projet-final/assets/images/LOGOS-VISIO.png">
+</head>
+<body id= <?php echo $template ?>>
+
+
+<?php 
+
+if(isset($_SESSION["isConnected"])&&$_SESSION["isConnected"]===true){
+    
+    require 'partials/_userHeader.phtml';
+    
+}else{
+    
+   require 'partials/_header.phtml'; 
+}
+
+
+
+require "templates/".$template."/".$template.".phtml";
+
+require 'partials/_footer.phtml';
+?>
+
+
+
+
+<script type="module" src="/res03-projet-final/script.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,34 @@
+<!--<?php var_dump($data);?>-->
+<form action="/res03-projet-final/admin/produit/<?php echo $data["toDisplay"]->getId() ?>/modifier" method="post">
+  <h1>Modification du Produit</h1>
+  
+  <fieldset>
+  <label for="id">id</label>
+  <input type="number" id="id" name="id" readonly value= "<?php echo $data["toDisplay"]->getId() ?>">
+  </fieldset>
+  
+  
+  <fieldset>
+  <label for="name">Nom du Produit</label>
+  <input type="text" id="name" name="name" value= "<?php echo $data["toDisplay"]->getName() ?>">
+  </fieldset>
+  <fieldset>
+  <label for="name">Description</label>
+  <input type="text" id="description" name="description" value= "<?php echo $data["toDisplay"]->getDesciption() ?>">
+  </fieldset>
+  <fieldset>
+  <label for="name">Prix</label>
+  <input type="text" id="prix" name="prix" value= "<?php echo $data["toDisplay"]->getPrix() ?>">
+  </fieldset>
+  <fieldset>
+  <label for="name">Stock</label>
+  <input type="text" id="stock" name="stock" value= "<?php echo $data["toDisplay"]->getStock() ?>">
+  </fieldset>
+  
+  <input type="hidden" name="formName" value="updateProduct">
+
+  <button id="registerButton" type="submit" value="Modifier le produit"><span class="fa-duotone fa-lock"></span>Modifier le Produit</button>
+  
+    </fieldset>
+  <p>Revenir a la liste des Produits<a href ="/res03-projet-final/admin/produits">ICI</a> </p>
+</form>

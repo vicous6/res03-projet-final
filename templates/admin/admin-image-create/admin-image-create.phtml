@@ -1,0 +1,36 @@
+
+<form action="/res03-projet-final/admin/image/ajouter" method="post" enctype="multipart/form-data">
+  <h1>Création d'Images</h1>
+  
+  
+  
+  <fieldset>
+  <label for="name">Description</label>
+  <input type="text" id="name" name="name">
+  </fieldset>
+  <fieldset>
+           <input type="file" name="image" />
+         
+          
+  </fieldset>
+  <fieldset>
+      <label for="name">Le produit</label>
+    <select name="produit" id="name">
+        <option value="">--Please choose an option--</option>
+       
+    <?php     foreach ($data["produits"]as $produit){  ?>
+         
+        <option value='<?=$produit->getId() ?>'><?= $produit->getName() ?></option>
+    <?php   }  ?>
+       
+     
+    </select>
+  </fieldset>
+  
+  <input type="hidden" name="formName" value="createImage">
+
+  <button id="registerButton" type="submit" value="Creer l'image"><span class="fa-duotone fa-lock"></span>Creer l'Image</button>
+  
+    </fieldset>
+  <p>Revenir a la liste des images<a href ="/res03-projet-final/admin/images">ICI</a> </p>
+</form>

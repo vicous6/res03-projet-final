@@ -1,0 +1,22 @@
+
+<form action="/res03-projet-final/admin/categorie/<?php echo $data["toDisplay"]->getId() ?>/modifier" method="post">
+  <h1>Modification de Categorie</h1>
+  
+  <fieldset>
+  <label for="id">id</label>
+  <input type="number" id="id" name="id" readonly value= "<?php echo $data["toDisplay"]->getId() ?>">
+  </fieldset>
+  
+  
+  <fieldset>
+  <label for="name">Nom de la Categorie</label>
+  <input type="text" id="name" name="name" value= "<?php echo $data["toDisplay"]->getTitle() ?>">
+  </fieldset>
+  
+  <input type="hidden" name="formName" value="updateCategory">
+
+  <button id="registerButton" type="submit" value="Modifier l'utilisateur"><span class="fa-duotone fa-lock"></span>Modifier la Categorie</button>
+  
+    </fieldset>
+  <p>Revenir a la liste des categories<a href ="/res03-projet-final/admin/categories">ICI</a> </p>
+</form>

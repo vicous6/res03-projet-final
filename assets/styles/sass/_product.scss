@@ -1,0 +1,290 @@
+@media screen and (max-width: 767px) {
+    #product {
+        &>h2 {
+            background: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 3rem;
+            &>a {
+                position: absolute;
+                left: 1vw;
+                font-size: 2rem;
+                text-decoration: none;
+                font-family: Montserrat, sans-serif;
+                color:black;
+                border: 1px solid black;
+                padding: 0.3rem;
+            }
+
+        }
+        &>section {
+
+            min-height: 600px;
+            padding: 0rem;
+            display: grid;
+            &>article {
+
+                justify-self: center;
+                align-self: center;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 0.5rem;
+
+                &>button {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 1rem;
+                }
+                &>a {
+                    display: grid;
+                    &>figure {
+                        display: grid;
+                        align-self: center;
+                        img {
+                            justify-self: center;
+                            width: 50vw;
+                            max-height: 60vh;
+                            min-height: 500px;
+                        }
+                    }
+                }
+                &>ul {
+                    padding: 1rem;
+                    display: grid;
+                    grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+                    &>li {
+                        background: beige;
+                        display: grid;
+                        &>p {
+                            font-size: 1rem;
+                            align-self: center;
+                            text-align: center;
+                            &>span {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #product {
+        &>h2 {
+            background: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 3rem;
+            &>a {
+                position: absolute;
+                left: 1vw;
+                font-size: 2rem;
+                text-decoration: none;
+                font-family: Montserrat, sans-serif;
+                color:black;
+                border: 1px solid black;
+                padding: 0.3rem;
+            }
+        }
+        &>section {
+
+            min-height: 600px;
+            padding: 0rem;
+            display: grid;
+            &>article {
+                width: 90%;
+                justify-self: center;
+                align-self: center;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 0.5rem;
+
+                &>button {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 1rem;
+                }
+                &>a {
+                    display: grid;
+                    &>figure {
+                        display: grid;
+                        align-self: center;
+                        img {
+                            justify-self: center;
+                            width: 50vw;
+                            max-height: 60vh;
+                            min-height: 500px;
+                        }
+                    }
+                }
+                &>ul {
+                    padding: 1rem;
+                    display: grid;
+                    grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+                    &>li {
+                        background: beige;
+                        display: grid;
+                        &>p {
+                            font-size: 1.4rem;
+                            align-self: center;
+                            text-align: center;
+                            &>span {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1299px) {
+    #product {
+        &>h2 {
+            background: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 3rem;
+            &>a {
+                position: absolute;
+                left: 1vw;
+                font-size: 2rem; 
+                font-family: Montserrat, sans-serif;
+                 text-decoration:none;
+                 color:black;
+                 border: 1px solid black;
+                padding: 0.3rem;
+            }
+        }
+        &>section {
+
+            min-height: 600px;
+            padding: 0rem;
+            display: grid;
+            &>article {
+                width: 70%;
+                justify-self: center;
+                align-self: center;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 0.5rem;
+
+                &>button {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 1rem;
+                }
+                &>a {
+                    display: grid;
+                    &>figure {
+                        display: grid;
+                        align-self: center;
+                        img {
+                            justify-self: center;
+                            width: 40vw;
+                            max-height: 60vh;
+                            min-height: 500px;
+                        }
+                    }
+                }
+                &>ul {
+                    padding: 1rem;
+                    display: grid;
+                    grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+                    &>li {
+                        background: beige;
+                        display: grid;
+                        &>p {
+                            font-size: 1.4rem;
+                            align-self: center;
+                            text-align: center;
+                            &>span {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    #product {
+        &>h2 {
+            background: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 3rem;
+            &>a {
+                position: absolute;
+                left: 1vw;
+                font-size: 2rem; // margin-top: 10vh;
+                font-family: Montserrat, sans-serif;
+                 text-decoration:none;
+                 color:black;
+                 border: 1px solid black;
+                padding: 0.3rem;
+            }
+        }
+        &>section {
+            height: 72vh;
+            min-height: 600px;
+            padding: 0rem;
+            display: grid;
+            &>article {
+                min-height: 528px;
+                width: 70%;
+                justify-self: center;
+                align-self: center;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 0.5rem;
+
+                height: 65vh;
+                &>button {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 1rem;
+                }
+                &>a {
+                    display: grid;
+                    &>figure {
+                        justify-self: center;
+                        display: grid;
+                        img {
+                            align-self: center;
+                            width: 30vw;
+                            max-height: 60vh;
+                            min-height: 400px;
+                        }
+                    }
+                }
+                &>ul {
+                    padding: 2rem;
+                    display: grid;
+                    grid-template-rows: 1fr 2fr 1fr 1fr 1fr 1fr;
+                    &>li {
+                        background: beige;
+                        display: grid;
+                        &>p {
+                            font-size: 1.4rem;
+                            align-self: center;
+                            text-align: center;
+                            &>span {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
