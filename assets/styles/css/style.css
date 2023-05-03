@@ -2402,7 +2402,9 @@ nav {
     position: absolute;
     left: 1vw;
     font-size: 2rem;
+    text-decoration: none;
     font-family: Montserrat, sans-serif;
+    color: black;
   }
   #product > section {
     min-height: 600px;
@@ -2463,7 +2465,9 @@ nav {
     position: absolute;
     left: 1vw;
     font-size: 2rem;
+    text-decoration: none;
     font-family: Montserrat, sans-serif;
+    color: black;
   }
   #product > section {
     min-height: 600px;
@@ -2526,6 +2530,8 @@ nav {
     left: 1vw;
     font-size: 2rem;
     font-family: Montserrat, sans-serif;
+    text-decoration: none;
+    color: black;
   }
   #product > section {
     min-height: 600px;
@@ -2588,6 +2594,8 @@ nav {
     left: 1vw;
     font-size: 2rem;
     font-family: Montserrat, sans-serif;
+    text-decoration: none;
+    color: black;
   }
   #product > section {
     height: 72vh;
@@ -3093,8 +3101,12 @@ nav {
     position: absolute;
     left: 1vw;
     font-size: 1rem;
-    margin-top: 60px;
+    color: black;
     font-family: Montserrat, sans-serif;
+    text-decoration: none;
+    margin-top: 70px;
+    border: 1px solid black;
+    padding: 0.3rem;
   }
   #productsCategory > ul {
     margin-top: 2rem;
@@ -3198,10 +3210,14 @@ nav {
     font-size: 3rem;
   }
   #productsCategory > h2 > a {
+    color: black;
     position: absolute;
     left: 1vw;
     font-size: 1.2rem;
+    text-decoration: none;
     font-family: Montserrat, sans-serif;
+    border: 1px solid black;
+    padding: 1rem;
   }
   #productsCategory > ul {
     margin-top: 2rem;
@@ -3315,10 +3331,14 @@ nav {
     font-size: 3rem;
   }
   #productsCategory > h2 > a {
+    color: black;
     position: absolute;
     left: 1vw;
     font-size: 1.8rem;
+    text-decoration: none;
     font-family: Montserrat, sans-serif;
+    border: 1px solid black;
+    padding: 1rem;
   }
   #productsCategory > ul {
     margin-top: 2rem;
@@ -3432,10 +3452,14 @@ nav {
     font-size: 3rem;
   }
   #productsCategory > h2 > a {
+    color: black;
+    text-decoration: none;
     position: absolute;
     left: 1vw;
     font-size: 1.8rem;
     font-family: Montserrat, sans-serif;
+    border: 1px solid black;
+    padding: 1rem;
   }
   #productsCategory > ul {
     margin-top: 2rem;
@@ -3578,6 +3602,58 @@ nav {
 
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+@keyframes translate1 {
+  0% {
+    transform: translate(-550px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes translate4 {
+  0% {
+    transform: translate(150px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes translate2 {
+  0% {
+    transform: translate(0px, -1000px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes translate3 {
+  0% {
+    transform: translate(0px, 1000px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.animation1 {
+  animation-duration: 1s;
+  animation-name: translate1;
+}
+
+.animation2 {
+  animation-duration: 1s;
+  animation-name: translate2;
+}
+
+.animation3 {
+  animation-duration: 1s;
+  animation-name: translate3;
+}
+
+.animation4 {
+  animation-duration: 1s;
+  animation-name: translate4;
 }
 
 /*# sourceMappingURL=style.css.map */

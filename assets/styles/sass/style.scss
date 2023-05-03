@@ -23,3 +23,59 @@
 body{
     font-family:"Montserrat", sans-serif;
 }
+@keyframes translate1 {
+    0% {
+         transform: translate(-550px, 0px);
+    }
+    
+    
+    100% {
+       transform: translate(0px, 0px);
+    }
+}
+@keyframes translate4 {
+    0% {
+         transform: translate(150px, 0px);
+    }
+  
+    100% {
+       transform: translate(0px, 0px);
+    }
+}
+@keyframes translate2 {
+    0% {
+       transform: translate(0px, -1000px);
+    }
+   
+    100% {
+       transform: translate(0px, 0px);
+    }
+}
+@keyframes translate3 {
+    0% {
+       transform: translate(0px, 1000px);
+    }
+   
+    100% {
+       transform: translate(0px, 0px);
+    }
+}
+
+.animation1{
+    animation-duration: 1.0s;
+    animation-name: translate1;
+    
+}
+
+.animation2{
+   animation-duration: 1.0s;
+    animation-name: translate2; 
+}
+.animation3{
+   animation-duration: 1.0s;
+    animation-name: translate3; 
+}
+.animation4{
+   animation-duration: 1.0s;
+    animation-name: translate4; 
+}

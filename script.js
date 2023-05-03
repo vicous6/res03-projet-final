@@ -3,14 +3,14 @@ import { caroussel } from "/res03-projet-final/assets/js/caroussel.js";
 import { carousselProduct } from "/res03-projet-final/assets/js/carousselProduct.js";
 import { total } from "/res03-projet-final/assets/js/cart/makeTotalPrice.js";
 import { initCart } from "/res03-projet-final/assets/js/cart/cart.js";
-
+import { initHeader } from "/res03-projet-final/assets/js/initHeader.js";
 window.addEventListener("DOMContentLoaded",function(){
     
 //   console.log(window.location.href)
     initCart();
     // creer la route vers create User
  
- 
+  initHeader();
 
    let truc = window.location.href;
    let route = truc.split("/");

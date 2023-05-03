@@ -1,6 +1,6 @@
 @media screen and (max-width: 767px) {
     #product {
-&>h2 {
+        &>h2 {
             background: white;
             padding: 1rem;
             text-align: center;
@@ -9,10 +9,11 @@
                 position: absolute;
                 left: 1vw;
                 font-size: 2rem;
-                // margin-top: 10vh;
-                font-family:Montserrat,sans-serif;
+                text-decoration: none;
+                font-family: Montserrat, sans-serif;
+                color:black;
             }
-        
+
         }
         &>section {
 
@@ -30,7 +31,7 @@
                 &>button {
                     width: 50px;
                     height: 50px;
-                    font-size:1rem;
+                    font-size: 1rem;
                 }
                 &>a {
                     display: grid;
@@ -70,7 +71,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     #product {
-&>h2 {
+        &>h2 {
             background: white;
             padding: 1rem;
             text-align: center;
@@ -79,8 +80,9 @@
                 position: absolute;
                 left: 1vw;
                 font-size: 2rem;
-                // margin-top: 10vh;
-                font-family:Montserrat,sans-serif;
+                text-decoration: none;
+                font-family: Montserrat, sans-serif;
+                color:black;
             }
         }
         &>section {
@@ -99,7 +101,7 @@
                 &>button {
                     width: 50px;
                     height: 50px;
-                    font-size:1rem;
+                    font-size: 1rem;
                 }
                 &>a {
                     display: grid;
@@ -139,7 +141,7 @@
 
 @media screen and (min-width: 1024px) and (max-width: 1299px) {
     #product {
-&>h2 {
+        &>h2 {
             background: white;
             padding: 1rem;
             text-align: center;
@@ -147,9 +149,10 @@
             &>a {
                 position: absolute;
                 left: 1vw;
-                font-size: 2rem;
-                // margin-top: 10vh;
-                font-family:Montserrat,sans-serif;
+                font-size: 2rem; 
+                font-family: Montserrat, sans-serif;
+                 text-decoration:none;
+                 color:black;
             }
         }
         &>section {
@@ -168,7 +171,7 @@
                 &>button {
                     width: 50px;
                     height: 50px;
-                    font-size:1rem;
+                    font-size: 1rem;
                 }
                 &>a {
                     display: grid;
@@ -208,7 +211,7 @@
 
 @media screen and (min-width: 1300px) {
     #product {
-&>h2 {
+        &>h2 {
             background: white;
             padding: 1rem;
             text-align: center;
@@ -216,9 +219,10 @@
             &>a {
                 position: absolute;
                 left: 1vw;
-                font-size: 2rem;
-                // margin-top: 10vh;
-                font-family:Montserrat,sans-serif;
+                font-size: 2rem; // margin-top: 10vh;
+                font-family: Montserrat, sans-serif;
+                 text-decoration:none;
+                 color:black;
             }
         }
         &>section {
@@ -239,7 +243,7 @@
                 &>button {
                     width: 50px;
                     height: 50px;
-                    font-size:1rem;
+                    font-size: 1rem;
                 }
                 &>a {
                     display: grid;
