@@ -1926,6 +1926,7 @@ nav {
     grid-template-rows: 1fr 0.3fr;
   }
   #monPanier > main > section:nth-of-type(1) {
+    margin-top: 1rem;
     min-width: 513px;
     background: white;
     border-radius: 10px;
@@ -2109,7 +2110,6 @@ nav {
   }
   #monPanier > main > section:nth-of-type(2) {
     font-size: 2rem;
-    height: 300px;
     background: white;
     margin-top: 1rem;
     justify-self: center;
@@ -2230,7 +2230,6 @@ nav {
   #monPanier > main > section:nth-of-type(2) {
     position: fixed;
     font-size: 2rem;
-    height: 300px;
     background: white;
     margin-left: 1rem;
     padding: 2rem;
@@ -2350,7 +2349,6 @@ nav {
   #monPanier > main > section:nth-of-type(2) {
     position: fixed;
     font-size: 2rem;
-    height: 300px;
     background: white;
     margin-left: 1rem;
     padding: 2rem;
@@ -2405,6 +2403,8 @@ nav {
     text-decoration: none;
     font-family: Montserrat, sans-serif;
     color: black;
+    border: 1px solid black;
+    padding: 0.3rem;
   }
   #product > section {
     min-height: 600px;
@@ -2468,6 +2468,8 @@ nav {
     text-decoration: none;
     font-family: Montserrat, sans-serif;
     color: black;
+    border: 1px solid black;
+    padding: 0.3rem;
   }
   #product > section {
     min-height: 600px;
@@ -2532,6 +2534,8 @@ nav {
     font-family: Montserrat, sans-serif;
     text-decoration: none;
     color: black;
+    border: 1px solid black;
+    padding: 0.3rem;
   }
   #product > section {
     min-height: 600px;
@@ -2596,6 +2600,8 @@ nav {
     font-family: Montserrat, sans-serif;
     text-decoration: none;
     color: black;
+    border: 1px solid black;
+    padding: 0.3rem;
   }
   #product > section {
     height: 72vh;
