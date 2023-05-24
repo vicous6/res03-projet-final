@@ -99,8 +99,7 @@ Class User {
     {
         $this->livraison = $livraison;
     }
-    
-    
+   
     
 }
 

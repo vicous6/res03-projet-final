@@ -21,6 +21,14 @@ class LoginController extends AbstractPublicController
             isset($post["password"]) &&
             !empty($post["password"])
         ) {
+            
+            $post["email"] = $this->clean($post["email"]);
+            $post["password"] = $this->clean($post["password"]);
+        
+            
+            
+            
+            
             $userManager = new UserManager();
             $emailExistence = $userManager->getUserByEmail($post["email"]);
             
@@ -32,8 +40,7 @@ class LoginController extends AbstractPublicController
                     $emailExistence->getPassword()
                 );
                 if ($isPassOk === true) {
-                    echo "Le pass et le hash correspondent";
-                    //  A FAIRE : gerer les sessions
+                    // "Le pass et le hash correspondent";
 
                     $_SESSION["isConnected"] = true;
                     $_SESSION["role"] = $emailExistence->getRole();
@@ -46,15 +53,15 @@ class LoginController extends AbstractPublicController
                         header("Location: produits");
                     }
                 } else {
-                    echo "le mail existe mais pas le pass";
-                    $this->renderPublic("login", ["raté"]);
+                    // echo "le mail existe mais pas le pass";
+                    $this->renderPublic("login", ["Le login à échoué"]);
                 }
             } else {
-                echo "Ce mail n'existe pas";
-                $this->renderPublic("login", ["authentification ratée"]);
+                // echo "Ce mail n'existe pas";
+                $this->renderPublic("login", ["Le login à échoué"]);
             }
         } else {
-            $this->renderPublic("login", ["un champ n'est pas rempli"]);
+            $this->renderPublic("login", [""]);
         }
     }
 }

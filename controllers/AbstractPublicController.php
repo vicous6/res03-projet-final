@@ -10,7 +10,11 @@ public function renderPublic(string $view, array $values) : void{
     $data=$values;
     require 'templates/layout.phtml';
 }
-
+public function clean($data): string{
+    
+     $safeCode = htmlspecialchars($data);
+     return $safeCode;
+}
 
 
 }

@@ -97,7 +97,7 @@ class Router
                 isset($_SESSION["role"]) &&
                 $_SESSION["role"] === "admin"
             ) {
-                //  var_dump($_SESSION);
+               
                 ////////////CategroryPrivateController///////////////////////
 
                 if ($route[1] === "categories" && !isset($route[2])) {

@@ -19,6 +19,7 @@ class Media {
      */
     public function getName(): string
     {
+        
         return $this->name;
     }
 

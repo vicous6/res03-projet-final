@@ -1,7 +1,5 @@
-
-
 @media screen and (max-width: 767px) {
-     #login {
+    #login {
 
         &>section {
             background: url("https://pro-artista.fr/profiles/breches-bijoux/breches-bijoux-b6bc7-lg.jpeg");
@@ -17,11 +15,16 @@
                 width: 90vw;
                 display: grid;
                 background: rgb(255, 255, 255, 0.4);
-                grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 0.2fr 1fr 1fr 1fr 1fr;
                 &>h2 {
                     font-size: 3rem;
                     align-self: center;
                     justify-self: center;
+                }
+                &>h3 {
+                    align-self: center;
+                    justify-self: center;
+                    font-weight:bold;
                 }
                 &>fieldset:nth-of-type(1) {
                     width: 70%;
@@ -61,7 +64,7 @@
 
                     &>button {
                         justify-self: center;
-                        width: 85%; 
+                        width: 85%;
                         font-size: 1.8rem;
                     }
                 }
@@ -93,11 +96,16 @@
                 width: 50vw;
                 display: grid;
                 background: rgb(255, 255, 255, 0.4);
-                grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 0.2fr 1fr 1fr 1fr 1fr;
                 &>h2 {
                     font-size: 3rem;
                     align-self: center;
                     justify-self: center;
+                }
+                &>h3 {
+                    align-self: center;
+                    justify-self: center;
+                    font-weight: bold;
                 }
                 &>fieldset:nth-of-type(1) {
                     width: 70%;
@@ -137,7 +145,7 @@
 
                     &>button {
                         justify-self: center;
-                        width: 85%; 
+                        width: 85%;
                         font-size: 1.8rem;
                     }
                 }
@@ -169,11 +177,16 @@
                 width: 50vw;
                 display: grid;
                 background: rgb(255, 255, 255, 0.4);
-                grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 0.2fr 1fr 1fr 1fr 1fr;
                 &>h2 {
                     font-size: 3rem;
                     align-self: center;
                     justify-self: center;
+                }
+                &>h3 {
+                    align-self: center;
+                    justify-self: center;
+                    font-weight: bold;
                 }
                 &>fieldset:nth-of-type(1) {
                     width: 70%;
@@ -213,7 +226,7 @@
 
                     &>button {
                         justify-self: center;
-                        width: 85%; 
+                        width: 85%;
                         font-size: 1.8rem;
                     }
                 }
@@ -245,11 +258,17 @@
                 width: 25vw;
                 display: grid;
                 background: rgb(255, 255, 255, 0.4);
-                grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 0.2fr 1fr 1fr 1fr 1fr;
                 &>h2 {
                     font-size: 3rem;
                     align-self: center;
                     justify-self: center;
+                }
+                &>h3 {
+                    align-self: center;
+                    justify-self: center;
+                    font-weight: bold;
+
                 }
                 &>fieldset:nth-of-type(1) {
                     width: 70%;

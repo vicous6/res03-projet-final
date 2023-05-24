@@ -1,5 +1,6 @@
-<form  action = "register" method="post">
+<form  action = "register" method="post" id = "register">
   <h2>Création de compte</h2>
+  <h3><?= $data[0]; ?></h3>
     <fieldset>
   <label for="registerUsername">Identifiant</label>
   <input type="text" id="registerUsername" name="registerUsername">
@@ -29,8 +30,3 @@
     </fieldset>
      <p>Pour se connecter cliquez <a href ="/res03-projet-final/login">ICI</a> </p>
 </form>
-
-
-<?php 
-// var_dump($_POST);
-?>
