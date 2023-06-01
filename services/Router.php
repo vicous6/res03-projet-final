@@ -32,6 +32,7 @@ class Router
     {
         if (isset($_GET["path"])) {
             // var_dump($_GET["path"]);
+             
             $route = explode("/", $_GET["path"]);
 
             // Pages publics gerer par -> PageController
@@ -230,11 +231,11 @@ class Router
             }
             // Toute les url qui ne correspondent a rien de valide
             else {
-                header("Location: /res03-projet-final/produits");
+            $this->pageController->display404();
             }
         } else {
-            echo "dfvfvergf";
-            $this->pageController->display404();
+                header("Location: /res03-projet-final/accueil");
+           $this->pageController->homepage();
         }
     }
 } ?>

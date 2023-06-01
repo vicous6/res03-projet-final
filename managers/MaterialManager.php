@@ -27,7 +27,7 @@ class MaterialManager extends AbstractManager
         $query = $this->db->prepare(
             "INSERT INTO material VALUES (null, :name)"
         );
-        var_dump($post);
+      
         $parameters = [
             "name" => $post["name"],
         ];
@@ -38,11 +38,23 @@ class MaterialManager extends AbstractManager
     }
     public function deleteMaterialById(string $id)
     {
+        
         $query = $this->db->prepare("DELETE FROM material WHERE id=:value");
         $parameters = [
             "value" => $id,
         ];
-        $query->execute($parameters);
+        
+        
+      
+        try{
+            $query->execute($parameters);
+            return "ok";
+        } catch(Exception $e){
+            return null;
+        }
+        $material = $query->fetch(PDO::FETCH_ASSOC);
+        
+        return "ok";
     }
     public function modifyMaterial(array $post)
     {
