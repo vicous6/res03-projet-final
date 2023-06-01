@@ -19,9 +19,14 @@ class MaterialController extends AbstractAdminController
     {
         if (isset($post) && !empty($post)) {
             $materialManager = new MaterialManager();
-            echo "coucou";
+          
+            $post["name"] = $this->clean($post["name"]);
+            
+            
+            
             $materialManager->createMaterial($post);
-
+            
+          
             header("Location: /res03-projet-final/admin/materiaux");
         } else {
             $this->renderAdmin("admin-material-create", []);
@@ -32,6 +37,8 @@ class MaterialController extends AbstractAdminController
         $materialManager = new MaterialManager();
 
         if (isset($post) && !empty($post)) {
+            
+             $post["name"] = $this->clean($post["name"]);
             $materialManager->modifyMaterial($post);
 
             header("Location: /res03-projet-final/admin/materiaux");
@@ -49,7 +56,9 @@ class MaterialController extends AbstractAdminController
         $materialManager = new MaterialManager();
 
         $action = $materialManager->deleteMaterialById($id);
-
+        
+        // var_dump($action);
+       
         header("Location: /res03-projet-final/admin/materiaux");
     }
 }

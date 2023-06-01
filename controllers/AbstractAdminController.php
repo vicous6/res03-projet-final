@@ -11,6 +11,11 @@ public function renderAdmin(string $view, array $values) : void{
     require 'templates/admin/layoutAdmin.phtml';
 }
 
+public function clean($data): string{
+    
+     $safeCode = htmlspecialchars($data);
+     return $safeCode;
+}
 
 
 }

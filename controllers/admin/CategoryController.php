@@ -20,6 +20,9 @@ class CategoryController extends AbstractAdminController
     {
         if (isset($post) && !empty($post)) {
             $categoryManager = new CategoryManager();
+            
+            $post["name"]= $this->clean($post["name"]);
+            
             $categoryManager->createCategory($post);
 
             header("Location: /res03-projet-final/admin/categories");
@@ -33,6 +36,7 @@ class CategoryController extends AbstractAdminController
         $categoryManager = new CategoryManager();
 
         if (isset($post) && !empty($post)) {
+            $post["name"]= $this->clean($post["name"]);
             $categoryManager->modifyCategory($post);
 
             header("Location: /res03-projet-final/admin/categories");

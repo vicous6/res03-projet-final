@@ -18,7 +18,7 @@ class ImageController extends AbstractAdminController
         if (isset($post) && !empty($post)) {
             $uploader = new Uploader();
             $media = $uploader->upload($_FILES, "image");
-
+            
             if ($media === null) {
                 header("Location: /res03-projet-final/admin/images");
             }
@@ -26,6 +26,10 @@ class ImageController extends AbstractAdminController
             $post["url"] = $media->getUrl();
 
             $imageManager = new ImageManager();
+            
+            $post["name"]= $this->clean($post["name"]);
+            $post["produit"]= $this->clean($post["produit"]);
+            
             $imageManager->createImage($post);
 
             header("Location: /res03-projet-final/admin/images");

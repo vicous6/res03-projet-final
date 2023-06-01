@@ -50,7 +50,17 @@ class ProductAdminController extends AbstractAdminController
             $productManager = new ProductManager();
             $materielManager = new MaterialManager();
             $categoryManager = new CategoryManager();
-
+            
+            
+            $post["name"]= $this->clean($post["name"]);
+            $post["description"]= $this->clean($post["description"]);
+            $post["prix"]= $this->clean($post["prix"]);
+            $post["stock"]= $this->clean($post["stock"]);
+            $post["category_id"]= $this->clean($post["category_id"]);
+            $post["materiaux"]= $this->clean($post["materiaux"]);
+            $post["materiaux2"]= $this->clean($post["materiaux2"]);
+            $post["materiaux3"]= $this->clean($post["materiaux3"]);
+            
             $productIdInDb = $productManager->createProduct($post);
 
             $materielManager->createMaterialOnProduct($post, $productIdInDb);
@@ -80,6 +90,14 @@ class ProductAdminController extends AbstractAdminController
         $productManager = new ProductManager();
 
         if (isset($post) && !empty($post)) {
+            // FAILLE XSS
+            // var_dump($post);
+            // die;
+             $post["name"] = $this->clean($post["name"]);
+            $post["description"]= $this->clean($post["description"]);
+            $post["prix"]= $this->clean($post["prix"]);
+            $post["stock"]= $this->clean($post["stock"]);
+          
             $productManager->modifyProduct($post);
 
             header("Location: /res03-projet-final/admin/produits");
