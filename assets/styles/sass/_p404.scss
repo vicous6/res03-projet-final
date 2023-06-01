@@ -1,0 +1,26 @@
+#p404{
+    height:100vh;
+    & > section{
+        min-height:60vh;
+        display:grid;
+        grid-template-rows:1fr 1fr 1fr  ;
+        & > h1 {
+            font-size:2.6rem;
+            justify-self:center;
+            align-self:center;
+            
+        }
+        & > p {
+            font-size:2rem;
+           justify-self:center;
+            align-self:center; 
+            width:80%;
+            text-align:center;
+        }
+        & > a {
+            font-size:2rem;
+            justify-self:center;
+            align-self:center;
+        }
+    }
+}
